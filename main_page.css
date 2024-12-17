@@ -1,0 +1,26 @@
+.main_page__section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .main_page__section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .main_page__section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+/* @media screen and (max-width: 720px) {
+    .main_page__section {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+} */
