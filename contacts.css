@@ -1,0 +1,187 @@
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+
+.contacts__col--left {
+    height: 446px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.contacts__col--right {
+    align-self: flex-end;
+}
+
+.contacts__img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contacts__cards {
+    display: flex;
+    gap: 40px;
+    margin-top: 46px;
+}
+
+.contacts__card {
+    border-radius: 30px;
+    background-color: var(--bg-gray);
+    flex-shrink: 1;
+    flex-grow: 1;
+    width: 30%;
+    padding: 30px 40px;
+    min-height: 256px;
+}
+
+.contacts__card--address {
+    padding-right: 25px;
+}
+
+.contacts__card--contacts {
+    background-image: url(./img/blobs/tooth_contacts_card.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% + 100px) calc(100% + 90px);
+    background-size: 250px;
+}
+
+.contacts__card_link + .contacts__card_link {
+    margin-top: 8px;
+}
+
+.contacts__card_link {
+    --icon-size: 28px;
+}
+
+.contacts__card_link--phone span {
+    margin-top: 8px;
+}
+
+.contacts__card_btn {
+    padding: 5px 24px;
+    margin-top: 24px;
+}
+
+.contacts__card_btn_icon {
+    --size: 36px;
+    width: var(--size);
+    min-width: var(--size);
+    height: var(--size);
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .contacts__col--left {
+        border-radius: 20px;
+    }
+
+    .contacts__col--right {
+        display: flex;
+        flex-direction: column;
+        align-self: initial;
+    }
+
+    .contacts__cards {
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: auto;
+    }
+
+    .contacts__card {
+        width: 100%;
+        min-height: 162px;
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 20px;
+    }
+
+    .contacts__card_link {
+        padding-left: calc(var(--icon-size) + 16px);
+    }
+
+    .contacts__card_link--phone span {
+        margin-top: 4px;
+    }
+
+    .contacts__card_btn {
+        height: 40px;
+        padding-left: 16px;
+        padding-right: 8px;
+        margin-top: auto;
+        .contacts__card_btn_icon {
+            --size: 30px;
+        }
+    }
+
+    .contacts__card--contacts {
+        background-position: calc(100% + 50px) calc(100% + 120px);
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .contacts {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+
+    .contacts__col {
+        width: 100%;
+    }
+
+    .contacts__col--left {
+        aspect-ratio: 688 / 438;
+        height: initial;
+    }
+
+    .contacts__cards {
+        margin-top: 40px;
+        flex-wrap: nowrap;
+        gap: 40px;
+    }
+
+    .contacts__card_btn {
+        height: 60px;
+        padding: 5px 16px;
+        /* width: min-content; */
+        margin-top: 16px;
+    }
+
+    .contacts__card--contacts {
+        background-position: calc(100% + 90px) calc(100% + 130px);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .contacts {
+        row-gap: 20px;
+    }
+
+    .contacts__cards {
+        margin-top: 20px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .contacts__card {
+        min-height: 200px;
+        padding: 20px 16px;
+    }
+
+    .contacts__card_btn {
+        margin-top: auto;
+    }
+
+    .contacts__card_link {
+        --icon-size: 24px;
+        padding-left: calc(var(--icon-size) + 12px);
+    }
+
+    .contacts__col--left {
+        min-height: 200px;
+    }
+}

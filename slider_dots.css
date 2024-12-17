@@ -1,0 +1,21 @@
+.slider_dots {
+    --dot-bg: #fff;
+    display: flex;
+    gap: 20px;
+}
+
+.slider_dots--gray {
+    --dot-bg: var(--gray);
+}
+
+.slider_dots__item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--dot-bg);
+    cursor: pointer;
+}
+
+.slider_dots__item--active {
+    background-color: var(--green);
+}

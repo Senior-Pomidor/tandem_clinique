@@ -1,0 +1,231 @@
+.main_slider {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.main_slider__control_inner {
+    display: flex;
+    color: #000;
+    width: 30px;
+}
+
+.main_slider__control {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.main_slider__control--right {
+    justify-content: flex-end;
+
+    .main_slider__control_inner {
+        transform: rotate(180deg);
+    }
+}
+
+.main_slider__container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1264px;
+    overflow: hidden;
+}
+
+.main_slider__title {
+    color: var(--purple);
+    margin-top: 22px;
+}
+
+.main_slider__subtitle {
+    font-size: 40px;
+    line-height: 48px;
+    margin-top: 28px;
+}
+
+.main_slider__btn {
+    margin-top: 42px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.main_slider__btn--mob {
+    display: none;
+}
+
+.main_slider__content {
+    flex-grow: 1;
+    max-width: calc(45% - 15px);
+    position: relative;
+    z-index: 1;
+}
+
+.main_slider__slides {
+    position: relative;
+    overflow: hidden;
+    height: 588px;
+    width: 657px;
+    max-width: calc(60% - 15px);
+    border-radius: 30px;
+}
+
+.main_slider__slide {
+    position: relative;
+    overflow: hidden;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+
+.main_slider__slide_img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+}
+
+
+.main_slider__dots {
+    position: absolute;
+    left: 40px;
+    bottom: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    .main_slider {
+        padding-top: 16px;
+        padding-bottom: 20px;
+    }
+
+    .main_slider__container {
+        max-width: 780px;
+    }
+
+    .main_slider__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: calc(50% - 15px);
+
+        flex-grow: 1;
+    }
+
+    .main_slider__title {
+        margin-top: 25px;
+    }
+
+    .main_slider__subtitle {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .main_slider__btn {
+        margin-top: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .main_slider__slides {
+        height: 339px;
+        width: 372px;
+        max-width: calc(60% - 15px);
+        border-radius: 20px;
+    }
+
+    .main_slider__dots {
+        left: 20px;
+        bottom: 18px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .main_slider {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .main_slider__container {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .main_slider__slides {
+        width: 306px;
+        height: 301px;
+    }
+
+    .main_slider__control {
+        width: 20px;
+    }
+
+    .main_slider__content {
+        width: calc(50% - 15px);
+        flex-grow: 1;
+    }
+
+    .main_slider__dots {
+        left: 25px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .main_slider {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .main_slider__control {
+        display: none;
+    }
+
+    .main_slider__title {
+        margin-top: 0;
+    }
+
+    .main_slider__subtitle {
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 12px;
+    }
+
+    .main_slider__container {
+        gap: initial;
+        flex-direction: column;
+    }
+
+    .main_slider__content,
+    .main_slider__slides {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .main_slider__slides {
+        height: 288px;
+        margin-top: 20px;
+    }
+
+    .main_slider__slide_img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .main_slider__dots {
+        bottom: 16px;
+        left: 50%;
+        translate: -50% 0;
+    }
+
+    .main_slider__btn {
+        display: none;
+    }
+
+    .main_slider__btn--mob {
+        display: flex;
+        margin-top: 36px;
+    }
+}

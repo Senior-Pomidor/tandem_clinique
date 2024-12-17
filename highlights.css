@@ -1,0 +1,136 @@
+.highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 44px;
+    min-height: 698px;
+}
+
+.highlights__col {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.highlights__col--left {
+    background-image: url(./img/smile.jpeg);
+    /* background-position: -180px 0; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.highlights__col--right {
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    padding-right: 36px;
+    background: var(--green-gradient);
+}
+
+.highlights__img {
+    height: 100%;
+    right: 100px;
+}
+
+.highlights__title {
+    margin-bottom: 24px;
+}
+
+.highlights__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 20px;
+    margin-top: auto;
+}
+
+.highlights__tag {
+    flex-grow: 0;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 24px;
+    border-radius: 30px;
+    background-color: var(--bg-white);
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .highlights {
+        min-height: 446px;
+        column-gap: 40px;
+    }
+
+    .highlights__col--left {
+        background-image: url(./img/smile.jpeg);
+        /* background-position: -110px 0; */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+
+    .highlights__col--right {
+        padding: 24px;
+        min-height: 450px;
+    }
+
+    .highlights__tags {
+        gap: 8px 16px;
+    }
+
+    .highlights__tag {
+        padding: 0 16px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .highlights {
+        grid-template-columns: 1fr 445px;
+        min-height: 350px;
+    }
+
+    .highlights__col--left {
+        background-image: url(./img/smile.jpeg);
+        background-position: bottom center;
+    }
+
+
+    .highlights__col--right {
+        padding: 20px;
+        min-height: initial;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .highlights {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        min-height: initial;
+    }
+
+    .highlights__col--left {
+        height: 288px;
+    }
+
+    .highlights__col--right {
+        padding: 16px;
+        padding-right: 12px;
+    }
+
+    .highlights__title {
+        margin-bottom: 30px;
+    }
+
+    .highlights__tags {
+        gap: 10px;
+    }
+
+    .highlights__tag {
+        padding: 0 10px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+}

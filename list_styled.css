@@ -1,0 +1,60 @@
+.list_styled {
+}
+
+.list_styled li {
+    position: relative;
+    padding-left: 52px;
+}
+
+.list_styled li + li {
+    margin-top: 42px;
+}
+
+
+.list_styled li:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--green-gradient);
+    background-image:
+        url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 20L17 14L11 8' stroke='%23010101' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e "),
+        var(--green-gradient);
+    background-position: center center;
+    content: "";
+    border-radius: 50%;
+}
+
+.list_styled__title {
+    margin-bottom: 12px;
+}
+
+
+.list_styled__img {
+
+}
+
+.list_styled__img--grow {
+
+}
+
+@media screen and (max-width: 1200px) {
+    .list_styled li {
+        padding-left: 38px;
+    }
+
+    .list_styled li + li {
+        margin-top: 20px;
+    }
+
+    .list_styled li:before {
+        width: 26px;
+        height: 26px;
+        background-size: 20px;
+    }
+
+    .list_styled__title {
+        margin-bottom: 8px;
+    }
+}
