@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tandem</title>
+
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./list_styled.css">
+    <link rel="stylesheet" href="./ratings.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./main_page.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./main_slider.css">
+    <link rel="stylesheet" href="./highlights.css">
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="./promo.css">
+    <link rel="stylesheet" href="./reasons.css">
+    <link rel="stylesheet" href="./slider.css">
+    <link rel="stylesheet" href="./callback_form.css">
+    <link rel="stylesheet" href="./callback.css">
+    <link rel="stylesheet" href="./contacts.css">
+    <link rel="stylesheet" href="./footer.css">
+</head>
+
+<body>
+    <div class="container"></div>
+    <header class="header js_header container">
+        <div class="header__main">
+            <div class="header__main_container">
+                <a class="header__logo header__logo--desktop" href="/">
+                    <img class="header__logo_img" src="./img/logo.svg" alt="">
+                </a>
+
+                <div class="header__main_content">
+                    <div class="header__main_top">
+                        <div class="header__contacts">
+                            <a class="header__logo header__logo--mob" href="/">
+                                <img class="header__logo_img" src="./img/logo.svg" alt="">
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--metro" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img class="icon_link__icon" src="./img/icons/metro.svg" alt=""/>
+                                м. Славянский бульвар
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--address" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                                <span class="header__contact_text--mob">
+                                    м. Славянский бульвар
+                                </span>
+                                г. Москва, ул. Нежинская, 8, корп.4
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                                <img class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                                8 (495) 132-31-02
+                            </a>
+
+                            <label class="header__mob_nav_btn js_header_nav_btn">
+                                <img
+                                    class="header__mob_nav_btn_icon header__mob_nav_btn_icon--burger"
+                                    src="./img/icons/burger.svg"
+                                    alt=""
+                                >
+
+                                <img
+                                    class="header__mob_nav_btn_icon header__mob_nav_btn_icon--close"
+                                    src="./img/icons/cross.svg"
+                                    alt=""
+                                >
+
+                                <!-- <input
+                                    class="header__mob_nav_toggle"
+                                    type="checkbox"
+                                /> -->
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="header__main_bottom">
+                        <div class="header__search">
+                            <input
+                                placeholder="Поиск..."
+                                class="header__search_input"
+                                type="text"
+                            >
+                        </div>
+
+                        <ul class="header__social">
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--wa" href=""></a></li>
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--tg" href=""></a></li>
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--vk" href=""></a></li>
+                        </ul>
+
+                        <button class="header__appointment_btn btn">
+                            Записаться
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__nav_list">
+                <li class="header__nav_item">
+                    <a class="header__nav_link header__nav_link--active" href="#">
+                        О&nbsp;клинике
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Услуги
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Врачи
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Портфолио
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Акции
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Прайс
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Блог
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__mob">
+            <div class="header__mob_contacts">
+                <a class="icon_link header__contact header__contact--metro" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                    <img class="icon_link__icon" src="./img/icons/metro.svg" alt=""/>
+                    м. Славянский бульвар
+                </a>
+
+                <a class="icon_link header__contact header__contact--address" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                    <img class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                    г. Москва, ул. Нежинская, 8, корп.4
+                </a>
+
+                <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                    <img class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                    <b>8 (495) 132-31-02</b>
+                </a>
+            </div>
+
+            <ul class="header__social">
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--wa" href=""></a></li>
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--tg" href=""></a></li>
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--vk" href=""></a></li>
+            </ul>
+
+            <button class="header__appointment_btn btn">
+                Записаться
+            </button>
+        </div>
+    </header>
+    <script src="./header.js"></script>
+
+    <main>
+        <section class="container ">
+            <h1 class="h2 main_title">
+                TANDEM – стоматология в&nbsp;Москве
+            </h1>
+        </section>
+
+        <section class="container highlights main_page__section">
+            <div class="highlights__col highlights__col--left">
+            </div>
+
+            <div class="highlights__col highlights__col--right">
+                <h2 class="highlights__title">
+                    Мы создаём здоровые и&nbsp;счастливые улыбки!
+                </h2>
+
+                <ul class="highlights__tags">
+                    <li class="highlights__tag">
+                        Диагностика
+                    </li>
+                    <li class="highlights__tag">
+                        Лечение зубов
+                    </li>
+                    <li class="highlights__tag">
+                        Эстетическая стоматология
+                    </li>
+                    <li class="highlights__tag">
+                        Профилактика
+                    </li>
+                    <li class="highlights__tag">
+                        Имплантация зубов
+                    </li>
+                    <li class="highlights__tag">
+                        Исправление прикуса
+                    </li>
+                    <li class="highlights__tag">
+                        Хирургическая стоматология
+                    </li>
+                    <li class="highlights__tag">
+                        Протезирование зубов
+                    </li>
+                    <li class="highlights__tag">
+                        Пародонтология
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container profile main_page__section">
+            <div class="profile__col profile__col--left">
+                <!-- <img class="profile__img" src="./img/galstyan.png" alt="Галстян Карен Эдуардович"> -->
+            </div>
+            <div class="profile__col profile__col--right">
+                <h3 class="profile__title">
+                    Приветственное слово основателя Галстяна Карена Эдуардовича
+                </h3>
+
+                <blockquote class="profile__blockquote">
+                    <p>
+                        Дорогие пациенты
+                    </p>
+
+                    <p>
+                        Приветствую вас в стоматологии TANDEM. Здесь, мы не просто лечим зубы – мы заботимся о вашем
+                        здоровье, комфорте и улыбке.
+                    </p>
+
+                    <p>
+                        Мы искренне верим, что забота начинается с внимания к вашим потребностям и пожеланиям. Мы всегда
+                        готовы выслушать вас, ответить на все вопросы и предложить индивидуальные решения, которые
+                        идеально подходят именно вам.
+                    </p>
+                </blockquote>
+
+                <div class="profile__footer">
+                    <button class="btn">
+                        Написать руководителю
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container slider main_page__section">
+            <div class="slider__slides">
+                <div class="slider__slide">
+                    <img src="./img/slides/1.jpeg" alt="">
+                </div>
+            </div>
+
+            <div class="slider__buttons">
+                <button class="slider__button slider_button_card slider_button_card--active">
+                    <div class="slider_button_card__content">
+                        <strong class="slider_button_card__tag">
+                            Профилактика
+                        </strong>
+
+                        <h5 class="slider_button_card__title">
+                            Профессиональная чистка зубов
+                        </h5>
+
+                        <p class="slider_button_card__text">
+                            и профессиональная гигиена полости рта
+                        </p>
+                    </div>
+                </button>
+
+                <button class="slider__button slider_button_card">
+                    <div class="slider_button_card__content">
+                        <strong class="slider_button_card__tag">
+                            Профилактика
+                        </strong>
+
+                        <h5 class="slider_button_card__title">
+                            Профессиональная чистка зубов
+                        </h5>
+
+                        <p class="slider_button_card__text">
+                            и профессиональная гигиена полости рта
+                        </p>
+                    </div>
+                </button>
+
+                <button class="slider__button slider_button_card">
+                    <div class="slider_button_card__content">
+                        <strong class="slider_button_card__tag">
+                            Профилактика
+                        </strong>
+
+                        <h5 class="slider_button_card__title">
+                            Профессиональная чистка зубов
+                        </h5>
+
+                        <p class="slider_button_card__text">
+                            и профессиональная гигиена полости рта
+                        </p>
+                    </div>
+                </button>
+
+                <button class="slider__button slider_button_card">
+                    <div class="slider_button_card__content">
+                        <strong class="slider_button_card__tag">
+                            Профилактика
+                        </strong>
+
+                        <h5 class="slider_button_card__title">
+                            Профессиональная чистка зубов
+                        </h5>
+
+                        <p class="slider_button_card__text">
+                            и профессиональная гигиена полости рта
+                        </p>
+                    </div>
+                </button>
+
+                <button class="slider__button slider_button_card">
+                    <div class="slider_button_card__content">
+                        <strong class="slider_button_card__tag">
+                            Профилактика
+                        </strong>
+
+                        <h5 class="slider_button_card__title">
+                            Установка адгезивно-мостовидного протеза
+                        </h5>
+
+                        <p class="slider_button_card__text">
+                            и профессиональная гигиена полости рта
+                        </p>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <section class="container promo main_page__section">
+            <div class="promo__block promo__img_wrapper">
+                <img src="./img/teeth_kt.png" alt="">
+            </div>
+
+            <div class="promo__block promo__content_wrapper">
+                <div class="promo__content_img_col">
+                    <img src="./img/blobs/2_teeth_purple.svg" alt="">
+                </div>
+
+                <div class="promo__content_col">
+                    <h2 class="promo__title">
+                        СТОМАТОЛОГИя TАNDEM
+                    </h2>
+
+                    <div class="promo__description">
+                        <p>
+                            В клинике Tandem мы верим, что здоровье вашей улыбки – наша общая цель. Миссия команды
+                            состоит в том, чтобы каждый пациент получил не только качественное стоматологическое
+                            лечение, но и заботу, поддержку и индивидуальный подход. Мы объединяем профессионализм
+                            высококвалифицированных врачей с передовыми технологиями и теплым отношением к каждому
+                            человеку.
+                        </p>
+                        <p>
+                            Приходите в Tandem – вместе мы создаем здоровые улыбки, радующие глаза и сердца!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container reasons main_page__section">
+            <h2 class="reasons__title">
+                Почему выбирают нас?
+            </h2>
+
+            <div class="reasons__content">
+                <ul class="reasons__list list_styled">
+                    <img src="./img/smile.jpeg" alt="">
+
+                    <li>
+                        <h5 class="list_styled__title">
+                            Опытные квалифицированные врачи
+                        </h5>
+
+                        <p>
+                            Наши специалисты обладают богатым опытом, имеют образование и опыт работы за рубежом.
+                        </p>
+                    </li>
+                    <li>
+                        <h5 class="list_styled__title">
+                            Удобное расположение
+                        </h5>
+
+                        <p>
+                            Клиника удобно расположена на улице Нежинская г.Москва, имеет бесплатную парковку.
+                        </p>
+                    </li>
+                    <li>
+                        <h5 class="list_styled__title">
+                            Честная гарантия
+                        </h5>
+
+                        <p>
+                            Даём честную гарантию 2 года на работу и расходные материалы.
+                        </p>
+                    </li>
+                </ul>
+
+                <ul class="reasons__list list_styled">
+                    <img src="./img/smile.jpeg" alt="">
+
+                    <li>
+                        <h5 class="list_styled__title">
+                            Забота о пациентах
+                        </h5>
+
+                        <p>
+                            В нашей клинике вы почувствуете заботу и внимание со стороны нашей дружелюбной команды,
+                            готовой помочь вам достичь здоровой улыбки
+                        </p>
+                    </li>
+                </ul>
+
+                <ul class="reasons__list list_styled">
+                    <li>
+                        <h5 class="list_styled__title">
+                            Отличные отзывы
+                        </h5>
+
+                        <p>
+                            Наш рейтинг на отзовиках составляет 4,9 из 5, что подтверждает высокое качество наших услуг
+                            и довольство клиентов.
+                        </p>
+                    </li>
+
+                    <img src="./img/smile.jpeg" alt="">
+
+                    <li>
+                        <h5 class="list_styled__title">
+                            Современные технологии
+                        </h5>
+
+                        <p>
+                            Мы используем передовые технологии, включая 3D сканеры, для точной диагностики и
+                            качественного лечения.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container ratings main_page__section">
+            <h2 class="ratings__title">
+                Качество лечения подтверждают независимые порталы
+            </h2>
+
+            <div class="ratings__list">
+                <strong class="rating">
+                    <div class="rating__header">
+                        <img class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+
+                        <p class="rating__title">Яндекс</p>
+                    </div>
+
+                    <div class="rating__description">
+                        <span class="rating__rate">
+                            4,8<small>/5</small>
+                        </span>
+
+                        по мнению пациентов
+                    </div>
+                </strong>
+
+                <strong class="rating">
+                    <div class="rating__header">
+                        <img class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+
+                        <p class="rating__title">Яндекс</p>
+                    </div>
+
+                    <div class="rating__description">
+                        <span class="rating__rate">
+                            4,8<small>/5</small>
+                        </span>
+
+                        по мнению пациентов
+                    </div>
+                </strong>
+
+                <strong class="rating">
+                    <div class="rating__header">
+                        <img class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+
+                        <p class="rating__title">Яндекс</p>
+                    </div>
+
+                    <div class="rating__description">
+                        <span class="rating__rate">
+                            4,8<small>/5</small>
+                        </span>
+
+                        по мнению пациентов
+                    </div>
+                </strong>
+
+                <strong class="rating">
+                    <div class="rating__header">
+                        <img class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+
+                        <p class="rating__title">Яндекс</p>
+                    </div>
+
+                    <div class="rating__description">
+                        <span class="rating__rate">
+                            4,8<small>/5</small>
+                        </span>
+
+                        по мнению пациентов
+                    </div>
+                </strong>
+            </div>
+        </section>
+
+        <section class="container main_page__section">
+            <article class="callback">
+                <div class="callback__inner">
+                    <div class="callback__text">
+                        <h2 class="callback__title">
+                            Мне только спросить!
+                        </h2>
+    
+                        <p class="callback__description">
+                            Оставьте заявку и мы ответим на все вопросы. Например, мы можем рассказать как получить налоговый вычет за лечение зубов.
+                        </p>
+                    </div>
+    
+                    <form class="callback__form callback_form" action="./">
+                        <input class="input callback_form__input" placeholder="Имя Фамилия" type="text" required>
+                        <input class="input callback_form__input" placeholder="Телефон" type="text" required>
+    
+                        <button class="callback_form__submit_btn btn" type="submit">
+                            Заказать обратный звонок
+                        </button>
+    
+                        <label class="checkbox callback_form__checkbox">
+                            <input class="checkbox__native" type="checkbox" checked required>
+                            <div class="checkbox__marker"></div>
+    
+                            <p class="checkbox__text">
+                                Даю согласие на <a href="/" class="link" target="_blank">обработку своих персональных данных</a>
+                            </p>
+                        </label>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+        <section class="container contacts main_page__section">
+            <div class="contacts__col contacts__col--left">
+                <img class="contacts__img" src="./img/contacts.png" alt="стоматология тандем">
+            </div>
+
+            <div class="contacts__col contacts__col--right">
+                <h2 class="contacts__title">
+                    Всегда рады видеть вас в&nbsp;нашей клинике
+                </h2>
+
+                <div class="contacts__cards">
+                    <div class="contacts__card contacts__card--address">
+                        <a class="icon_link contacts__card_link" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                            <img class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
+                            м. Славянский бульвар
+                        </a>
+                        <a class="icon_link contacts__card_link" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                            <img class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                            г. Москва, ул. Нежинская, 8, корп.4
+                        </a>
+
+                        <a class="contacts__card_btn btn">
+                            Построить&nbsp;маршрут к&nbsp;клинике
+                            <img class="contacts__card_btn_icon" src="./img/icons/btn_link_arrow.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="contacts__card contacts__card--contacts">
+                        <a class="icon_link contacts__card_link" href="mailto:tandem-clinic1@yandex.ru">
+                            <img class="icon_link__icon" src="./img/icons/email.svg" alt="" />
+                            tandem-clinic1@yandex.ru
+                        </a>
+
+                        <a class="icon_link contacts__card_link contacts__card_link--phone" href="tel:+74951323102">
+                            <img class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                            Единый телефон: <br>
+                            <span><b>8 (495) 132-31-02</b></span>
+                        </ф>
+                        <a class="icon_link contacts__card_link" href="https://wa.me/79250549900" target="_blank">
+                            <img class="icon_link__icon" src="./img/icons/wa.svg" alt="" />
+                            <b>+7 (925) 054-99-00</b>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <img class="footer__logo_img" src="./img/logo.svg" alt="">
+                </div>
+
+                <p class="footer__ur_info">
+                    OOO Tandem Dental Clinic
+                </p>
+                <p class="footer__ur_info footer__ur_info--license">
+                    Номер лицензии: <span>ЛО-77-01-002858</span>
+                </p>
+
+                <a class="footer__policy--big-tab" href="/">
+                    Политика защиты данных
+                </a>
+            </div>
+
+            <div class="footer__cols">
+                <ul class="footer__links">
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            О&nbsp;клинике
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Прайс
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Наши&nbsp;врачи
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--law_info_big_tab">
+                        <a class="footer__link" href="#">
+                            Правовая информация
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--policy">
+                        <a class="footer__link" href="#">
+                            Политика защиты данных
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="footer__links">
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Блог
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--law_info">
+                        <a class="footer__link" href="#">
+                            Правовая информация
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__right">
+                <p class="footer__right_text">
+                    Для получения подробной и актуальной стоимости услуг, обращайтесь к администратору.
+                </p>
+
+                <a class="footer__policy--mob" href="#" target="_blank">
+                    Политика защиты данных
+                </a>
+                <a class="footer__law_info--mob" href="#" target="_blank">
+                    Правовая информация
+                </a>
+
+                <a class="footer__version footer__link" href="#">
+                    Версия для слабовидящих
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. <br>
+            НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
