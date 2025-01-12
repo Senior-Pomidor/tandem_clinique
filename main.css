@@ -545,3 +545,13 @@ a {
         background-color: var(--purple);
     }
 }
+
+[class*="js_appear"] {
+    opacity: 0;
+    transition-timing-function: ease-out;
+}
+
+body, html {
+    overflow-x: hidden;
+    /* overflow: hidden; */
+}

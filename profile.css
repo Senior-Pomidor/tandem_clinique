@@ -7,6 +7,7 @@
 .profile__col {
     border-radius: 30px;
     overflow: hidden;
+    position: relative;
 }
 
 .profile__col--left {
@@ -24,10 +25,13 @@
 }
 
 .profile__img {
-    height: 90%;
-    width: 100%;
+    height: 100%;
     object-fit: contain;
     margin-top: auto;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .profile__title + .profile__blockquote {

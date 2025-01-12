@@ -27,6 +27,11 @@
     <link rel="stylesheet" href="./footer.css">
     <!-- END: обязательно на каждую страницу -->
 
+    <!-- START: swiper обяателен для слайдеров -->
+    <!-- XXX: загружать до слайдеров -->
+    <script src="./swiper.min.js"></script>
+    <!-- END: swiper обяателен для слайдеров-->
+
     <!-- START: секции -->
     <link rel="stylesheet" href="./main_page.css">
     <link rel="stylesheet" href="./ratings.css">
@@ -49,25 +54,25 @@
         <div class="header__main">
             <div class="header__main_container">
                 <a class="header__logo header__logo--desktop" href="/">
-                    <img class="header__logo_img" src="./img/logo.svg" alt="">
+                    <img loading="lazy" class="header__logo_img" src="./img/logo.svg" alt="">
                 </a>
 
                 <div class="header__main_content">
                     <div class="header__main_top">
                         <div class="header__contacts">
                             <a class="header__logo header__logo--mob" href="/">
-                                <img class="header__logo_img" src="./img/logo.svg" alt="">
+                                <img loading="lazy" class="header__logo_img" src="./img/logo.svg" alt="">
                             </a>
 
                             <a class="icon_link header__contact header__contact--metro"
                                 href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
-                                <img class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
+                                <img loading="lazy" class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
                                 м. Славянский бульвар
                             </a>
 
                             <a class="icon_link header__contact header__contact--address"
                                 href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
-                                <img class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                                <img loading="lazy" class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
                                 <span class="header__contact_text--mob">
                                     м. Славянский бульвар
                                 </span>
@@ -75,18 +80,19 @@
                             </a>
 
                             <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
-                                <img class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                                <img loading="lazy" class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
                                 8 (495) 132-31-02
                             </a>
 
+                            <!-- TODO: заменить блок -->
                             <div class="header__mob_nav_btns">
                                 <label for="qwerty" class="header__search_btn_mob js_header_search_btn_mob"></label>
 
                                 <div class="header__mob_nav_btn js_header_nav_btn">
-                                    <img class="header__mob_nav_btn_icon header__mob_nav_btn_icon--burger"
+                                    <img loading="lazy" class="header__mob_nav_btn_icon header__mob_nav_btn_icon--burger"
                                         src="./img/icons/burger.svg" alt="">
     
-                                    <img class="header__mob_nav_btn_icon header__mob_nav_btn_icon--close"
+                                    <img loading="lazy" class="header__mob_nav_btn_icon header__mob_nav_btn_icon--close"
                                         src="./img/icons/cross.svg" alt="">
                                 </div>
                             </div>
@@ -94,6 +100,7 @@
                     </div>
 
                     <div class="header__main_bottom">
+                        <!-- TODO: заменить блок -->
                         <div class="header__search js_header_search">
                             <form class="header__search_input_wrapper" action="/">
                                 <input
@@ -191,18 +198,18 @@
             <div class="header__mob_contacts">
                 <a class="icon_link header__contact header__contact--metro" href="https://yandex.ru/maps/-/CHEnVVPm"
                     target="_blank">
-                    <img class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
+                    <img loading="lazy" class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
                     м. Славянский бульвар
                 </a>
 
                 <a class="icon_link header__contact header__contact--address" href="https://yandex.ru/maps/-/CHEnVVPm"
                     target="_blank">
-                    <img class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                    <img loading="lazy" class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
                     г. Москва, ул. Нежинская, 8, корп.4
                 </a>
 
                 <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
-                    <img class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                    <img loading="lazy" class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
                     <b>8 (495) 132-31-02</b>
                 </a>
             </div>
@@ -233,8 +240,9 @@
         <!-- XXX: ниспользует callback_form_popup.css, подключен в head -->
         <!-- XXX: ниспользует dropdown.js, подключен в конце страницы -->
         <!-- XXX: использует popup.js, подключен в конце страницы -->
-        <section class="container main_slider">
-            <button class="main_slider__control main_slider__control--left">
+        <!-- XXX: использует swiper.min.js, подключен в шапке -->
+        <section class="container main_slider" id="js_main_slider">
+            <button class="main_slider__control main_slider__control--left swiper-button-prev">
                 <span class="main_slider__control_inner">
                     <svg
                         viewBox="0 0 31 24"
@@ -250,7 +258,7 @@
             </button>
 
             <div class="main_slider__container">
-                <div class="main_slider__content">
+                <div class="main_slider__content js_appear_left">
                     <h2 class="h1 main_slider__title">
                         Вместе <br>
                         к&nbsp;здоровым
@@ -267,17 +275,20 @@
                     </button>
                 </div>
 
-                <div class="main_slider__slides">
-                    <div class="main_slider__slide">
-                        <img class="main_slider__slide_img" src="./img/main_slides/1.jpeg" alt="">
+                <div class="main_slider__slides js_appear_right" id="js_main_slider_wrapper">
+                    <div class="main_slider__slides_inner swiper-wrapper">
+                        <div class="main_slider__slide swiper-slide">
+                            <img loading="lazy" class="main_slider__slide_img" src="./img/main_slides/1.jpeg" alt="">
+                        </div>
+                        <div class="main_slider__slide swiper-slide">
+                            <img loading="lazy" class="main_slider__slide_img" src="./img/main_slides/1.jpeg" alt="">
+                        </div>
+                        <div class="main_slider__slide swiper-slide">
+                            <img loading="lazy" class="main_slider__slide_img" src="./img/main_slides/1.jpeg" alt="">
+                        </div>
                     </div>
 
-                    <ul class="main_slider__dots slider_dots">
-                        <li class="slider_dots__item"></li>
-                        <li class="slider_dots__item"></li>
-                        <li class="slider_dots__item slider_dots__item--active"></li>
-                        <li class="slider_dots__item"></li>
-                    </ul>
+                    <div class="main_slider__dots slider_dots swiper-pagination"></div>
                 </div>
 
                 <button class="btn main_slider__btn main_slider__btn--mob" data-popup-id="main_slider_popup">
@@ -285,7 +296,7 @@
                 </button>
             </div>
 
-            <button class="main_slider__control main_slider__control--right">
+            <button class="main_slider__control main_slider__control--right swiper-button-next">
                 <span class="main_slider__control_inner">
                     <svg
                         viewBox="0 0 31 24"
@@ -299,68 +310,68 @@
                     </svg>
                 </span>
             </button>
+        </section>
 
-            <div class="main_slider__popup popup js_popup" id="main_slider_popup">
-                <div class="popup__inner">
-                    <div class="main_slider__popup_content callback_form_popup">
-                        <div class="callback_form_popup__inner">
-                            <h3 class="h2 callback_form_popup__title">
-                                Записаться на&nbsp;прием
-                            </h3>
+        <div class="main_slider__popup popup js_popup swiper-button-next" id="main_slider_popup">
+            <div class="popup__inner">
+                <div class="main_slider__popup_content callback_form_popup">
+                    <div class="callback_form_popup__inner">
+                        <h3 class="h2 callback_form_popup__title">
+                            Записаться на&nbsp;прием
+                        </h3>
 
-                            <p class="callback_form_popup__description">
-                                Заполните форму,
-                                мы&nbsp;свяжемся с&nbsp;вами
-                                и&nbsp;запишем на&nbsp;удобное время
-                            </p>
+                        <p class="callback_form_popup__description">
+                            Заполните форму,
+                            мы&nbsp;свяжемся с&nbsp;вами
+                            и&nbsp;запишем на&nbsp;удобное время
+                        </p>
 
-                            <form class="callback_form callback_form_popup__form" action="/">
-                                <input class="input callback_form__input" placeholder="Имя Фамилия" type="text" required>
-                                <input class="input callback_form__input" placeholder="Телефон" type="text" required>
-                                <input class="input callback_form__input" placeholder="Дата и время" type="text" onfocus="(this.type='datetime-local')" required>
+                        <form class="callback_form callback_form_popup__form" action="/">
+                            <input class="input callback_form__input" placeholder="Имя Фамилия" type="text" required>
+                            <input class="input callback_form__input" placeholder="Телефон" type="text" required>
+                            <input class="input callback_form__input" placeholder="Дата и время" type="text" onfocus="(this.type='datetime-local')" required>
 
-                                <div class="dropdown js_dropdown callback_form__input">
-                                    <button class="input input--dropdown js_dropdown_btn dropdown__btn" type="button">
-                                        <span class="dropdown__placeholder">
-                                            Указать способ связи
-                                        </span>
-                                    </button>
-                                    <input class="js_dropdown_input" name="callback_method" type="text" required>
-
-                                    <!-- в инпут прокидывается текст из li -->
-                                    <ul class="dropdown__options">
-                                        <li class="dropdown__option js_dropdown_option">
-                                            Телефон
-                                        </li>
-                                        <li class="dropdown__option js_dropdown_option">
-                                            Электронная почта
-                                        </li>
-                                    </ul>
-                                </div>
-                                <button class="callback_form__submit_btn btn" type="submit">
-                                    Записаться
+                            <div class="dropdown js_dropdown callback_form__input">
+                                <button class="input input--dropdown js_dropdown_btn dropdown__btn" type="button">
+                                    <span class="dropdown__placeholder">
+                                        Указать способ связи
+                                    </span>
                                 </button>
-        
-                                <label class="checkbox callback_form__checkbox">
-                                    <input class="checkbox__native" type="checkbox" checked required>
-                                    <div class="checkbox__marker"></div>
-        
-                                    <p class="checkbox__text">
-                                        Даю согласие на <a href="/" class="link" target="_blank">обработку своих персональных
-                                            данных</a>
-                                    </p>
-                                </label>
-                            </form>
-                        </div>
+                                <input class="js_dropdown_input" name="callback_method" type="text" required>
+
+                                <!-- в инпут прокидывается текст из li -->
+                                <ul class="dropdown__options">
+                                    <li class="dropdown__option js_dropdown_option">
+                                        Телефон
+                                    </li>
+                                    <li class="dropdown__option js_dropdown_option">
+                                        Электронная почта
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="callback_form__submit_btn btn" type="submit">
+                                Записаться
+                            </button>
+    
+                            <label class="checkbox callback_form__checkbox">
+                                <input class="checkbox__native" type="checkbox" checked required>
+                                <div class="checkbox__marker"></div>
+    
+                                <p class="checkbox__text">
+                                    Даю согласие на <a href="/" class="link" target="_blank">обработку своих персональных
+                                        данных</a>
+                                </p>
+                            </label>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         <script src="./main_slider.js"></script>
 
 
 
-        <section class="container">
+        <section class="container js_appear_top">
             <h1 class="h2 main_title">
                 TANDEM – стоматология в&nbsp;Москве
             </h1>
@@ -368,48 +379,167 @@
 
 
 
+        <!-- XXX: использует popup.css, подключен в head -->
+        <!-- XXX: использует popup.js, подключен в конце страницы -->
         <section class="container highlights main_page__section">
-            <div class="highlights__col highlights__col--left">
+            <div class="highlights__inner">
+                <div class="highlights__col highlights__col--left js_appear_left"></div>
+
+                <div class="highlights__col highlights__col--right js_appear_right">
+                    <h2 class="highlights__title">
+                        Мы создаём здоровые и&nbsp;счастливые улыбки!
+                    </h2>
+
+                    <ul class="highlights__tags">
+                        <li class="highlights__tag">
+                            Диагностика
+                        </li>
+                        <li class="highlights__tag">
+                            Лечение зубов
+                        </li>
+                        <li class="highlights__tag">
+                            Эстетическая стоматология
+                        </li>
+                        <li class="highlights__tag">
+                            Профилактика
+                        </li>
+                        <li class="highlights__tag">
+                            Имплантация зубов
+                        </li>
+                        <li class="highlights__tag">
+                            Исправление прикуса
+                        </li>
+                        <li class="highlights__tag">
+                            Хирургическая стоматология
+                        </li>
+                        <li class="highlights__tag">
+                            Протезирование зубов
+                        </li>
+                        <li class="highlights__tag">
+                            Пародонтология
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="highlights__col highlights__col--right">
-                <h2 class="highlights__title">
-                    Мы создаём здоровые и&nbsp;счастливые улыбки!
-                </h2>
+            <!-- TODO: добавить блок -->
+            <form class="highlights__form js_appear_bottom" action="/">
+                <div class="highlights__form__inner">
+                    <div class="highlights__dropdowns">
+                        <div class="highlights__dropdown js_dropdown js_dropdown_2">
+                            <div class="highlights__dropdown__btn_wrapper">
+                                <ul class="highlights__dropdown_options dropdown__options">
+                                    <li class="highlights__dropdown_option js_dropdown_option dropdown_option">
+                                        Зуб болит
+                                    </li>
+                                    <li class="highlights__dropdown_option js_dropdown_option dropdown_option">
+                                        Буб болит
+                                    </li>
+                                </ul>
 
-                <ul class="highlights__tags">
-                    <li class="highlights__tag">
-                        Диагностика
-                    </li>
-                    <li class="highlights__tag">
-                        Лечение зубов
-                    </li>
-                    <li class="highlights__tag">
-                        Эстетическая стоматология
-                    </li>
-                    <li class="highlights__tag">
-                        Профилактика
-                    </li>
-                    <li class="highlights__tag">
-                        Имплантация зубов
-                    </li>
-                    <li class="highlights__tag">
-                        Исправление прикуса
-                    </li>
-                    <li class="highlights__tag">
-                        Хирургическая стоматология
-                    </li>
-                    <li class="highlights__tag">
-                        Протезирование зубов
-                    </li>
-                    <li class="highlights__tag">
-                        Пародонтология
-                    </li>
-                </ul>
-            </div>
+                                <button class="highlights__dropdown_btn js_dropdown_btn" type="button">
+                                    Что болит
+
+                                    <svg class="highlights__dropdown_btn_icon" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 7L9.5 12L14.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <input
+                                class="highlights__dropdown_input js_dropdown_input"
+                                type="text"
+                                name="pain"
+                                value="Зуб болит"
+                            />
+                        </div>
+
+                        <div class="highlights__dropdowns_divider"></div>
+
+                        <div class="highlights__dropdown">
+                            <label for="highlights_date" class="highlights__dropdown__btn_wrapper">
+                                <button class="highlights__dropdown_btn" type="button">
+                                    Выбрать дату
+                                </button>
+                            </label>
+                            <input class="highlights__dropdown_input" type="datetime-local" id="highlights_date" name="date" />
+                        </div>
+
+                        <div class="highlights__dropdowns_divider"></div>
+
+                        <div class="highlights__dropdown js_dropdown js_dropdown_2">
+                            <div class="highlights__dropdown__btn_wrapper">
+                                <ul class="highlights__dropdown_options dropdown__options">
+                                    <li class="highlights__dropdown_option js_dropdown_option dropdown_option">
+                                        смс-сообщение
+                                    </li>
+                                    <li class="highlights__dropdown_option js_dropdown_option dropdown_option">
+                                        письмо на почту
+                                    </li>
+                                </ul>
+
+                                <button class="highlights__dropdown_btn js_dropdown_btn" type="button">
+                                    Указать способ связи
+
+                                    <svg class="highlights__dropdown_btn_icon" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 7L9.5 12L14.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <input
+                                class="highlights__dropdown_input js_dropdown_input"
+                                type="text"
+                                name="callback_method"
+                                value="смс-сообщение"
+                            />
+                        </div>
+                    </div>
+
+                    <button class="btn highlights__form_btn" data-popup-id="highlights_popup" type="button">
+                        Записаться
+                    </button>
+                </div>
+
+
+                <div class="profile__popup popup js_popup" id="highlights_popup">
+                    <div class="popup__inner">
+                        <div class="callback_form_popup">
+                            <div class="callback_form_popup__inner">
+                                <h3 class="h2 callback_form_popup__title">
+                                    Записаться на&nbsp;приём
+                                </h3>
+
+
+                                <p class="callback_form_popup__description">
+                                    Заполните форму,
+                                    мы&nbsp;свяжемся с&nbsp;вами
+                                    и&nbsp;запишем на&nbsp;удобное время
+                                </p>
+    
+                                <div class="callback_form callback_form_popup__form">
+                                    <input class="input callback_form__input" name="name" placeholder="Имя Фамилия" type="text" required>
+                                    <input class="input callback_form__input" name="phone" placeholder="Телефон" type="text" required>
+    
+    
+                                    <button class="callback_form__submit_btn btn" type="submit">
+                                        Записаться
+                                    </button>
+            
+                                    <label class="checkbox callback_form__checkbox">
+                                        <input class="checkbox__native" name="agreement" type="checkbox" checked required>
+                                        <div class="checkbox__marker"></div>
+            
+                                        <p class="checkbox__text">
+                                            Даю согласие на <a href="/" class="link" target="_blank">обработку своих персональных
+                                                данных</a>
+                                        </p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </section>
-
-
 
 
 
@@ -417,10 +547,11 @@
         <!-- XXX: использует callback_form.css, подключен в head -->
         <!-- XXX: ниспользует callback_form_popup.css, подключен в head -->
         <section class="container profile main_page__section">
-            <div class="profile__col profile__col--left">
-                <!-- <img class="profile__img" src="./img/galstyan.png" alt="Галстян Карен Эдуардович"> -->
+            <div class="profile__col profile__col--left js_appear_bottom">
+                <!-- TODO: заменить урл фотки -->
+                <img loading="lazy" class="profile__img" src="./img/doctors/galstyan.png" alt="Галстян Карен Эдуардович">
             </div>
-            <div class="profile__col profile__col--right">
+            <div class="profile__col profile__col--right js_appear_top">
                 <h3 class="profile__title">
                     Приветственное слово основателя Галстяна Карена Эдуардовича
                 </h3>
@@ -487,104 +618,134 @@
 
 
         <!-- XXX: использует slider_dots.css, подключен в head -->
-        <section class="container slider main_page__section">
-            <div class="slider__slides">
-                <div class="slider__slide">
-                    <img src="./img/slides/1.jpeg" alt="">
+        <!-- XXX: использует swiper.min.js, подключен в шапке -->
+        <section class="container slider main_page__section" id="js_services_slider_wrapper">
+            <h2 class="slider__title">
+                Популярные услуги
+            </h2>
+
+            <div class="slider__inner">
+                <div class="slider__slides_wrapper js_appear_top" id="js_services_slider">
+                    <div class="slider__slides swiper-wrapper">
+                        <div class="slider__slide swiper-slide">
+                            <img loading="lazy" src="./img/slides/1.jpeg" alt="">
+                        </div>
+                        <div class="slider__slide swiper-slide">
+                            <img loading="lazy" src="./img/smile.jpeg" alt="">
+                        </div>
+                        <div class="slider__slide swiper-slide">
+                            <img loading="lazy" src="./img/contacts.png" alt="">
+                        </div>
+                        <div class="slider__slide swiper-slide">
+                            <img loading="lazy" src="./img/teeth_kt.png" alt="">
+                        </div>
+                        <div class="slider__slide swiper-slide">
+                            <img loading="lazy" src="./img/doctors/asatryan.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="services__slider_dots slider_dots swiper-pagination">
+                        <!--  -->
+                    </div>
+                </div>
+
+                <div class="slider__buttons js_slider_buttons" id="js_services_slider_cards">
+                    <div class="slider__buttons_inner swiper-wrapper">
+                        <div role="button" class="slider__button slider_button_card js_slider_button swiper-slide js_appear_left">
+                            <div class="slider_button_card__content">
+                                <strong class="slider_button_card__tag">
+                                    Профилактика
+                                </strong>
+        
+                                <h5 class="slider_button_card__title">
+                                    Профессиональная чистка зубов
+                                </h5>
+        
+                                <p class="slider_button_card__text">
+                                    и профессиональная гигиена полости рта
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div role="button" class="slider__button slider_button_card js_slider_button swiper-slide js_appear_right">
+                            <div class="slider_button_card__content">
+                                <strong class="slider_button_card__tag">
+                                    Эстетическая стоматология
+                                </strong>
+        
+                                <h5 class="slider_button_card__title">
+                                    Ортодонтия
+                                </h5>
+        
+                                <p class="slider_button_card__text">
+                                    Выравнивание прикуса
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div role="button" class="slider__button slider_button_card js_slider_button swiper-slide js_appear_left">
+                            <div class="slider_button_card__content">
+                                <strong class="slider_button_card__tag">
+                                    Диагностика
+                                </strong>
+        
+                                <h5 class="slider_button_card__title">
+                                    Рентген диагностика 
+                                </h5>
+        
+                                <p class="slider_button_card__text">
+                                    радиовизиография
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div role="button" class="slider__button slider_button_card js_slider_button swiper-slide js_appear_right">
+                            <div class="slider_button_card__content">
+                                <strong class="slider_button_card__tag">
+                                    Лечение
+                                </strong>
+        
+                                <h5 class="slider_button_card__title">
+                                    Лечение кариеса, пульпита, периодонтита
+                                </h5>
+                            </div>
+                        </div>
+        
+                        <div role="button" class="slider__button slider_button_card js_slider_button swiper-slide js_appear_top">
+                            <div class="slider_button_card__content">
+                                <strong class="slider_button_card__tag">
+                                    Протезирование зубов
+                                </strong>
+        
+                                <h5 class="slider_button_card__title">
+                                    Установка адгезивно-мостовидного протеза
+                                </h5>
+        
+                                <p class="slider_button_card__text">
+                                    Какой-нибудь текст расшифровка, или условие, пояснение
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="services__slider_dots slider_dots swiper-pagination">
+                        <!--  -->
+                    </div>
                 </div>
             </div>
-
-            <div class="slider__buttons">
-                <button class="slider__button slider_button_card slider_button_card--active">
-                    <div class="slider_button_card__content">
-                        <strong class="slider_button_card__tag">
-                            Профилактика
-                        </strong>
-
-                        <h5 class="slider_button_card__title">
-                            Профессиональная чистка зубов
-                        </h5>
-
-                        <p class="slider_button_card__text">
-                            и профессиональная гигиена полости рта
-                        </p>
-                    </div>
-                </button>
-
-                <button class="slider__button slider_button_card">
-                    <div class="slider_button_card__content">
-                        <strong class="slider_button_card__tag">
-                            Профилактика
-                        </strong>
-
-                        <h5 class="slider_button_card__title">
-                            Профессиональная чистка зубов
-                        </h5>
-
-                        <p class="slider_button_card__text">
-                            и профессиональная гигиена полости рта
-                        </p>
-                    </div>
-                </button>
-
-                <button class="slider__button slider_button_card">
-                    <div class="slider_button_card__content">
-                        <strong class="slider_button_card__tag">
-                            Профилактика
-                        </strong>
-
-                        <h5 class="slider_button_card__title">
-                            Профессиональная чистка зубов
-                        </h5>
-
-                        <p class="slider_button_card__text">
-                            и профессиональная гигиена полости рта
-                        </p>
-                    </div>
-                </button>
-
-                <button class="slider__button slider_button_card">
-                    <div class="slider_button_card__content">
-                        <strong class="slider_button_card__tag">
-                            Профилактика
-                        </strong>
-
-                        <h5 class="slider_button_card__title">
-                            Профессиональная чистка зубов
-                        </h5>
-
-                        <p class="slider_button_card__text">
-                            и профессиональная гигиена полости рта
-                        </p>
-                    </div>
-                </button>
-
-                <button class="slider__button slider_button_card">
-                    <div class="slider_button_card__content">
-                        <strong class="slider_button_card__tag">
-                            Профилактика
-                        </strong>
-
-                        <h5 class="slider_button_card__title">
-                            Установка адгезивно-мостовидного протеза
-                        </h5>
-
-                        <p class="slider_button_card__text">
-                            и профессиональная гигиена полости рта
-                        </p>
-                    </div>
-                </button>
-            </div>
         </section>
+        <script src="./services_slider.js"></script>
+
 
         <section class="container promo main_page__section">
-            <div class="promo__block promo__img_wrapper">
-                <img src="./img/teeth_kt.png" alt="">
+            <div class="promo__block promo__img_wrapper js_appear_bottom">
+                <img loading="lazy" src="./img/teeth_kt.png" alt="">
             </div>
 
-            <div class="promo__block promo__content_wrapper">
+            <div class="promo__block promo__content_wrapper js_appear_top">
                 <div class="promo__content_img_col">
-                    <img src="./img/blobs/2_teeth_purple.svg" alt="">
+                    <img loading="lazy" src="./img/blobs/2_teeth_purple.svg" alt="">
                 </div>
 
                 <div class="promo__content_col">
@@ -616,8 +777,8 @@
             </h2>
 
             <div class="reasons__content">
-                <ul class="reasons__list list_styled">
-                    <img src="./img/smile.jpeg" alt="">
+                <ul class="reasons__list list_styled js_appear_left">
+                    <img loading="lazy" src="./img/smile.jpeg" alt="">
 
                     <li>
                         <h5 class="list_styled__title">
@@ -648,8 +809,8 @@
                     </li>
                 </ul>
 
-                <ul class="reasons__list list_styled">
-                    <img src="./img/smile.jpeg" alt="">
+                <ul class="reasons__list list_styled js_appear_top">
+                    <img loading="lazy" src="./img/smile.jpeg" alt="">
 
                     <li>
                         <h5 class="list_styled__title">
@@ -663,7 +824,7 @@
                     </li>
                 </ul>
 
-                <ul class="reasons__list list_styled">
+                <ul class="reasons__list list_styled js_appear_right">
                     <li>
                         <h5 class="list_styled__title">
                             Отличные отзывы
@@ -675,7 +836,7 @@
                         </p>
                     </li>
 
-                    <img src="./img/smile.jpeg" alt="">
+                    <img loading="lazy" src="./img/smile.jpeg" alt="">
 
                     <li>
                         <h5 class="list_styled__title">
@@ -692,106 +853,107 @@
         </section>
 
         <!-- XXX: использует slider_dots.css, подключен в head -->
-        <section class="container doctors main_page__section">
+        <!-- XXX: использует swiper.min.js, подключен в шапке -->
+        <section class="container doctors main_page__section js_appear_top" id="js_doctors">
             <h2 class="doctors__title">
                 Выберите своего любимого врача
             </h2>
 
             <div class="doctors__slider">
-                <div class="doctors__slider_inner">
-                    <div class="doctors__slide">
-                        <img class="doctors__slide_img" src="./img/doctors/galstyan.png" alt="Карен Эдуардович Галстян">
-
-                        <a class="doctors__slide_link" href="/">
-                            <h5 class="doctors__slide_name">
-                                Карен Эдуардович Галстян
-                            </h5>
-                            <p class="doctors__slide_profession">
-                                Руководитель клиники Tandem, врач-стоматолог, парадонтолог.....
-                            </p>
-
-                            <span class="doctors__slide_footer">
-                                <span class="doctors__slide_more">
-                                    Подробнее
+                <div class="doctors__slider_inner" id="js_doctors_slider_wrapper">
+                    <div class="doctors__slider_slides swiper-wrapper">
+                        <div class="doctors__slide swiper-slide">
+                            <img loading="lazy" class="doctors__slide_img" src="./img/doctors/galstyan.png" alt="Карен Эдуардович Галстян">
+    
+                            <a class="doctors__slide_link" href="/">
+                                <h5 class="doctors__slide_name">
+                                    Карен Эдуардович Галстян
+                                </h5>
+                                <p class="doctors__slide_profession">
+                                    Руководитель клиники Tandem, врач-стоматолог, парадонтолог.....
+                                </p>
+    
+                                <span class="doctors__slide_footer">
+                                    <span class="doctors__slide_more">
+                                        Подробнее
+                                    </span>
                                 </span>
-                            </span>
-                        </a>
-                    </div>
-
-                    <div class="doctors__slide">
-                        <img class="doctors__slide_img" src="./img/doctors/gukasyan.jpg"
-                            alt="Кристина Каджиковна Гукасян">
-
-                        <a class="doctors__slide_link" href="/">
-                            <h5 class="doctors__slide_name">
-                                Кристина Каджиковна Гукасян
-                            </h5>
-                            <p class="doctors__slide_profession">
-                                Врач-стоматолог
-                            </p>
-
-                            <span class="doctors__slide_footer">
-                                <span class="doctors__slide_more">
-                                    Подробнее
+                            </a>
+                        </div>
+    
+                        <div class="doctors__slide swiper-slide">
+                            <img loading="lazy" class="doctors__slide_img" src="./img/doctors/gukasyan.jpg"
+                                alt="Кристина Каджиковна Гукасян">
+    
+                            <a class="doctors__slide_link" href="/">
+                                <h5 class="doctors__slide_name">
+                                    Кристина Каджиковна Гукасян
+                                </h5>
+                                <p class="doctors__slide_profession">
+                                    Врач-стоматолог
+                                </p>
+    
+                                <span class="doctors__slide_footer">
+                                    <span class="doctors__slide_more">
+                                        Подробнее
+                                    </span>
                                 </span>
-                            </span>
-                        </a>
-                    </div>
-
-                    <div class="doctors__slide">
-                        <img class="doctors__slide_img" src="./img/doctors/asatryan.jpg" alt="Эдуард Иванович Асатрян">
-
-                        <a class="doctors__slide_link" href="/">
-                            <h5 class="doctors__slide_name">
-                                Эдуард Иванович Асатрян
-                            </h5>
-                            <p class="doctors__slide_profession">
-                                Врач-стоматолог
-                            </p>
-
-                            <span class="doctors__slide_footer">
-                                <span class="doctors__slide_more">
-                                    Подробнее
+                            </a>
+                        </div>
+    
+                        <div class="doctors__slide swiper-slide">
+                            <img loading="lazy" class="doctors__slide_img" src="./img/doctors/asatryan.jpg" alt="Эдуард Иванович Асатрян">
+    
+                            <a class="doctors__slide_link" href="/">
+                                <h5 class="doctors__slide_name">
+                                    Эдуард Иванович Асатрян
+                                </h5>
+                                <p class="doctors__slide_profession">
+                                    Врач-стоматолог
+                                </p>
+    
+                                <span class="doctors__slide_footer">
+                                    <span class="doctors__slide_more">
+                                        Подробнее
+                                    </span>
                                 </span>
-                            </span>
-                        </a>
-                    </div>
-
-                    <div class="doctors__slide">
-                        <img class="doctors__slide_img" src="./img/doctors/asatryan.jpg" alt="Эдуард Иванович Асатрян">
-
-                        <a class="doctors__slide_link" href="/">
-                            <h5 class="doctors__slide_name">
-                                Эдуард Иванович Асатрян
-                            </h5>
-                            <p class="doctors__slide_profession">
-                                Врач-стоматолог
-                            </p>
-
-                            <span class="doctors__slide_footer">
-                                <span class="doctors__slide_more">
-                                    Подробнее
+                            </a>
+                        </div>
+    
+                        <div class="doctors__slide swiper-slide">
+                            <img loading="lazy" class="doctors__slide_img" src="./img/doctors/asatryan.jpg" alt="Эдуард Иванович Асатрян">
+    
+                            <a class="doctors__slide_link" href="/">
+                                <h5 class="doctors__slide_name">
+                                    Эдуард Иванович Асатрян
+                                </h5>
+                                <p class="doctors__slide_profession">
+                                    Врач-стоматолог
+                                </p>
+    
+                                <span class="doctors__slide_footer">
+                                    <span class="doctors__slide_more">
+                                        Подробнее
+                                    </span>
                                 </span>
-                            </span>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="doctors__slider_controls">
-                    <button class="doctors__slider_control doctors__slider_control--left"></button>
+                <div class="doctors__slider_controls" >
+                    <button class="doctors__slider_control doctors__slider_control--left swiper-button-prev"></button>
 
-                    <button class="doctors__slider_control doctors__slider_control--right"></button>
+                    <button class="doctors__slider_control doctors__slider_control--right swiper-button-next"></button>
 
-                    <ul class="doctors__slider_dots slider_dots slider_dots--gray">
-                        <li class="slider_dots__item"></li>
-                        <li class="slider_dots__item slider_dots__item--active"></li>
-                        <li class="slider_dots__item"></li>
-                        <li class="slider_dots__item"></li>
-                        <li class="slider_dots__item"></li>
-                    </ul>
+                    <div class="doctors__slider_dots slider_dots slider_dots--gray swiper-pagination">
+                        <!--  -->
+                    </div>
                 </div>
             </div>
         </section>
+        <script src="./doctors.js"></script>
+
 
         <section class="container ratings main_page__section">
             <h2 class="ratings__title">
@@ -799,9 +961,9 @@
             </h2>
 
             <div class="ratings__list">
-                <strong class="rating">
+                <div class="rating js_appear_top">
                     <div class="rating__header">
-                        <img class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+                        <img loading="lazy" class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
 
                         <p class="rating__title">Яндекс</p>
                     </div>
@@ -813,11 +975,11 @@
 
                         по мнению пациентов
                     </div>
-                </strong>
+                </div>
 
-                <strong class="rating">
+                <div class="rating js_appear_bottom">
                     <div class="rating__header">
-                        <img class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+                        <img loading="lazy" class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
 
                         <p class="rating__title">Яндекс</p>
                     </div>
@@ -829,11 +991,11 @@
 
                         по мнению пациентов
                     </div>
-                </strong>
+                </div>
 
-                <strong class="rating">
+                <div class="rating js_appear_top">
                     <div class="rating__header">
-                        <img class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+                        <img loading="lazy" class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
 
                         <p class="rating__title">Яндекс</p>
                     </div>
@@ -845,11 +1007,11 @@
 
                         по мнению пациентов
                     </div>
-                </strong>
+                </div>
 
-                <strong class="rating">
+                <div class="rating js_appear_bottom">
                     <div class="rating__header">
-                        <img class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+                        <img loading="lazy" class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
 
                         <p class="rating__title">Яндекс</p>
                     </div>
@@ -861,13 +1023,13 @@
 
                         по мнению пациентов
                     </div>
-                </strong>
+                </div>
             </div>
         </section>
 
 
         <!-- XXX: использует callback_form.css, подключен в head -->
-        <section class="container main_page__section main_page__section--callback">
+        <section class="container main_page__section main_page__section--callback js_appear_top">
             <article class="callback">
                 <div class="callback__inner">
                     <div class="callback__text">
@@ -906,112 +1068,111 @@
 
         <!-- XXX: использует popup.css, подключен в head -->
         <!-- XXX: использует popup.js, подключен в конце страницы -->
-        <section class="container reviews main_page__section">
+        <!-- XXX: использует swiper.min.js, подключен в шапке -->
+        <section class="container reviews main_page__section js_appear_top" id="js_reviews">
             <h2 class="reviews__title">
                 Мы ценим доверие наших пациентов
             </h2>
 
             <div class="reviews__slider">
-                <div class="reviews__slider_inner">
-                    <div class="reviews__slide review js_review">
-                        <div class="review__header">
-                            <h5 class="review__name">
-                                Ирина Сизоненко
-                            </h5>
+                <div class="reviews__slider_inner" id="js_reviews_slider_wrapper">
+                    <div class="reviews__slider_slides swiper-wrapper">
+                        <div class="reviews__slide review js_review swiper-slide">
+                            <div class="review__header">
+                                <h5 class="review__name">
+                                    Ирина Сизоненко
+                                </h5>
 
-                            <span class="review__date">
-                                13.12.2023
-                            </span>
+                                <span class="review__date">
+                                    13.12.2023
+                                </span>
+                            </div>
+
+                            <p class="review__text js_review__text">
+                                7 января 2024 года пришли по рекомендации друзей в стоматологическую клинику «Тандем» Определённо это лучшая клиника и все сотрудники которые там работают. Теперь всё по порядку, 1.Шли на голгофу,а великолепно провели Рождество!!)) 2.Благодарим Эдуарда Ивановича Асатрян за его профессионализм и чуткое отношение к пациентам! 3.Большое спасибо Архангельской Дарье Николаевне за профилатическую чистку! Нет слов-всё время теперь хочется улыбаться!!!!! Говорят что чистку необходимо делать один раз в полгода, а мы готовы теперь каждый месяц, поскольку она сделана идеально!!! И отдельное спасибо администратоу Стэлле,которая очень грамотно помогла попасть ко всем специалистам в один день,а во время ожидания своего времени приёма она с пониманием и с юмором давала дельные советы нам- «дрожащим пациентам»))))) Отдельно хочется отметить что в клинике существует система скидок для семьи, которую нам сегодня сделали! Превосходное оборудование, идеальная чистота, чуткость и доброжелательность всего персонала- Высший уровень!!! Рекомендуюем Всем, кто боится зубных врачей!!!!👍
+                            </p>
+
+                            <button class="review__show_more js_review__show_more" data-popup-id="review_popup">
+                                Читать весь отзыв
+                            </button>
                         </div>
 
-                        <p class="review__text js_review__text">
-                            7 января 2024 года пришли по рекомендации друзей в стоматологическую клинику «Тандем» Определённо это лучшая клиника и все сотрудники которые там работают. Теперь всё по порядку, 1.Шли на голгофу,а великолепно провели Рождество!!)) 2.Благодарим Эдуарда Ивановича Асатрян за его профессионализм и чуткое отношение к пациентам! 3.Большое спасибо Архангельской Дарье Николаевне за профилатическую чистку! Нет слов-всё время теперь хочется улыбаться!!!!! Говорят что чистку необходимо делать один раз в полгода, а мы готовы теперь каждый месяц, поскольку она сделана идеально!!! И отдельное спасибо администратоу Стэлле,которая очень грамотно помогла попасть ко всем специалистам в один день,а во время ожидания своего времени приёма она с пониманием и с юмором давала дельные советы нам- «дрожащим пациентам»))))) Отдельно хочется отметить что в клинике существует система скидок для семьи, которую нам сегодня сделали! Превосходное оборудование, идеальная чистота, чуткость и доброжелательность всего персонала- Высший уровень!!! Рекомендуюем Всем, кто боится зубных врачей!!!!👍
-                        </p>
+                        <div class="reviews__slide review js_review swiper-slide">
+                            <div class="review__header">
+                                <h5 class="review__name">
+                                    Оля Сенько
+                                </h5>
 
-                        <button class="review__show_more js_review__show_more" data-popup-id="review_popup">
-                            Читать весь отзыв
-                        </button>
-                    </div>
+                                <span class="review__date">
+                                    28.02.2022
+                                </span>
+                            </div>
 
-                    <div class="reviews__slide review js_review">
-                        <div class="review__header">
-                            <h5 class="review__name">
-                                Оля Сенько
-                            </h5>
+                            <p class="review__text js_review__text">
+                                Побывав во многих клиниках,
+                                могу на 100% теперь сказать,
+                                что в этой клинике работают лучшиеврачи!
+                                Специалисты высокого уровня!
+                                Отдельная благодарность доктору
+                                Галстяну Карену Эдуардовичу!
+                            </p>
 
-                            <span class="review__date">
-                                28.02.2022
-                            </span>
+                            <button class="review__show_more js_review__show_more" data-popup-id="review_popup">
+                                Читать весь отзыв
+                            </button>
                         </div>
 
-                        <p class="review__text js_review__text">
-                            Побывав во многих клиниках,
-                            могу на 100% теперь сказать,
-                            что в этой клинике работают лучшиеврачи!
-                            Специалисты высокого уровня!
-                            Отдельная благодарность доктору
-                            Галстяну Карену Эдуардовичу!
-                        </p>
+                        <div class="reviews__slide review js_review swiper-slide">
+                            <div class="review__header">
+                                <h5 class="review__name">
+                                    Сергей Лобанов
+                                </h5>
 
-                        <button class="review__show_more js_review__show_more" data-popup-id="review_popup">
-                            Читать весь отзыв
-                        </button>
-                    </div>
+                                <span class="review__date">
+                                    13.12.2023
+                                </span>
+                            </div>
 
-                    <div class="reviews__slide review js_review">
-                        <div class="review__header">
-                            <h5 class="review__name">
-                                Сергей Лобанов
-                            </h5>
+                            <p class="review__text js_review__text">
+                                Решился на установку зубного импланта в клинике Тандем.Очень переживал сначала ,но доктор все четко объяснила,успокоила.Вся команда очень слаженная,девочки помощницы -чудесные ! Укол анестезии не почувствовала совсем! А когда закончили вообще не понял.
+                                Решился на установку зубного импланта в клинике Тандем.Очень переживал сначала ,но доктор все четко объяснила,успокоила.Вся команда очень слаженная,девочки помощницы -чудесные ! Укол анестезии не почувствовала совсем! А когда закончили вообще не понял...
+                            </p>
 
-                            <span class="review__date">
-                                13.12.2023
-                            </span>
+                            <button class="review__show_more js_review__show_more" data-popup-id="review_popup">
+                                Читать весь отзыв
+                            </button>
                         </div>
 
-                        <p class="review__text js_review__text">
-                            Решился на установку зубного импланта в клинике Тандем.Очень переживал сначала ,но доктор все четко объяснила,успокоила.Вся команда очень слаженная,девочки помощницы -чудесные ! Укол анестезии не почувствовала совсем! А когда закончили вообще не понял.
-                            Решился на установку зубного импланта в клинике Тандем.Очень переживал сначала ,но доктор все четко объяснила,успокоила.Вся команда очень слаженная,девочки помощницы -чудесные ! Укол анестезии не почувствовала совсем! А когда закончили вообще не понял...
-                        </p>
+                        <div class="reviews__slide review js_review swiper-slide">
+                            <div class="review__header">
+                                <h5 class="review__name">
+                                    Ирина Сизоненко
+                                </h5>
 
-                        <button class="review__show_more js_review__show_more" data-popup-id="review_popup">
-                            Читать весь отзыв
-                        </button>
-                    </div>
+                                <span class="review__date">
+                                    13.12.2023
+                                </span>
+                            </div>
 
-                    <div class="reviews__slide review js_review">
-                        <div class="review__header">
-                            <h5 class="review__name">
-                                Ирина Сизоненко
-                            </h5>
+                            <p class="review__text js_review__text">
+                                7 января 2024 года пришли по рекомендации друзей в стоматологическую клинику «Тандем» Определённо это лучшая клиника и все сотрудники которые там работают. Теперь всё по порядку, 1.Шли на голгофу,а великолепно провели Рождество!!)) 2.Благодарим Эдуарда Ивановича Асатрян за его профессионализм и чуткое отношение к пациентам! 3.Большое спасибо Архангельской Дарье Николаевне за профилатическую чистку! Нет слов-всё время теперь хочется улыбаться!!!!! Говорят что чистку необходимо делать один раз в полгода, а мы готовы теперь каждый месяц, поскольку она сделана идеально!!! И отдельное спасибо администратоу Стэлле,которая очень грамотно помогла попасть ко всем специалистам в один день,а во время ожидания своего времени приёма она с пониманием и с юмором давала дельные советы нам- «дрожащим пациентам»))))) Отдельно хочется отметить что в клинике существует система скидок для семьи, которую нам сегодня сделали! Превосходное оборудование, идеальная чистота, чуткость и доброжелательность всего персонала- Высший уровень!!! Рекомендуюем Всем, кто боится зубных врачей!!!!👍
+                            </p>
 
-                            <span class="review__date">
-                                13.12.2023
-                            </span>
+                            <button class="review__show_more js_review__show_more" data-popup-id="review_popup">
+                                Читать весь отзыв
+                            </button>
                         </div>
-
-                        <p class="review__text js_review__text">
-                            7 января 2024 года пришли по рекомендации друзей в стоматологическую клинику «Тандем» Определённо это лучшая клиника и все сотрудники которые там работают. Теперь всё по порядку, 1.Шли на голгофу,а великолепно провели Рождество!!)) 2.Благодарим Эдуарда Ивановича Асатрян за его профессионализм и чуткое отношение к пациентам! 3.Большое спасибо Архангельской Дарье Николаевне за профилатическую чистку! Нет слов-всё время теперь хочется улыбаться!!!!! Говорят что чистку необходимо делать один раз в полгода, а мы готовы теперь каждый месяц, поскольку она сделана идеально!!! И отдельное спасибо администратоу Стэлле,которая очень грамотно помогла попасть ко всем специалистам в один день,а во время ожидания своего времени приёма она с пониманием и с юмором давала дельные советы нам- «дрожащим пациентам»))))) Отдельно хочется отметить что в клинике существует система скидок для семьи, которую нам сегодня сделали! Превосходное оборудование, идеальная чистота, чуткость и доброжелательность всего персонала- Высший уровень!!! Рекомендуюем Всем, кто боится зубных врачей!!!!👍
-                        </p>
-
-                        <button class="review__show_more js_review__show_more" data-popup-id="review_popup">
-                            Читать весь отзыв
-                        </button>
                     </div>
                 </div>
 
                 <div class="reviews__slider_controls">
-                    <button class="reviews__slider_control reviews__slider_control--left"></button>
+                    <button class="reviews__slider_control reviews__slider_control--left swiper-button-prev"></button>
 
-                    <button class="reviews__slider_control reviews__slider_control--right"></button>
+                    <button class="reviews__slider_control reviews__slider_control--right swiper-button-next"></button>
 
-                    <ul class="reviews__slider_dots slider_dots slider_dots--gray">
-                        <li class="slider_dots__item"></li>
-                        <li class="slider_dots__item slider_dots__item--active"></li>
-                        <li class="slider_dots__item"></li>
-                        <li class="slider_dots__item"></li>
-                        <li class="slider_dots__item"></li>
-                    </ul>
+                    <div class="reviews__slider_dots slider_dots slider_dots--gray swiper-pagination">
+                        <!--  -->
+                    </div>
                 </div>
             </div>
 
@@ -1029,133 +1190,171 @@
         </section>
         <script src="./reviews.js"></script>
 
-
-        <section class="container questions main_page__section">
-            <h2 class="questions__title">
+        <!-- XXX: использует swiper.min.js, подключен в шапке -->
+        <section class="container questions main_page__section" id="js_questions">
+            <h2 class="questions__title js_appear_bottom">
                 Важные вопросы стоматологу
             </h2>
 
-            <p class="questions__slider_description questions__slider_description--mob">
+            <p class="questions__slider_description questions__slider_description--mob js_appear_bottom">
                 Мы знаем какой ответственный и важный шаг для вас - поход к стоматологу. Поэтому отвечаем на самые популярные вопросы.
             </p>
 
             <div class="questions__slider">
-                <div class="questions__slider_controls">
+                <div class="questions__slider_controls js_appear_left">
                     <p class="questions__slider_description questions__slider_description--desc">
                         Мы знаем какой ответственный и важный шаг для вас - поход к стоматологу. Поэтому отвечаем на самые популярные вопросы.
                     </p>
 
-                    <div class="questions__slider_buttons">
-                        <div role="button" class="questions__slider_button">
-                            <div class="questions__slider_button_img_wrapper">
-                                <img class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
-                            </div>
+                    <div class="questions__slider_buttons" id="js_questions_slider_mob">
+                        <div class="questions__slider_buttons_inner swiper-wrapper">
+                            <div role="button" class="questions__slider_button js_slider_button swiper-slide">
+                                <div class="questions__slider_button_img_wrapper">
+                                    <img loading="lazy" class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
+                                </div>
 
-                            <div class="questions__slider_button_text">
-                                <p class="questions__slider_button_title">
-                                    Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
-                                </p>
-                                <span class="questions__slider_button_date">
-                                    06.09.2024
-                                </span>
+                                <div class="questions__slider_button_text">
+                                    <p class="questions__slider_button_title">
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                    </p>
+                                    <span class="questions__slider_button_date">
+                                        06.09.2024
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-    
-                        <div role="button" class="questions__slider_button">
-                            <div class="questions__slider_button_img_wrapper">
-                                <img class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
-                            </div>
+        
+                            <div role="button" class="questions__slider_button js_slider_button swiper-slide">
+                                <div class="questions__slider_button_img_wrapper">
+                                    <img loading="lazy" class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
+                                </div>
 
-                            <div class="questions__slider_button_text">
-                                <p class="questions__slider_button_title">
-                                    Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
-                                    Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
-                                </p>
-                                <span class="questions__slider_button_date">
-                                    06.09.2024
-                                </span>
+                                <div class="questions__slider_button_text">
+                                    <p class="questions__slider_button_title">
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                    </p>
+                                    <span class="questions__slider_button_date">
+                                        06.09.2024
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-    
-                        <div role="button" class="questions__slider_button">
-                            <div class="questions__slider_button_img_wrapper">
-                                <img class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
-                            </div>
+        
+                            <div role="button" class="questions__slider_button js_slider_button swiper-slide">
+                                <div class="questions__slider_button_img_wrapper">
+                                    <img loading="lazy" class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
+                                </div>
 
-                            <div class="questions__slider_button_text">
-                                <p class="questions__slider_button_title">
-                                    Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
-                                    Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
-                                </p>
-                                <span class="questions__slider_button_date">
-                                    06.09.2024
-                                </span>
+                                <div class="questions__slider_button_text">
+                                    <p class="questions__slider_button_title">
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                    </p>
+                                    <span class="questions__slider_button_date">
+                                        06.09.2024
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-    
-                        <div role="button" class="questions__slider_button">
-                            <div class="questions__slider_button_img_wrapper">
-                                <img class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
-                            </div>
+        
+                            <div role="button" class="questions__slider_button js_slider_button swiper-slide">
+                                <div class="questions__slider_button_img_wrapper">
+                                    <img loading="lazy" class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
+                                </div>
 
-                            <div class="questions__slider_button_text">
-                                <p class="questions__slider_button_title">
-                                    Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
-                                    Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
-                                </p>
-                                <span class="questions__slider_button_date">
-                                    06.09.2024
-                                </span>
+                                <div class="questions__slider_button_text">
+                                    <p class="questions__slider_button_title">
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                    </p>
+                                    <span class="questions__slider_button_date">
+                                        06.09.2024
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <ul class="questions__slider_dots slider_dots slider_dots--gray">
-                    <li class="slider_dots__item"></li>
-                    <li class="slider_dots__item slider_dots__item--active"></li>
-                    <li class="slider_dots__item"></li>
-                    <li class="slider_dots__item"></li>
-                    <li class="slider_dots__item"></li>
-                </ul>
+                <div class="questions__slider_dots slider_dots slider_dots--gray swiper-pagination">
+                    <!--  -->
+                </div>
 
-                <div class="questions__slides">
-                    <div class="questions__slide">
-                        <div class="qustions__video_wrapper js_video_wrapper">
-                            <video
-                                class="questions__slide_video js_video"
-                                controls
-                                src="https://storage.yandexcloud.net/media.samolet.ru/video/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%202024.mp4"
-                            >
-                            </video>
-                            <button class="questions__slide_video_button js_video_control"></button>
+                <div class="questions__slides_wrapper js_appear_right" id="js_questions_slider">
+                    <div class="questions__slides swiper-wrapper">
+                        <div class="questions__slide swiper-slide js_slider_slide">
+                            <div class="qustions__video_wrapper js_video_wrapper">
+                                <video
+                                    class="questions__slide_video js_video"
+                                    controls
+                                    src="https://storage.yandexcloud.net/media.samolet.ru/video/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%202024.mp4"
+                                >
+                                </video>
+                                <button class="questions__slide_video_button js_video_control"></button>
+                            </div>
+                            <p class="questions__slide_title">
+                                Почему важно идти в клинику, а не к врачу  
+                            </p>
+
+                            <span class="questions__slide_date">
+                                06.09.2024
+                            </span>
                         </div>
-                        <p class="questions__slide_title">
-                            Почему важно идти в клинику, а не к врачу  
-                        </p>
 
-                        <span class="questions__slide_date">
-                            06.09.2024
-                        </span>
-                    </div>
+                        <div class="questions__slide swiper-slide js_slider_slide">
+                            <div class="qustions__video_wrapper js_video_wrapper">
+                                <video
+                                    class="questions__slide_video js_video"
+                                    controls
+                                    src="https://storage.yandexcloud.net/media.samolet.ru/video/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%202024.mp4"
+                                >
+                                </video>
+                                <button class="questions__slide_video_button js_video_control"></button>
+                            </div>
+                            <p class="questions__slide_title">
+                                Почему важно идти в клинику, а не к врачу
+                            </p>
 
-                    <div class="questions__slide">
-                        <div class="qustions__video_wrapper js_video_wrapper">
-                            <video
-                                class="questions__slide_video js_video"
-                                controls
-                                src="https://storage.yandexcloud.net/media.samolet.ru/video/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%202024.mp4"
-                            >
-                            </video>
-                            <button class="questions__slide_video_button js_video_control"></button>
+                            <span class="questions__slide_date">
+                                06.09.2024
+                            </span>
                         </div>
-                        <p class="questions__slide_title">
-                            Почему важно идти в клинику, а не к врачу
-                        </p>
 
-                        <span class="questions__slide_date">
-                            06.09.2024
-                        </span>
+                        <div class="questions__slide swiper-slide js_slider_slide">
+                            <div class="qustions__video_wrapper js_video_wrapper">
+                                <video
+                                    class="questions__slide_video js_video"
+                                    controls
+                                    src="https://storage.yandexcloud.net/media.samolet.ru/video/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%202024.mp4"
+                                >
+                                </video>
+                                <button class="questions__slide_video_button js_video_control"></button>
+                            </div>
+                            <p class="questions__slide_title">
+                                Почему важно идти в клинику, а не к врачу
+                            </p>
+
+                            <span class="questions__slide_date">
+                                06.09.2024
+                            </span>
+                        </div>
+
+                        <div class="questions__slide swiper-slide js_slider_slide">
+                            <div class="qustions__video_wrapper js_video_wrapper">
+                                <video
+                                    class="questions__slide_video js_video"
+                                    controls
+                                    src="https://storage.yandexcloud.net/media.samolet.ru/video/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%202024.mp4"
+                                >
+                                </video>
+                                <button class="questions__slide_video_button js_video_control"></button>
+                            </div>
+                            <p class="questions__slide_title">
+                                Почему важно идти в клинику, а не к врачу Почему важно идти в клинику, а не к врачу Почему важно идти в клинику, а не к врачу
+                            </p>
+
+                            <span class="questions__slide_date">
+                                06.09.2024
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1164,47 +1363,47 @@
 
 
         <section class="container contacts main_page__section">
-            <div class="contacts__col contacts__col--left">
-                <img class="contacts__img" src="./img/contacts.png" alt="стоматология тандем">
+            <div class="contacts__col contacts__col--left js_appear_left">
+                <img loading="lazy" class="contacts__img" src="./img/contacts.png" alt="стоматология тандем">
             </div>
 
-            <div class="contacts__col contacts__col--right">
+            <div class="contacts__col contacts__col--right js_appear_right">
                 <h2 class="contacts__title">
                     Всегда рады видеть вас в&nbsp;нашей клинике
                 </h2>
 
                 <div class="contacts__cards">
-                    <div class="contacts__card contacts__card--address">
+                    <div class="contacts__card contacts__card--address js_appear_top">
                         <a class="icon_link contacts__card_link" href="https://yandex.ru/maps/-/CHEnVVPm"
                             target="_blank">
-                            <img class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
+                            <img loading="lazy" class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
                             м. Славянский бульвар
                         </a>
                         <a class="icon_link contacts__card_link" href="https://yandex.ru/maps/-/CHEnVVPm"
                             target="_blank">
-                            <img class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                            <img loading="lazy" class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
                             Москва, ул. Нежинская, 8, корп.4
                         </a>
 
                         <a class="contacts__card_btn btn">
                             Построить маршрут к&nbsp;клинике
-                            <img class="contacts__card_btn_icon" src="./img/icons/btn_link_arrow.svg" alt="">
+                            <img loading="lazy" class="contacts__card_btn_icon" src="./img/icons/btn_link_arrow.svg" alt="">
                         </a>
                     </div>
 
-                    <div class="contacts__card contacts__card--contacts">
+                    <div class="contacts__card contacts__card--contacts js_appear_right">
                         <a class="icon_link contacts__card_link" href="mailto:tandem-clinic1@yandex.ru">
-                            <img class="icon_link__icon" src="./img/icons/email.svg" alt="" />
+                            <img loading="lazy" class="icon_link__icon" src="./img/icons/email.svg" alt="" />
                             tandem-clinic1@yandex.ru
                         </a>
 
                         <a class="icon_link contacts__card_link contacts__card_link--phone" href="tel:+74951323102">
-                            <img class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                            <img loading="lazy" class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
                             Единый телефон: <br>
                             <span><b>8 (495) 132-31-02</b></span>
                             </ф>
                             <a class="icon_link contacts__card_link" href="https://wa.me/79250549900" target="_blank">
-                                <img class="icon_link__icon" src="./img/icons/wa.svg" alt="" />
+                                <img loading="lazy" class="icon_link__icon" src="./img/icons/wa.svg" alt="" />
                                 <b>+7 (925) 054-99-00</b>
                             </a>
                     </div>
@@ -1217,7 +1416,7 @@
         <div class="footer__inner">
             <div class="footer__left">
                 <div class="footer__logo">
-                    <img class="footer__logo_img" src="./img/logo.svg" alt="">
+                    <img loading="lazy" class="footer__logo_img" src="./img/logo.svg" alt="">
                 </div>
 
                 <p class="footer__ur_info">
@@ -1317,6 +1516,11 @@
     <script src="./main.js"></script>
     <script src="./popup.js"></script>
     <script src="./dropdown.js"></script>
+
+    <!-- XXX: анимация появления блоков -->
+    <script src="./appear.js"></script>
+
+
 </body>
 
 </html>

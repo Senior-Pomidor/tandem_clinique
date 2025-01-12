@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const $resetBtn = $header.querySelector('.js_search_reset_btn')
 
         $resetBtn.addEventListener('mousedown', evt => {
-            evt.preventDefault()
+            // evt.preventDefault()
             $searchInput.value = ''
         })
 
@@ -31,8 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // })
 
         document.addEventListener('click', evt => {
-            console.log('22222');
-            
             if (!evt.target.closest('.js_header_search') && !evt.target.closest('.js_header_search_btn_mob')) {
                 $header.classList.remove($headerSearchOpenClass)
 

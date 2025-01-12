@@ -12,8 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const option = evt.target.closest('.js_dropdown_option')
 
                 if (option) {
-                    $input.value = option.textContent
-                    $btn.textContent =  option.textContent
+                    if (!dropdown.classList.contains('js_dropdown_2')) {
+                        $btn.textContent = option.textContent
+                    }
+                    
+                    $input.value = option.textContent.trim()
                     dropdown.classList.remove('dropdown--open')
                 }
             })

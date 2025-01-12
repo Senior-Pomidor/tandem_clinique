@@ -19,3 +19,11 @@
 .slider_dots__item--active {
     background-color: var(--green);
 }
+
+
+/*
+<div class="slider_dots">
+    <span class="slider_dots__item"></span>
+    <span class="slider_dots__item slider_dots__item--active"></span>
+</div>
+*/
