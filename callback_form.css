@@ -30,6 +30,7 @@
 @media screen and (max-width: 1200px) {
     .callback_form {
         padding: 30px;
+        border-radius: 20px;
     }
 
     .callback_form__input + .callback_form__input {
@@ -46,7 +47,6 @@
 @media screen and (max-width: 720px) {
     .callback_form {
         padding: 16px;
-        border-radius: 20px;
         width: 400px;
         max-width: 100%;
     }

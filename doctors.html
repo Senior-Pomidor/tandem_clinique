@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Стоматология в москве">
+
+    <title>Tandem</title>
+
+    <!-- START: общие стили -->
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./main.css">
+    <!-- END: общие стили -->
+
+    <!-- START: UI components -->
+    <link rel="stylesheet" href="./callback_form.css">
+    <!-- <link rel="stylesheet" href="./popup.css">
+    <link rel="stylesheet" href="./callback_form_popup.css"> -->
+    <!-- END: UI components -->
+
+    <!-- START: обязательно на каждую страницу -->
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./footer.css">
+    <!-- END: обязательно на каждую страницу -->
+
+
+    <!-- START: секции -->
+    <link rel="stylesheet" href="./css/page_doctors/banner.css">
+    <link rel="stylesheet" href="./css/page_doctors/hero.css">
+    <link rel="stylesheet" href="./css/page_doctors/doctors_grid.css">
+    <link rel="stylesheet" href="./css/page_doctors/highlights.css">
+    <link rel="stylesheet" href="./css/page_doctors/callback.css">
+    <link rel="stylesheet" href="./css/page_doctors/doctors_page.css">
+    <!-- END: секции -->
+</head>
+
+<body>
+    <header class="header js_header container">
+        <div class="header__main">
+            <div class="header__main_container">
+                <a class="header__logo header__logo--desktop" href="/">
+                    <img loading="lazy" class="header__logo_img" src="./img/logo.svg" alt="">
+                </a>
+
+                <div class="header__main_content">
+                    <div class="header__main_top">
+                        <div class="header__contacts">
+                            <a class="header__logo header__logo--mob" href="/">
+                                <img loading="lazy" class="header__logo_img" src="./img/logo.svg" alt="">
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--metro"
+                                href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
+                                м. Славянский бульвар
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--address"
+                                href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                                <span class="header__contact_text--mob">
+                                    м. Славянский бульвар
+                                </span>
+                                г. Москва, ул. Нежинская, 8, корп.4
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                                <img loading="lazy" class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                                8 (495) 132-31-02
+                            </a>
+
+                            <!-- TODO: заменить блок -->
+                            <div class="header__mob_nav_btns">
+                                <label for="qwerty" class="header__search_btn_mob js_header_search_btn_mob"></label>
+
+                                <div class="header__mob_nav_btn js_header_nav_btn">
+                                    <img loading="lazy"
+                                        class="header__mob_nav_btn_icon header__mob_nav_btn_icon--burger"
+                                        src="./img/icons/burger.svg" alt="">
+
+                                    <img loading="lazy" class="header__mob_nav_btn_icon header__mob_nav_btn_icon--close"
+                                        src="./img/icons/cross.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__main_bottom">
+                        <!-- TODO: заменить блок -->
+                        <div class="header__search js_header_search">
+                            <form class="header__search_input_wrapper" action="/">
+                                <input placeholder="Поиск..." class="header__search_input js_search_input" type="text"
+                                    id="qwerty">
+
+                                <button type="button" class="header__search_reset js_search_reset_btn"></button>
+                            </form>
+
+                            <!-- XXX: Блок .header__search_suggestions должен быть всегда -->
+                            <!-- XXX: внутренние ссылки могут генериться -->
+                            <div class="header__search_suggestions">
+                                <a class="header__search_suggestion" href="/qweqwe">
+                                    dasdasd Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ullam
+                                    veniam cupiditate quo laboriosam voluptatibus mollitia dicta ad soluta. Ad est animi
+                                    optio iusto obcaecati ratione deserunt quam officia magnam commodi! Vitae
+                                    repudiandae eaque fugit, beatae incidunt nam ea accusamus dolores tempore impedit
+                                    ipsum doloremque quis. Tempore dolorum velit libero.
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="header__social">
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--wa" href=""></a>
+                            </li>
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--tg" href=""></a>
+                            </li>
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--vk" href=""></a>
+                            </li>
+                        </ul>
+
+                        <button class="header__appointment_btn btn">
+                            Записаться
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__nav_list">
+                <li class="header__nav_item">
+                    <a class="header__nav_link header__nav_link--active" href="#">
+                        О&nbsp;клинике
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Услуги
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Врачи
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Портфолио
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Акции
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Прайс
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Блог
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__mob">
+            <div class="header__mob_contacts">
+                <a class="icon_link header__contact header__contact--metro" href="https://yandex.ru/maps/-/CHEnVVPm"
+                    target="_blank">
+                    <img loading="lazy" class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
+                    м. Славянский бульвар
+                </a>
+
+                <a class="icon_link header__contact header__contact--address" href="https://yandex.ru/maps/-/CHEnVVPm"
+                    target="_blank">
+                    <img loading="lazy" class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                    г. Москва, ул. Нежинская, 8, корп.4
+                </a>
+
+                <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                    <img loading="lazy" class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                    <b>8 (495) 132-31-02</b>
+                </a>
+            </div>
+
+            <ul class="header__social">
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--wa" href=""></a>
+                </li>
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--tg" href=""></a>
+                </li>
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--vk" href=""></a>
+                </li>
+            </ul>
+
+            <button class="header__appointment_btn btn">
+                Записаться
+            </button>
+        </div>
+    </header>
+
+    <script src="./header.js"></script>
+
+    <main>
+        <div class="breadcrumbs container">
+            <a href="/" class="breadcrumbs__link">Главная</a>
+            <span class="breadcrumbs__divider">/</span>
+            <span class="breadcrumbs__link breadcrumbs__link--active">Врачи</span>
+        </div>
+
+        <section class="container doctors_page__section doctors_page__section--banner">
+            <article class="banner">
+                <div class="banner__inner">
+                    <div class="banner__text">
+                        <h3 class="banner__title">
+                            Баннер
+                        </h3>
+
+                        <p class="banner__description">
+                            Текст текст текст текст текст текст текст Текст текст текст текст текст текст текст
+                        </p>
+                    </div>
+
+                    <div class="banner__btn_wrapper">
+                        <button class="btn banner__btn">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+                <img src="./img/page_doctors/banner.png" alt="баннер" loading="lazy" class="banner__img">
+            </article>
+        </section>
+
+        <section class="container hero doctors_page__section doctors_page__section--hero">
+            <div class="hero__title_wrapper">
+                <h1 class="hero__title">
+                    Врачи клиники
+                </h1>
+            </div>
+            <div class="hero__text">
+                <p>
+                    Команда клиники Tandem&mdash; это высокопрофессиональные врачи
+                    с&nbsp;большим опытом работы как в&nbsp;России,
+                    так и&nbsp;за&nbsp;рубежом. Каждый из&nbsp;наших
+                    специалистов посвятил свою карьеру заботе
+                    о&nbsp;здоровье пациентов, обеспечивая индивидуальный
+                    подход и&nbsp;высокое качество лечения.
+                    В&nbsp;нашей клинике работают врачи различных профилей,
+                    включая терапевтов, ортодонтов, ортопедов и&nbsp;гигиенистов.
+                </p>
+
+                <p>
+                    Мы&nbsp;гордимся тем, что можем предложить полный спектр
+                    стоматологических услуг, от&nbsp;профилактики
+                    и&nbsp;лечения кариеса до&nbsp;сложных ортопедических
+                    конструкций и&nbsp;исправления прикуса. Наша цель&nbsp;&mdash;
+                    сделать так, чтобы каждый пациент мог гордиться своей улыбкой,
+                    а&nbsp;визиты к&nbsp;стоматологу были комфортными
+                    и&nbsp;результативными. Мы&nbsp;заботимся о&nbsp;том,
+                    чтобы ваши зубы оставались здоровыми, а&nbsp;улыбка&nbsp;&mdash;
+                    сияющей! Вы&nbsp;можете быть уверены, что в&nbsp;руках наших
+                    специалистов ваше здоровье&nbsp;&mdash; в&nbsp;надежных руках.
+                </p>
+            </div>
+        </section>
+
+        <section class="container doctors_page__section doctors_page__section--doctors_grid">
+            <div class="doctors_grid">
+                <div class="doctors_grid__doctor_card_wrapper">
+                    <div class="doctors_grid__doctor_card doctor_card">
+                        <img loading="lazy" class="doctor_card__img" src="./img/page_doctors/doctors/galstyan.jpeg" alt="Карен Эдуардович Галстян">
+
+                        <a class="doctor_card__link" href="/">
+                            <h5 class="doctor_card__name">
+                                Карен Эдуардович Галстян
+                            </h5>
+                            <p class="doctor_card__profession">
+                                Руководитель клиники Tandem, врач-стоматолог, парадонтолог.....
+                            </p>
+
+                            <span class="doctor_card__footer">
+                                <span class="doctor_card__more">
+                                    Подробнее
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <button class="btn doctors_grid__doctor_card_wrapper_btn">
+                        Записаться на приём
+                    </button>
+                </div>
+
+                <div class="doctors_grid__doctor_card_wrapper">
+                    <div class="doctors_grid__doctor_card doctor_card">
+                        <img loading="lazy" class="doctor_card__img" src="./img/page_doctors/doctors/asatryan.jpeg" alt="Карен Эдуардович Галстян">
+
+                        <a class="doctor_card__link" href="/">
+                            <h5 class="doctor_card__name">
+                                Карен Эдуардович Галстян
+                            </h5>
+                            <p class="doctor_card__profession">
+                                Руководитель клиники Tandem, врач-стоматолог, парадонтолог.....
+                            </p>
+
+                            <span class="doctor_card__footer">
+                                <span class="doctor_card__more">
+                                    Подробнее
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <button class="btn btn--border doctors_grid__doctor_card_wrapper_btn">
+                        Записаться на приём
+                    </button>
+                </div>
+
+
+                <div class="doctors_grid__doctor_card_wrapper">
+                    <div class="doctors_grid__doctor_card doctor_card">
+                        <img loading="lazy" class="doctor_card__img" src="./img/page_doctors/doctors/gukasyan.jpeg" alt="Карен Эдуардович Галстян">
+
+                        <a class="doctor_card__link" href="/">
+                            <h5 class="doctor_card__name">
+                                Карен Эдуардович Галстян
+                            </h5>
+                            <p class="doctor_card__profession">
+                                Руководитель клиники Tandem, врач-стоматолог, парадонтолог.....
+                            </p>
+
+                            <span class="doctor_card__footer">
+                                <span class="doctor_card__more">
+                                    Подробнее
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <button class="btn btn--border doctors_grid__doctor_card_wrapper_btn">
+                        Записаться на приём
+                    </button>
+                </div>
+
+
+                <div class="doctors_grid__doctor_card_wrapper">
+                    <div class="doctors_grid__doctor_card doctor_card">
+                        <img loading="lazy" class="doctor_card__img" src="./img/page_doctors/doctors/gukasyan.jpeg" alt="Карен Эдуардович Галстян">
+
+                        <a class="doctor_card__link" href="/">
+                            <h5 class="doctor_card__name">
+                                Карен Эдуардович Галстян
+                            </h5>
+                            <p class="doctor_card__profession">
+                                Руководитель клиники Tandem, врач-стоматолог, парадонтолог.....
+                            </p>
+
+                            <span class="doctor_card__footer">
+                                <span class="doctor_card__more">
+                                    Подробнее
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <button class="btn btn--border doctors_grid__doctor_card_wrapper_btn">
+                        Записаться на приём
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- XXX: использует callback_form.css, подключен в head -->
+        <!-- XXX: использует page_doctors/callback.css, подключен в head -->
+        <section class="container doctors_page__section doctors_page__section--callback">
+            <article class="callback callback--green">
+                <div class="callback__inner">
+                    <div class="callback__text">
+                        <h2 class="callback__title">
+                            Записаться на&nbsp;прием
+                        </h2>
+
+                        <p class="callback__description">
+                            Заполните форму, мы&nbsp;свяжемся с&nbsp;вами и&nbsp;запишем на&nbsp;удобное время
+                        </p>
+                    </div>
+
+                    <form class="callback__form callback_form" action="/">
+                        <input class="input callback_form__input" placeholder="Имя Фамилия" type="text" required>
+                        <input class="input callback_form__input" placeholder="Телефон" type="text" required>
+
+                        <button class="callback_form__submit_btn btn" type="submit">
+                            Записаться
+                        </button>
+
+                        <label class="checkbox callback_form__checkbox">
+                            <input class="checkbox__native" type="checkbox" checked required>
+                            <div class="checkbox__marker"></div>
+
+                            <p class="checkbox__text">
+                                Даю согласие на <a href="/" class="link" target="_blank">обработку своих персональных
+                                    данных</a>
+                            </p>
+                        </label>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+        <!-- XXX: использует page_doctors/highlights.css, подключен в head -->
+        <section class="container highlights doctors_page__section doctors_page__section--highlights">
+            <div class="highlights__title_wrapper">
+                <h2 class="highlights__title">
+                    Мы создаём здоровые и&nbsp;счастливые улыбки!
+                </h2>
+
+                <h2 class="highlights__title highlights__title--mob">
+                    Мы создаём здоровые <br> и&nbsp;счастливые улыбки!
+                </h2>
+            </div>
+
+            <ul class="highlights__tags">
+                <li class="highlights__tag">
+                    Диагностика
+                </li>
+                <li class="highlights__tag">
+                    Лечение зубов
+                </li>
+                <li class="highlights__tag">
+                    Пародонтология
+                </li>
+                <li class="highlights__tag">
+                    Эстетическая стоматология
+                </li>
+                <li class="highlights__tag">
+                    Профилактика
+                </li>
+                <li class="highlights__tag">
+                    Имплантация зубов
+                </li>
+                <li class="highlights__tag">
+                    Исправление прикуса
+                </li>
+                <li class="highlights__tag">
+                    Хирургическая стоматология
+                </li>
+                <li class="highlights__tag">
+                    Протезирование зубов
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <img loading="lazy" class="footer__logo_img" src="./img/logo.svg" alt="">
+                </div>
+
+                <p class="footer__ur_info">
+                    OOO Tandem Dental Clinic
+                </p>
+                <p class="footer__ur_info footer__ur_info--license">
+                    Номер лицензии: <span>ЛО-77-01-002858</span>
+                </p>
+
+                <a class="footer__policy--big-tab" href="/">
+                    Политика защиты данных
+                </a>
+            </div>
+
+            <div class="footer__cols">
+                <ul class="footer__links">
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            О&nbsp;клинике
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Прайс
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Наши&nbsp;врачи
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--law_info_big_tab">
+                        <a class="footer__link" href="#">
+                            Правовая информация
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--policy">
+                        <a class="footer__link" href="#">
+                            Политика защиты данных
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="footer__links">
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Блог
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--law_info">
+                        <a class="footer__link" href="#">
+                            Правовая информация
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__right">
+                <p class="footer__right_text">
+                    Для получения подробной и актуальной стоимости услуг, обращайтесь к администратору.
+                </p>
+
+                <a class="footer__policy--mob" href="#" target="_blank">
+                    Политика защиты данных
+                </a>
+                <a class="footer__law_info--mob" href="#" target="_blank">
+                    Правовая информация
+                </a>
+
+                <a class="footer__version footer__link" href="#">
+                    Версия для слабовидящих
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. <br>
+            НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+        </div>
+    </footer>
+
+    <!-- <script src="./main.js"></script> -->
+    <!-- <script src="./popup.js"></script> -->
+
+    <!-- XXX: анимация появления блоков -->
+    <!-- <script src="./appear.js"></script> -->
+</body>
+
+</html>

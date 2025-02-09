@@ -47,7 +47,7 @@ body {
     --purple: rgba(174, 142, 248, 1);
     --gray: rgba(112, 112, 112, 1);
     --bg-purple: var(--purple);
-    --bg-gray: rgba(243, 245, 243, 1);
+    --bg-gray: #f3f5f3;
     --bg-white: #fff;
     --green-gradient: linear-gradient(160.04deg, #B7FBBD 5.41%, #F5F6FA 51.07%, #E4DFF5 95.82%);
     --gray-gradient: linear-gradient(180deg, #F0F5F0 0%, #F7F7F7 100%);
@@ -175,6 +175,21 @@ h5,
 (-ms-high-contrast: active) {
     .btn:hover {
         color: #fff;
+    }
+}
+
+.btn--border {
+    background: #fff;
+    box-shadow: inset 0 0 0 2px var(--purple);
+    transition: all var(--link-transition);
+}
+
+@media (hover: hover),
+(-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .btn--border:hover {
+        color: #fff;
+        background: var(--purple);
     }
 }
 

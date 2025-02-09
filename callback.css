@@ -42,6 +42,10 @@
 }
 
 @media screen and (max-width: 1200px) {
+    .callback {
+        border-radius: 20px;
+    }
+
     .callback__inner {
         padding: 32px 82px;
     }
