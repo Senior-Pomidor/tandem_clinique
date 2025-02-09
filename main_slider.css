@@ -184,7 +184,7 @@
 @media screen and (max-width: 720px) {
     .main_slider {
         padding-top: 16px;
-        padding-bottom: 16px;
+        padding-bottom: 20px;
     }
 
     .main_slider__control {

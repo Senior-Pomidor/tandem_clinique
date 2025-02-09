@@ -55,13 +55,40 @@
 @media screen and (max-width: 1200px) {
     .callback_form_popup {
         margin: 0 auto;
-        width: 450px;
+        width: 334px;
+        border-radius: 20px;
+    }
+
+    .callback_form_popup__title,
+    .callback_form_popup__description {
+        text-align: center;
+    }
+
+    .callback_form_popup__inner {
+        padding: 32px 24px;
+    }
+
+    .callback_form_popup__form {
+        border-radius: 20px;
+    }
+
+    .callback_form_popup::before {
+        top: 0;
+        left: -150px;
+        width: 814px;
+        height: 817px;
+        background-size: contain;
+        background-image: url(./img/blobs/tooth_callback_popup_tablet.svg);
+    }
+
+    .callback_form_popup::after {
+        display: none;
     }
 }
 
 @media screen and (max-width: 920px) {
     .callback_form_popup__inner {
-        padding: 20px;
+        /*  */
     }
 
     .callback_form_popup__title+.callback_form_popup__form {
