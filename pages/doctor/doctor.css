@@ -1,0 +1,139 @@
+.doctor {
+    --grid-gap: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid-gap);
+}
+
+.doctor__hero {
+    display: flex;
+    gap: var(--grid-gap);
+}
+
+.doctor__hero_col {
+    flex: 1 1 1px;
+}
+
+.doctor__hero_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor__hero_btn {
+    margin-top: auto;
+    margin-bottom: 68px;
+    width: 288px;
+}
+
+
+
+.doctor__hero_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 20px;
+    margin: 33px 0;
+}
+
+.doctor__hero_tag {
+    flex-grow: 0;
+    height: 52px;
+    line-height: 52px;
+    padding: 0 24px;
+    border-radius: 30px;
+    background-color: var(--bg-gray);
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.doctor__hero_img_wrapper {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 30px;
+
+    img {
+        position: absolute;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+}
+
+
+.doctor__tiles {
+    display: flex;
+    gap: var(--grid-gap);
+    flex-wrap: wrap;
+}
+
+.doctor__tile {
+    width: 100%;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    min-height: 270px;
+    padding: 32px;
+    background-color: var(--bg-gray);
+    background-image: url(../../assets/img/blobs/1_tooth_corner_green.svg);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+
+
+
+    .doctor__tile_img {
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+}
+
+.doctor__tile:nth-child(1),
+.doctor__tile:nth-child(2) {
+    width: calc((50% - var(--grid-gap) * 1.5) / 2);
+}
+
+.doctor__tile:nth-child(3) {
+    width: calc((50% - var(--grid-gap) / 2));
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .doctor__hero_tags {
+        gap: 8px 16px;
+        margin-right: 0;
+        margin-left: 40px;
+        max-width: 620px;
+    }
+
+    .doctor__hero_tag {
+        padding: 0 16px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 920px) {
+    .doctor__hero_tags {
+        margin-left: 0;
+        max-width: initial;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .doctor__hero_tags {
+        gap: 10px;
+    }
+
+    .doctor__hero_tag {
+        padding: 0 10px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+}

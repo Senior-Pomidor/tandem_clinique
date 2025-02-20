@@ -9,30 +9,26 @@
 
     <title>Tandem</title>
 
-    <!-- START: общие стили -->
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./main.css">
-    <!-- END: общие стили -->
-
-    <!-- START: UI components -->
-    <link rel="stylesheet" href="./callback_form.css">
-    <!-- <link rel="stylesheet" href="./popup.css">
-    <link rel="stylesheet" href="./callback_form_popup.css"> -->
-    <!-- END: UI components -->
-
     <!-- START: обязательно на каждую страницу -->
-    <link rel="stylesheet" href="./header.css">
-    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./global/normalize.css">
+    <link rel="stylesheet" href="./global/main.css">
+    <link rel="stylesheet" href="./global/header.css">
+    <link rel="stylesheet" href="./global/footer.css">
     <!-- END: обязательно на каждую страницу -->
 
 
+    <!-- START: общие блоки -->
+    <link rel="stylesheet" href="./blocks/callback_form.css">
+    <link rel="stylesheet" href="./blocks/callback.css">
+    <link rel="stylesheet" href="./blocks/banner.css">
+    <link rel="stylesheet" href="./blocks/highlights.css">
+    <link rel="stylesheet" href="./blocks/doctor_card.css">
+    <!-- END: общие блоки -->
+
     <!-- START: секции -->
-    <link rel="stylesheet" href="./css/page_doctors/banner.css">
-    <link rel="stylesheet" href="./css/page_doctors/hero.css">
-    <link rel="stylesheet" href="./css/page_doctors/doctors_grid.css">
-    <link rel="stylesheet" href="./css/page_doctors/highlights.css">
-    <link rel="stylesheet" href="./css/page_doctors/callback.css">
-    <link rel="stylesheet" href="./css/page_doctors/doctors_page.css">
+    <link rel="stylesheet" href="./pages/doctors/hero.css">
+    <link rel="stylesheet" href="./pages/doctors/doctors_grid.css">
+    <link rel="stylesheet" href="./pages/doctors/doctors_page.css">
     <!-- END: секции -->
 </head>
 
@@ -41,25 +37,25 @@
         <div class="header__main">
             <div class="header__main_container">
                 <a class="header__logo header__logo--desktop" href="/">
-                    <img loading="lazy" class="header__logo_img" src="./img/logo.svg" alt="">
+                    <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
                 </a>
 
                 <div class="header__main_content">
                     <div class="header__main_top">
                         <div class="header__contacts">
                             <a class="header__logo header__logo--mob" href="/">
-                                <img loading="lazy" class="header__logo_img" src="./img/logo.svg" alt="">
+                                <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
                             </a>
 
                             <a class="icon_link header__contact header__contact--metro"
                                 href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
-                                <img loading="lazy" class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
                                 м. Славянский бульвар
                             </a>
 
                             <a class="icon_link header__contact header__contact--address"
                                 href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
-                                <img loading="lazy" class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" />
                                 <span class="header__contact_text--mob">
                                     м. Славянский бульвар
                                 </span>
@@ -67,7 +63,7 @@
                             </a>
 
                             <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
-                                <img loading="lazy" class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
                                 8 (495) 132-31-02
                             </a>
 
@@ -78,10 +74,10 @@
                                 <div class="header__mob_nav_btn js_header_nav_btn">
                                     <img loading="lazy"
                                         class="header__mob_nav_btn_icon header__mob_nav_btn_icon--burger"
-                                        src="./img/icons/burger.svg" alt="">
+                                        src="./assets/img/icons/burger.svg" alt="">
 
                                     <img loading="lazy" class="header__mob_nav_btn_icon header__mob_nav_btn_icon--close"
-                                        src="./img/icons/cross.svg" alt="">
+                                        src="./assets/img/icons/cross.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -145,7 +141,7 @@
         <nav class="header__nav">
             <ul class="header__nav_list">
                 <li class="header__nav_item">
-                    <a class="header__nav_link header__nav_link--active" href="#">
+                    <a class="header__nav_link header__nav_link--active" href="/">
                         О&nbsp;клинике
                     </a>
                 </li>
@@ -155,7 +151,7 @@
                     </a>
                 </li>
                 <li class="header__nav_item">
-                    <a class="header__nav_link" href="#">
+                    <a class="header__nav_link" href="/doctors.html">
                         Врачи
                     </a>
                 </li>
@@ -186,18 +182,18 @@
             <div class="header__mob_contacts">
                 <a class="icon_link header__contact header__contact--metro" href="https://yandex.ru/maps/-/CHEnVVPm"
                     target="_blank">
-                    <img loading="lazy" class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
                     м. Славянский бульвар
                 </a>
 
                 <a class="icon_link header__contact header__contact--address" href="https://yandex.ru/maps/-/CHEnVVPm"
                     target="_blank">
-                    <img loading="lazy" class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" />
                     г. Москва, ул. Нежинская, 8, корп.4
                 </a>
 
                 <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
-                    <img loading="lazy" class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
                     <b>8 (495) 132-31-02</b>
                 </a>
             </div>
@@ -248,7 +244,7 @@
                         </button>
                     </div>
                 </div>
-                <img src="./img/page_doctors/banner.png" alt="баннер" loading="lazy" class="banner__img">
+                <img src="./assets/img/banner.png" alt="баннер" loading="lazy" class="banner__img">
             </article>
         </section>
 
@@ -289,7 +285,7 @@
             <div class="doctors_grid">
                 <div class="doctors_grid__doctor_card_wrapper">
                     <div class="doctors_grid__doctor_card doctor_card">
-                        <img loading="lazy" class="doctor_card__img" src="./img/page_doctors/doctors/galstyan.jpeg" alt="Карен Эдуардович Галстян">
+                        <img loading="lazy" class="doctor_card__img" src="./assets/img/page_doctors/doctors/galstyan.jpeg" alt="Карен Эдуардович Галстян">
 
                         <a class="doctor_card__link" href="/">
                             <h5 class="doctor_card__name">
@@ -307,14 +303,14 @@
                         </a>
                     </div>
 
-                    <button class="btn doctors_grid__doctor_card_wrapper_btn">
+                    <button class="btn btn--border doctors_grid__doctor_card_wrapper_btn">
                         Записаться на приём
                     </button>
                 </div>
 
                 <div class="doctors_grid__doctor_card_wrapper">
                     <div class="doctors_grid__doctor_card doctor_card">
-                        <img loading="lazy" class="doctor_card__img" src="./img/page_doctors/doctors/asatryan.jpeg" alt="Карен Эдуардович Галстян">
+                        <img loading="lazy" class="doctor_card__img" src="./assets/img/page_doctors/doctors/asatryan.jpeg" alt="Карен Эдуардович Галстян">
 
                         <a class="doctor_card__link" href="/">
                             <h5 class="doctor_card__name">
@@ -340,7 +336,7 @@
 
                 <div class="doctors_grid__doctor_card_wrapper">
                     <div class="doctors_grid__doctor_card doctor_card">
-                        <img loading="lazy" class="doctor_card__img" src="./img/page_doctors/doctors/gukasyan.jpeg" alt="Карен Эдуардович Галстян">
+                        <img loading="lazy" class="doctor_card__img" src="./assets/img/page_doctors/doctors/gukasyan.jpeg" alt="Карен Эдуардович Галстян">
 
                         <a class="doctor_card__link" href="/">
                             <h5 class="doctor_card__name">
@@ -366,7 +362,7 @@
 
                 <div class="doctors_grid__doctor_card_wrapper">
                     <div class="doctors_grid__doctor_card doctor_card">
-                        <img loading="lazy" class="doctor_card__img" src="./img/page_doctors/doctors/gukasyan.jpeg" alt="Карен Эдуардович Галстян">
+                        <img loading="lazy" class="doctor_card__img" src="./assets/img/page_doctors/doctors/gukasyan.jpeg" alt="Карен Эдуардович Галстян">
 
                         <a class="doctor_card__link" href="/">
                             <h5 class="doctor_card__name">
@@ -391,8 +387,6 @@
             </div>
         </section>
 
-        <!-- XXX: использует callback_form.css, подключен в head -->
-        <!-- XXX: использует page_doctors/callback.css, подключен в head -->
         <section class="container doctors_page__section doctors_page__section--callback">
             <article class="callback callback--green">
                 <div class="callback__inner">
@@ -428,7 +422,6 @@
             </article>
         </section>
 
-        <!-- XXX: использует page_doctors/highlights.css, подключен в head -->
         <section class="container highlights doctors_page__section doctors_page__section--highlights">
             <div class="highlights__title_wrapper">
                 <h2 class="highlights__title">
@@ -476,7 +469,7 @@
         <div class="footer__inner">
             <div class="footer__left">
                 <div class="footer__logo">
-                    <img loading="lazy" class="footer__logo_img" src="./img/logo.svg" alt="">
+                    <img loading="lazy" class="footer__logo_img" src="./assets/img/logo.svg" alt="">
                 </div>
 
                 <p class="footer__ur_info">

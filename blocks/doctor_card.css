@@ -1,0 +1,179 @@
+.doctor_card {
+    position: relative;
+    overflow: hidden;
+
+    height: 460px;
+    background-color: var(--bg-gray);
+    border-radius: 30px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+
+.doctor_card__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+    transform: translateX(-50%);
+}
+
+.doctor_card__link {
+    --transition: .15s ease;
+
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding: 16px 24px;
+    padding-right: calc(24px + 36px + 10px);
+    border-radius: 30px;
+    max-height: fit-content;
+    transition: max-height .3s ease;
+    overflow: hidden;
+}
+
+.doctor_card__link::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    background-image: url(../../assets/img/icons/btn_link_arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity var(--transition);
+    opacity: 1;
+}
+
+@media (hover: hover),
+(-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .doctor_card__link:hover {
+        color: var(--font-color--primary);
+        max-height: 200px;
+
+        .doctor_card__more {
+            opacity: 1;
+            /* height: 36px; */
+        }
+
+
+        .doctor_card__footer {
+            height: calc(36px + 12px);
+        }
+    }
+
+    .doctor_card__link:hover::after {
+        opacity: 0;
+    }
+}
+
+.doctor_card__name {
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.doctor_card__profession {
+    font-size: 14px;
+    line-height: 17px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.doctor_card__footer {
+    display: flex;
+    height: 0;
+    transition: height .3s ease;
+}
+
+.doctor_card__more {
+    position: relative;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 10px;
+    border-radius: 50px;
+    background-color: var(--bg-gray);
+    font-size: 14px;
+    margin-top: 12px;
+    opacity: 0;
+    transition: opacity .15s;
+}
+
+.doctor_card__more::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    width: 28px;
+    height: 28px;
+    background-image: url(../../assets/img/icons/arrow_up_right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .doctor_card {
+        height: 460px;
+        /* width: 50%; */
+        padding: 14px 20px;
+        border-radius: 20px;
+    }
+
+    .doctor_card__link {
+        padding: 10px 16px;
+        border-radius: 20px;
+    }
+
+    .doctor_card__link::after {
+        right: 16px;
+    }
+
+    .doctor_card__name {
+        min-height: 36px;
+        padding-right: 48px;
+        line-height: 23px;
+    }
+
+    .doctor_card__profession {
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .doctor_card {
+        height: 356px;
+        padding: 14px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .doctor_card {
+        height: 398px;
+    }
+
+    .doctor_card__link {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .doctor_card__link::after {
+        right: 16px;
+    }
+
+    .doctor_card__name {
+        font-size: 14px;
+        line-height: 20px;
+        padding-right: 42px;
+    }
+}

@@ -9,43 +9,43 @@
 
     <title>Tandem</title>
 
-    <!-- START: общие стили -->
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./main.css">
-    <!-- END: общие стили -->
+    <!-- START: обязательно на каждую страницу -->
+    <link rel="stylesheet" href="./global/normalize.css">
+    <link rel="stylesheet" href="./global/main.css">
+    <link rel="stylesheet" href="./global/header.css">
+    <link rel="stylesheet" href="./global/footer.css">
+    <!-- END: обязательно на каждую страницу -->
 
     <!-- START: UI components -->
-    <link rel="stylesheet" href="./list_styled.css">
-    <link rel="stylesheet" href="./slider_dots.css">
-    <link rel="stylesheet" href="./popup.css">
-    <link rel="stylesheet" href="./callback_form.css">
-    <link rel="stylesheet" href="./callback_form_popup.css">
+    <link rel="stylesheet" href="./common/list_styled.css">
+    <link rel="stylesheet" href="./common/slider_dots.css">
+    <link rel="stylesheet" href="./common/popup.css">
     <!-- END: UI components -->
-
-    <!-- START: обязательно на каждую страницу -->
-    <link rel="stylesheet" href="./header.css">
-    <link rel="stylesheet" href="./footer.css">
-    <!-- END: обязательно на каждую страницу -->
 
     <!-- START: swiper обяателен для слайдеров -->
     <!-- XXX: загружать до слайдеров -->
-    <script src="./swiper.min.js"></script>
+    <script src="./common/swiper.min.js"></script>
     <!-- END: swiper обяателен для слайдеров-->
 
+    <!-- START: общие блоки -->
+    <link rel="stylesheet" href="./blocks/callback_form.css">
+    <link rel="stylesheet" href="./blocks/callback_form_popup.css">
+    <link rel="stylesheet" href="./blocks/callback.css">
+    <!-- END: общие блоки -->
+
     <!-- START: секции -->
-    <link rel="stylesheet" href="./main_page.css">
-    <link rel="stylesheet" href="./ratings.css">
-    <link rel="stylesheet" href="./main_slider.css">
-    <link rel="stylesheet" href="./highlights.css">
-    <link rel="stylesheet" href="./profile.css">
-    <link rel="stylesheet" href="./promo.css">
-    <link rel="stylesheet" href="./reasons.css">
-    <link rel="stylesheet" href="./slider.css">
-    <link rel="stylesheet" href="./callback.css">
-    <link rel="stylesheet" href="./contacts.css">
-    <link rel="stylesheet" href="./doctors.css">
-    <link rel="stylesheet" href="./reviews.css">
-    <link rel="stylesheet" href="./questions.css">
+    <link rel="stylesheet" href="./pages/main/main_page.css">
+    <link rel="stylesheet" href="./pages/main/ratings.css">
+    <link rel="stylesheet" href="./pages/main/main_slider.css">
+    <link rel="stylesheet" href="./pages/main/highlights.css">
+    <link rel="stylesheet" href="./pages/main/profile.css">
+    <link rel="stylesheet" href="./pages/main/promo.css">
+    <link rel="stylesheet" href="./pages/main/reasons.css">
+    <link rel="stylesheet" href="./pages/main/slider.css">
+    <link rel="stylesheet" href="./pages/main/contacts.css">
+    <link rel="stylesheet" href="./pages/main/doctors.css">
+    <link rel="stylesheet" href="./pages/main/reviews.css">
+    <link rel="stylesheet" href="./pages/main/questions.css">
     <!-- END: секции -->
 </head>
 
@@ -54,25 +54,25 @@
         <div class="header__main">
             <div class="header__main_container">
                 <a class="header__logo header__logo--desktop" href="/">
-                    <img loading="lazy" class="header__logo_img" src="./img/logo.svg" alt="">
+                    <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
                 </a>
 
                 <div class="header__main_content">
                     <div class="header__main_top">
                         <div class="header__contacts">
                             <a class="header__logo header__logo--mob" href="/">
-                                <img loading="lazy" class="header__logo_img" src="./img/logo.svg" alt="">
+                                <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
                             </a>
 
                             <a class="icon_link header__contact header__contact--metro"
                                 href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
-                                <img loading="lazy" class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
                                 м. Славянский бульвар
                             </a>
 
                             <a class="icon_link header__contact header__contact--address"
                                 href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
-                                <img loading="lazy" class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" />
                                 <span class="header__contact_text--mob">
                                     м. Славянский бульвар
                                 </span>
@@ -80,7 +80,7 @@
                             </a>
 
                             <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
-                                <img loading="lazy" class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
                                 8 (495) 132-31-02
                             </a>
 
@@ -90,10 +90,10 @@
 
                                 <div class="header__mob_nav_btn js_header_nav_btn">
                                     <img loading="lazy" class="header__mob_nav_btn_icon header__mob_nav_btn_icon--burger"
-                                        src="./img/icons/burger.svg" alt="">
+                                        src="./assets/img/icons/burger.svg" alt="">
     
                                     <img loading="lazy" class="header__mob_nav_btn_icon header__mob_nav_btn_icon--close"
-                                        src="./img/icons/cross.svg" alt="">
+                                        src="./assets/img/icons/cross.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -157,7 +157,7 @@
         <nav class="header__nav">
             <ul class="header__nav_list">
                 <li class="header__nav_item">
-                    <a class="header__nav_link header__nav_link--active" href="#">
+                    <a class="header__nav_link header__nav_link--active" href="/">
                         О&nbsp;клинике
                     </a>
                 </li>
@@ -167,7 +167,7 @@
                     </a>
                 </li>
                 <li class="header__nav_item">
-                    <a class="header__nav_link" href="#">
+                    <a class="header__nav_link" href="/doctors.html">
                         Врачи
                     </a>
                 </li>
@@ -198,18 +198,18 @@
             <div class="header__mob_contacts">
                 <a class="icon_link header__contact header__contact--metro" href="https://yandex.ru/maps/-/CHEnVVPm"
                     target="_blank">
-                    <img loading="lazy" class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
                     м. Славянский бульвар
                 </a>
 
                 <a class="icon_link header__contact header__contact--address" href="https://yandex.ru/maps/-/CHEnVVPm"
                     target="_blank">
-                    <img loading="lazy" class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" />
                     г. Москва, ул. Нежинская, 8, корп.4
                 </a>
 
                 <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
-                    <img loading="lazy" class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
                     <b>8 (495) 132-31-02</b>
                 </a>
             </div>
@@ -232,7 +232,7 @@
         </div>
     </header>
 
-    <script src="./header.js"></script>
+    <script src="./global/header.js"></script>
 
     <main>
         <!-- XXX: использует popup.css, подключен в head -->
@@ -278,13 +278,13 @@
                 <div class="main_slider__slides js_appear_right" id="js_main_slider_wrapper">
                     <div class="main_slider__slides_inner swiper-wrapper">
                         <div class="main_slider__slide swiper-slide">
-                            <img loading="lazy" class="main_slider__slide_img" src="./img/main_slides/1.jpeg" alt="">
+                            <img loading="lazy" class="main_slider__slide_img" src="./assets/img/main_slides/1.jpeg" alt="">
                         </div>
                         <div class="main_slider__slide swiper-slide">
-                            <img loading="lazy" class="main_slider__slide_img" src="./img/main_slides/1.jpeg" alt="">
+                            <img loading="lazy" class="main_slider__slide_img" src="./assets/img/main_slides/1.jpeg" alt="">
                         </div>
                         <div class="main_slider__slide swiper-slide">
-                            <img loading="lazy" class="main_slider__slide_img" src="./img/main_slides/1.jpeg" alt="">
+                            <img loading="lazy" class="main_slider__slide_img" src="./assets/img/main_slides/1.jpeg" alt="">
                         </div>
                     </div>
 
@@ -367,7 +367,7 @@
                 </div>
             </div>
         </div>
-        <script src="./main_slider.js"></script>
+        <script src="./pages/main/main_slider.js"></script>
 
 
 
@@ -426,31 +426,19 @@
             <form class="highlights__form js_appear_bottom" action="/">
                 <div class="highlights__form__inner">
                     <div class="highlights__dropdowns">
-                        <div class="highlights__dropdown js_dropdown js_dropdown_2">
-                            <div class="highlights__dropdown__btn_wrapper">
-                                <ul class="highlights__dropdown_options dropdown__options">
-                                    <li class="highlights__dropdown_option js_dropdown_option dropdown_option">
-                                        Зуб болит
-                                    </li>
-                                    <li class="highlights__dropdown_option js_dropdown_option dropdown_option">
-                                        Буб болит
-                                    </li>
-                                </ul>
-
-                                <button class="highlights__dropdown_btn js_dropdown_btn" type="button">
-                                    Что болит
-
-                                    <svg class="highlights__dropdown_btn_icon" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.5 7L9.5 12L14.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <input
-                                class="highlights__dropdown_input js_dropdown_input"
-                                type="text"
-                                name="pain"
-                                value="Зуб болит"
-                            />
+                        <div class="highlights__dropdown highlights__dropdown_reason js_dropdown js_dropdown_2">
+                                <div class="highlights__dropdown__btn_wrapper">
+                                    <div class="highlights__dropdown_options dropdown__options">
+                                        <textarea class="highlights__dropdown_option highlights__dropdown_input js_dropdown_textarea" rows="5" placeholder="Ваш текст" name="reason" id="highlights_reason"></textarea>
+                                    </div>
+    
+                                    <button class="highlights__dropdown_btn js_dropdown_btn" type="button">
+                                        Повод обращения
+                                    </button>
+                                </div>
+                                <div class="highlights__dropdown_input js_dropdown_btn js_dropdown_input" for="highlights_reason">
+                                    Ваш текст
+                                </div>
                         </div>
 
                         <div class="highlights__dropdowns_divider"></div>
@@ -484,7 +472,7 @@
                                 </ul>
 
                                 <button class="highlights__dropdown_btn js_dropdown_btn" type="button">
-                                    Указать способ связи
+                                    Способ связи
 
                                     <svg class="highlights__dropdown_btn_icon" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.5 7L9.5 12L14.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -546,6 +534,7 @@
                 </div>
             </form>
         </section>
+        <script src="./pages/main/highlights.js"></script>
 
 
 
@@ -555,7 +544,7 @@
         <section class="container profile main_page__section main_page__section--profile">
             <div class="profile__col profile__col--left js_appear_bottom">
                 <!-- TODO: заменить урл фотки -->
-                <img loading="lazy" class="profile__img" src="./img/doctors/galstyan.png" alt="Галстян Карен Эдуардович">
+                <img loading="lazy" class="profile__img" src="./assets/img/doctors/galstyan.png" alt="Галстян Карен Эдуардович">
             </div>
             <div class="profile__col profile__col--right js_appear_top">
                 <h3 class="profile__title">
@@ -634,19 +623,19 @@
                 <div class="slider__slides_wrapper js_appear_top" id="js_services_slider">
                     <div class="slider__slides swiper-wrapper">
                         <div class="slider__slide swiper-slide">
-                            <img loading="lazy" src="./img/slides/1.jpeg" alt="">
+                            <img loading="lazy" src="./assets/img/slides/1.jpeg" alt="">
                         </div>
                         <div class="slider__slide swiper-slide">
-                            <img loading="lazy" src="./img/smile.jpeg" alt="">
+                            <img loading="lazy" src="./assets/img/smile.jpeg" alt="">
                         </div>
                         <div class="slider__slide swiper-slide">
-                            <img loading="lazy" src="./img/contacts.png" alt="">
+                            <img loading="lazy" src="./assets/img/contacts.png" alt="">
                         </div>
                         <div class="slider__slide swiper-slide">
-                            <img loading="lazy" src="./img/teeth_kt.png" alt="">
+                            <img loading="lazy" src="./assets/img/teeth_kt.png" alt="">
                         </div>
                         <div class="slider__slide swiper-slide">
-                            <img loading="lazy" src="./img/doctors/asatryan.png" alt="">
+                            <img loading="lazy" src="./assets/img/doctors/asatryan.png" alt="">
                         </div>
                     </div>
 
@@ -741,17 +730,17 @@
                 </div>
             </div>
         </section>
-        <script src="./services_slider.js"></script>
+        <script src="./pages/main/services_slider.js"></script>
 
 
         <section class="container promo main_page__section">
             <div class="promo__block promo__img_wrapper js_appear_bottom">
-                <img loading="lazy" src="./img/teeth_kt.png" alt="">
+                <img loading="lazy" src="./assets/img/teeth_kt.png" alt="">
             </div>
 
             <div class="promo__block promo__content_wrapper js_appear_top">
                 <div class="promo__content_img_col">
-                    <img loading="lazy" src="./img/blobs/2_teeth_purple.svg" alt="">
+                    <img loading="lazy" src="./assets/img/blobs/2_teeth_purple.svg" alt="">
                 </div>
 
                 <div class="promo__content_col">
@@ -779,12 +768,12 @@
         <!-- XXX: использует list_styled.css, подключен в head -->
         <section class="container reasons main_page__section">
             <h2 class="reasons__title">
-                Почему выбирают нас?
+                Почему выбирают&nbsp;нас?
             </h2>
 
             <div class="reasons__content">
                 <ul class="reasons__list list_styled js_appear_left">
-                    <img loading="lazy" src="./img/smile.jpeg" alt="">
+                    <img loading="lazy" src="./assets/img/smile.jpeg" alt="">
 
                     <li>
                         <h5 class="list_styled__title">
@@ -816,7 +805,7 @@
                 </ul>
 
                 <ul class="reasons__list list_styled js_appear_top">
-                    <img loading="lazy" src="./img/smile.jpeg" alt="">
+                    <img loading="lazy" src="./assets/img/smile.jpeg" alt="">
 
                     <li>
                         <h5 class="list_styled__title">
@@ -842,7 +831,7 @@
                         </p>
                     </li>
 
-                    <img loading="lazy" src="./img/smile.jpeg" alt="">
+                    <img loading="lazy" src="./assets/img/smile.jpeg" alt="">
 
                     <li>
                         <h5 class="list_styled__title">
@@ -869,7 +858,7 @@
                 <div class="doctors__slider_inner" id="js_doctors_slider_wrapper">
                     <div class="doctors__slider_slides swiper-wrapper">
                         <div class="doctors__slide swiper-slide">
-                            <img loading="lazy" class="doctors__slide_img" src="./img/doctors/galstyan.png" alt="Карен Эдуардович Галстян">
+                            <img loading="lazy" class="doctors__slide_img" src="./assets/img/doctors/galstyan.png" alt="Карен Эдуардович Галстян">
     
                             <a class="doctors__slide_link" href="/">
                                 <h5 class="doctors__slide_name">
@@ -888,7 +877,7 @@
                         </div>
     
                         <div class="doctors__slide swiper-slide">
-                            <img loading="lazy" class="doctors__slide_img" src="./img/doctors/gukasyan.jpg"
+                            <img loading="lazy" class="doctors__slide_img" src="./assets/img/doctors/gukasyan.jpg"
                                 alt="Кристина Каджиковна Гукасян">
     
                             <a class="doctors__slide_link" href="/">
@@ -908,7 +897,7 @@
                         </div>
     
                         <div class="doctors__slide swiper-slide">
-                            <img loading="lazy" class="doctors__slide_img" src="./img/doctors/asatryan.jpg" alt="Эдуард Иванович Асатрян">
+                            <img loading="lazy" class="doctors__slide_img" src="./assets/img/doctors/asatryan.jpg" alt="Эдуард Иванович Асатрян">
     
                             <a class="doctors__slide_link" href="/">
                                 <h5 class="doctors__slide_name">
@@ -927,7 +916,7 @@
                         </div>
     
                         <div class="doctors__slide swiper-slide">
-                            <img loading="lazy" class="doctors__slide_img" src="./img/doctors/asatryan.jpg" alt="Эдуард Иванович Асатрян">
+                            <img loading="lazy" class="doctors__slide_img" src="./assets/img/doctors/asatryan.jpg" alt="Эдуард Иванович Асатрян">
     
                             <a class="doctors__slide_link" href="/">
                                 <h5 class="doctors__slide_name">
@@ -958,7 +947,7 @@
                 </div>
             </div>
         </section>
-        <script src="./doctors.js"></script>
+        <script src="./pages/main/doctors.js"></script>
 
 
         <section class="container ratings main_page__section">
@@ -969,7 +958,7 @@
             <div class="ratings__list">
                 <div class="rating js_appear_top">
                     <div class="rating__header">
-                        <img loading="lazy" class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+                        <img loading="lazy" class="rating__logo" src="./assets/img/icons/yandex_logo.png" alt="">
 
                         <p class="rating__title">Яндекс</p>
                     </div>
@@ -985,7 +974,7 @@
 
                 <div class="rating js_appear_bottom">
                     <div class="rating__header">
-                        <img loading="lazy" class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+                        <img loading="lazy" class="rating__logo" src="./assets/img/icons/yandex_logo.png" alt="">
 
                         <p class="rating__title">Яндекс</p>
                     </div>
@@ -1001,7 +990,7 @@
 
                 <div class="rating js_appear_top">
                     <div class="rating__header">
-                        <img loading="lazy" class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+                        <img loading="lazy" class="rating__logo" src="./assets/img/icons/yandex_logo.png" alt="">
 
                         <p class="rating__title">Яндекс</p>
                     </div>
@@ -1017,7 +1006,7 @@
 
                 <div class="rating js_appear_bottom">
                     <div class="rating__header">
-                        <img loading="lazy" class="rating__logo" src="./img/icons/yandex_logo.png" alt="">
+                        <img loading="lazy" class="rating__logo" src="./assets/img/icons/yandex_logo.png" alt="">
 
                         <p class="rating__title">Яндекс</p>
                     </div>
@@ -1194,7 +1183,7 @@
                 </div>
             </div>
         </section>
-        <script src="./reviews.js"></script>
+        <script src="./pages/main/reviews.js"></script>
 
         <!-- XXX: использует swiper.min.js, подключен в шапке -->
         <section class="container questions main_page__section" id="js_questions">
@@ -1216,7 +1205,7 @@
                         <div class="questions__slider_buttons_inner swiper-wrapper">
                             <div role="button" class="questions__slider_button js_slider_button swiper-slide">
                                 <div class="questions__slider_button_img_wrapper">
-                                    <img loading="lazy" class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
+                                    <img loading="lazy" class="questions__slider_button_img" src="./assets/img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
                                 </div>
 
                                 <div class="questions__slider_button_text">
@@ -1231,23 +1220,7 @@
         
                             <div role="button" class="questions__slider_button js_slider_button swiper-slide">
                                 <div class="questions__slider_button_img_wrapper">
-                                    <img loading="lazy" class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
-                                </div>
-
-                                <div class="questions__slider_button_text">
-                                    <p class="questions__slider_button_title">
-                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
-                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
-                                    </p>
-                                    <span class="questions__slider_button_date">
-                                        06.09.2024
-                                    </span>
-                                </div>
-                            </div>
-        
-                            <div role="button" class="questions__slider_button js_slider_button swiper-slide">
-                                <div class="questions__slider_button_img_wrapper">
-                                    <img loading="lazy" class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
+                                    <img loading="lazy" class="questions__slider_button_img" src="./assets/img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
                                 </div>
 
                                 <div class="questions__slider_button_text">
@@ -1263,7 +1236,23 @@
         
                             <div role="button" class="questions__slider_button js_slider_button swiper-slide">
                                 <div class="questions__slider_button_img_wrapper">
-                                    <img loading="lazy" class="questions__slider_button_img" src="./img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
+                                    <img loading="lazy" class="questions__slider_button_img" src="./assets/img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
+                                </div>
+
+                                <div class="questions__slider_button_text">
+                                    <p class="questions__slider_button_title">
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                    </p>
+                                    <span class="questions__slider_button_date">
+                                        06.09.2024
+                                    </span>
+                                </div>
+                            </div>
+        
+                            <div role="button" class="questions__slider_button js_slider_button swiper-slide">
+                                <div class="questions__slider_button_img_wrapper">
+                                    <img loading="lazy" class="questions__slider_button_img" src="./assets/img/questions/slider_btn_1.jpeg" alt="Почему важно идти в клинику, а не к врачу">
                                 </div>
 
                                 <div class="questions__slider_button_text">
@@ -1365,12 +1354,12 @@
                 </div>
             </div>
         </section>
-        <script src="./questions.js"></script>
+        <script src="./pages/main/questions.js"></script>
 
 
         <section class="container contacts main_page__section">
             <div class="contacts__col contacts__col--left js_appear_left">
-                <img loading="lazy" class="contacts__img" src="./img/contacts.png" alt="стоматология тандем">
+                <img loading="lazy" class="contacts__img" src="./assets/img/contacts.png" alt="стоматология тандем">
             </div>
 
             <div class="contacts__col contacts__col--right js_appear_right">
@@ -1382,34 +1371,34 @@
                     <div class="contacts__card contacts__card--address js_appear_top">
                         <a class="icon_link contacts__card_link" href="https://yandex.ru/maps/-/CHEnVVPm"
                             target="_blank">
-                            <img loading="lazy" class="icon_link__icon" src="./img/icons/metro.svg" alt="" />
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
                             м. Славянский бульвар
                         </a>
                         <a class="icon_link contacts__card_link" href="https://yandex.ru/maps/-/CHEnVVPm"
                             target="_blank">
-                            <img loading="lazy" class="icon_link__icon" src="./img/icons/map_point.svg" alt="" />
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" />
                             Москва, ул. Нежинская, 8, корп.4
                         </a>
 
                         <a class="contacts__card_btn btn">
                             Построить маршрут к&nbsp;клинике
-                            <img loading="lazy" class="contacts__card_btn_icon" src="./img/icons/btn_link_arrow.svg" alt="">
+                            <img loading="lazy" class="contacts__card_btn_icon" src="./assets/img/icons/btn_link_arrow.svg" alt="">
                         </a>
                     </div>
 
                     <div class="contacts__card contacts__card--contacts js_appear_right">
                         <a class="icon_link contacts__card_link" href="mailto:tandem-clinic1@yandex.ru">
-                            <img loading="lazy" class="icon_link__icon" src="./img/icons/email.svg" alt="" />
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/email.svg" alt="" />
                             tandem-clinic1@yandex.ru
                         </a>
 
                         <a class="icon_link contacts__card_link contacts__card_link--phone" href="tel:+74951323102">
-                            <img loading="lazy" class="icon_link__icon" src="./img/icons/phone.svg" alt="" />
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
                             Единый телефон: <br>
                             <span><b>8 (495) 132-31-02</b></span>
                             </ф>
                             <a class="icon_link contacts__card_link" href="https://wa.me/79250549900" target="_blank">
-                                <img loading="lazy" class="icon_link__icon" src="./img/icons/wa.svg" alt="" />
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/wa.svg" alt="" />
                                 <b>+7 (925) 054-99-00</b>
                             </a>
                     </div>
@@ -1422,7 +1411,7 @@
         <div class="footer__inner">
             <div class="footer__left">
                 <div class="footer__logo">
-                    <img loading="lazy" class="footer__logo_img" src="./img/logo.svg" alt="">
+                    <img loading="lazy" class="footer__logo_img" src="./assets/img/logo.svg" alt="">
                 </div>
 
                 <p class="footer__ur_info">
@@ -1519,12 +1508,12 @@
         </div>
     </footer>
 
-    <script src="./main.js"></script>
-    <script src="./popup.js"></script>
-    <script src="./dropdown.js"></script>
+    <script src="./global/main.js"></script>
+    <script src="./common/popup.js"></script>
+    <script src="./common/dropdown.js"></script>
 
     <!-- XXX: анимация появления блоков -->
-    <script src="./appear.js"></script>
+    <script src="./global/appear.js"></script>
 
 
 </body>

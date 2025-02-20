@@ -1,0 +1,45 @@
+
+.doctors_grid {
+    --gap: 40px;
+
+    gap: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.doctors_grid__doctor_card_wrapper {
+    width: 100%;
+}
+
+.doctors_grid__doctor_card_wrapper_btn {
+    margin-top: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+    .doctors_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .doctors_grid__doctor_card_wrapper {
+        margin: 0 auto;
+        max-width: 452px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .doctors_grid__doctor_card_wrapper {
+        max-width: 330px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .doctors_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctors_grid__doctor_card_wrapper {
+        width: 100%;
+        max-width: 370px;
+    }
+}
