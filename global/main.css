@@ -125,6 +125,15 @@ ol.list {
     }
 }
 
+.quote::before {
+    display: block;
+    content: "«";
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
 @media screen and (max-width: 1200px) {
     h1,
     .h1 {
@@ -148,6 +157,11 @@ ol.list {
         font-size: 16px;
         line-height: 23px;
     }
+
+    .quote::before {
+        font-size: 45px;
+        line-height: 22px;
+    }
 }
 
 
@@ -160,6 +174,11 @@ ol.list {
     h2,
     .h2 {
         font-size: 26px;
+    }
+
+    .quote::before {
+        font-size: 26px;
+        line-height: 32px;
     }
 }
 
@@ -575,6 +594,20 @@ a {
     color: var(--font-color--primary);
 }
 
+@media screen and (max-width: 1200px) {
+    .breadcrumbs {
+        padding-top: 20px;
+        padding-bottom: 24px;
+    }
+}   
+
+@media screen and (max-width: 720px) {
+    .breadcrumbs {
+        padding-top: 20px;
+        padding-bottom: 16px;
+    }
+}
+
 
 .pagination {
     display: flex;
@@ -616,3 +649,6 @@ body, html {
     overflow-x: hidden;
     /* overflow: hidden; */
 }
+
+
+/* .breadcrumbs { */

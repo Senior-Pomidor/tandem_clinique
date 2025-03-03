@@ -33,8 +33,7 @@
 
 .banner__img {
     position: absolute;
-    max-height: 100%;
-    bottom: 0;
+    top: 0;
     right: 17%;
     width: 310px;
     object-fit: contain;
@@ -47,6 +46,7 @@
         min-height: 160px;
         padding: 40px 30px;
         padding-right: 276px;
+        border-radius: 20px;
     }
 
     .banner__inner {
@@ -84,6 +84,31 @@
     }
 }
 
-@media screen and (max-width: 720) {
-    /*  */
+@media screen and (max-width: 720px) {
+    .banner {
+        padding-right: 113px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 16px;
+    }
+
+    .banner__inner {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .banner__description {
+        margin-top: 8px;
+    }
+
+    .banner__img {
+        width: 100px;
+        max-height: 100%;
+        top: initial;
+        bottom: 0;
+    }
+
+    .banner__title {
+        font-weight: 400;
+    }
 }

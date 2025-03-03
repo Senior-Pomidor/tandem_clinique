@@ -58,5 +58,24 @@
 }
 
 @media screen and (max-width: 720px) {
-    
+    .doctors_page__section--hero,
+    .doctors_page__section--doctors_grid,
+    .doctors_page__section--highlights {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .doctors_page__callback {
+        padding-bottom: 60px;
+        border-radius: 30px;
+    }
+
+    .doctors_grid__doctor_card_wrapper_btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .doctors_grid {
+        --gap: 20px;
+    }
 }

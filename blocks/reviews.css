@@ -47,7 +47,7 @@
     display: block;
     width: 22px;
     height: 22px;
-    background-image: url(../../assets/img/icons/arrow_up_right.svg);
+    background-image: url(../assets/img/icons/arrow_up_right.svg);
     margin-left: 12px;
 }
 
@@ -55,7 +55,6 @@
     background-color: var(--bg-gray);
     display: flex;
     flex-direction: column;
-
 }
 
 
@@ -131,12 +130,12 @@
 }
 
 .reviews__slider_control--left {
-    background-image: url(../../assets/img/icons/arrow_left.svg);
+    background-image: url(../assets/img/icons/arrow_left.svg);
 }
 
 .reviews__slider_control--right {
     margin-left: 80px;
-    background-image: url(../../assets/img/icons/arrow_right.svg);
+    background-image: url(../assets/img/icons/arrow_right.svg);
 }
 
 .reviews__slider_dots {

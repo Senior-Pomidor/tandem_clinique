@@ -406,6 +406,7 @@ body:has(.header--nav-open) {
 
         padding: 5px 10px;
         align-items: center;
+        border-radius: 10px;
     }
 
     .header__main_bottom > * {
@@ -424,7 +425,7 @@ body:has(.header--nav-open) {
     .header__contact--phone {
         font-size: 12px;
         line-height: 20px;
-        font-weight: 700;
+        font-weight: 500;
         padding-left: calc(var(--icon-size) + 6px);
     }
 

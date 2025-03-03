@@ -1,0 +1,97 @@
+.doctors_page__section--banner {
+    padding-bottom: 80px;
+}
+
+.doctors_page__section--doctor {
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.doctors_page__section--callback {
+    padding-bottom: 90px;
+}
+
+.doctors_page__section--highlights {
+    padding-top: 90px;
+    padding-bottom: 96px;
+}
+
+.doctors_page__section--reviews {
+    padding-top: 90px;
+
+    .reviews__slider_controls {
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .doctors_page__section--banner {
+        padding-bottom: 16px;
+    }
+    
+    .doctors_page__section--doctor {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .doctors_page__section--callback {
+        padding-bottom: 40px;
+    }
+
+    .doctors_page__section--highlights {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        margin-bottom: 40px;
+    }
+
+    .doctors_page__section--reviews {
+        padding-top: 60px;
+
+        .reviews__slider_controls {
+            padding-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .doctors_page__section--doctor {
+        padding-bottom: 60px;
+    }
+
+    .doctors_page__section--reviews {
+        .reviews__slider_controls {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .doctors_page__section--banner {
+        padding-bottom: 40px;
+    }
+
+    .doctors_page__section--doctor {
+        padding-top: 40px;
+    }
+
+    .doctors_page__section--callback {
+        padding-top: 40px;
+    }
+
+    .doctors_page__section--highlights {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .doctors_page__section--reviews {
+        padding-top: 40px;
+    
+        .reviews__slider_controls {
+            padding-bottom: 40px;
+        }
+
+        .review__show_more {
+            margin-top: 10px;
+        }
+    }
+}

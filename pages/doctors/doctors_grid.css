@@ -7,6 +7,10 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.doctors_grid__title {
+    display: none;
+}
+
 .doctors_grid__doctor_card_wrapper {
     width: 100%;
 }
@@ -24,6 +28,14 @@
         margin: 0 auto;
         max-width: 452px;
         width: 100%;
+
+        .doctor_card__name {
+            min-height: initial;
+        }
+    }
+
+    .doctors_grid__doctor_card_wrapper_btn {
+        margin-top: 16px;
     }
 }
 
@@ -41,5 +53,10 @@
     .doctors_grid__doctor_card_wrapper {
         width: 100%;
         max-width: 370px;
+    }
+
+    .doctors_grid__title {
+        display: block;
+        margin-bottom: 20px;
     }
 }
