@@ -1,0 +1,78 @@
+.about_page__section--content_slider,
+.about_page__section--ratings,
+.about_page__section--questions,
+.about_page__section--contacts {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.about_page__section--hero {
+    padding-bottom: 100px;
+}
+
+.about_page__section--profile {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.about_page__section--promo {
+    padding-top: 120px;
+    padding-bottom: 191px;
+}
+
+.about_page__section--callback {
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
+
+@media screen and (max-width: 1200px) {
+    .about_page__section--promo,
+    .about_page__section--content_slider,
+    .about_page__section--ratings,
+    .about_page__section--questions,
+    .about_page__section--contacts {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    section + .footer {
+        margin-top: 40px;
+    }
+
+    .about_page__section--hero {
+        padding-bottom: 20px;
+    }
+
+    .about_page__section--callback {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .about_page__section--hero {
+        padding-bottom: 60px;
+    }
+
+    .about_page__section--promo {
+        padding-top: 60px;
+        padding-bottom: 51px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .about_page__section--profile,
+    .about_page__section--promo,
+    .about_page__section--content_slider,
+    .about_page__section--ratings,
+    .about_page__section--questions,
+    .about_page__section--contacts {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .about_page__section--hero {
+        padding-top: 8px;
+        padding-bottom: 0;
+    }
+}

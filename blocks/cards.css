@@ -1,0 +1,231 @@
+.cards {
+    overflow: hidden;
+}
+
+.cards__inner {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+    gap: 40px;
+    min-height: 245px;
+}
+
+.card {
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: var(--bg-gray);
+}
+
+.card__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 32px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.card__content {
+    margin-top: 12px;
+}
+
+.card__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+    background-color: #fff;
+    min-height: 41px;
+    border-radius: 30px;
+    padding: 4px 24px;
+}
+
+.card__title {
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.card__title + .card__text {
+    margin-top: 12px;
+}
+
+.card--accent {
+    .card__inner {
+        background-color: var(--purple);
+        color: #fff;
+    }
+
+    .card__tag {
+        color: var(--font-color--primary);
+    }
+}
+
+.card--gradient {
+    .card__inner {
+        background-image: var(--green-gradient);
+    }
+}
+.card--decor {
+    overflow: hidden;
+}
+
+.card--decor .card__inner::before {
+    content: "";
+    display: block;
+    width: 286px;
+    height: 286px;
+    position: absolute;
+    top: -160px;
+    right: -140px;
+    background-image: url(../assets/img/blobs/blob_purple.svg);
+    background-repeat: no-repeat;
+    transform: rotate(-95deg);
+}
+
+.cards__slider_dots {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .cards__inner {
+        min-height: 160px;
+    }
+
+    .card {
+        border-radius: 20px;
+    }
+
+    .card__inner {
+        padding: 20px;
+    }
+
+    .card__tag {
+        font-size: 14px;
+        line-height: 20px;
+        min-height: 28px;
+        padding: 4px 12px;
+    }
+
+    .card__content {
+        margin-top: 9px;
+    }
+
+    .card__title {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .card__text {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--font-color--secondary);
+    }
+
+    .card__title + .card__text {
+        margin-top: 4px;
+    }
+
+    .card--accent {
+        .card__title {
+            font-weight: 700;
+            line-height: 23px;
+        }
+
+        .card__text {
+            color: inherit;
+        }
+    }
+
+    .card--decor .card__inner::before {
+        width: 178px;
+        height: 178px;
+        top: -110px;
+        left: 115px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .cards__inner {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+        row-gap: 20px;
+        min-height: initial;
+    }
+
+    .cards__card {
+        min-height: 160px;
+    }
+
+    .card--accent {
+        .card__title {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    .card--decor .card__inner::before {
+        top: -93px;
+        left: 118px;
+        transform: rotate(-85deg);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .hero__cards {
+        margin-top: 20px;
+    }
+
+    .cards {
+        position: relative;
+    }
+
+    .cards__inner {
+        display: flex;
+        gap: initial;
+    }
+
+    .cards__card {
+        min-width: 100%;
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .cards__slider_dots {
+        display: flex;
+        position: absolute;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .card__content {
+        margin-top: 13px;
+    }
+
+    .card__inner {
+        padding: 16px 20px;
+        padding-bottom: 42px;
+    }
+
+    .card__tag {
+        font-size: 12px;
+        line-height: 22px;
+        min-height: 30px;
+        padding: 4px 10px;
+    }
+
+    .card__title + .card__text {
+        margin-top: 10px;
+    }
+
+    .card--accent {
+        .card__title {
+            font-size: 20px;
+            line-height: 22px;
+        }
+    }
+}

@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Стоматология в москве">
+
+    <title>Tandem</title>
+
+    <!-- START: обязательно на каждую страницу -->
+    <link rel="stylesheet" href="./global/normalize.css">
+    <link rel="stylesheet" href="./global/main.css">
+    <link rel="stylesheet" href="./global/header.css">
+    <link rel="stylesheet" href="./global/footer.css">
+    <!-- END: обязательно на каждую страницу -->
+
+    <!-- START: вспомогательные стили -->
+    <link rel="stylesheet" href="./common/popup.css">
+    <link rel="stylesheet" href="./common/slider_dots.css">
+    <!-- END: вспомогательные стили -->
+
+
+    <!-- START: swiper обяателен для слайдеров -->
+    <!-- XXX: загружать до слайдеров -->
+    <script src="./common/swiper.min.js"></script>
+    <!-- END: swiper обяателен для слайдеров-->
+
+    <!-- START: общие блоки -->
+    <!-- <link rel="stylesheet" href="./blocks/banner.css">
+    <link rel="stylesheet" href="./blocks/highlights.css">
+    <link rel="stylesheet" href="./blocks/reviews.css"> -->
+    <link rel="stylesheet" href="./blocks/hero.css">
+    <link rel="stylesheet" href="./blocks/cards.css">
+    <link rel="stylesheet" href="./blocks/profile.css">
+    <link rel="stylesheet" href="./blocks/promo.css">
+    <link rel="stylesheet" href="./blocks/content_slider.css">
+    <link rel="stylesheet" href="./blocks/ratings.css">
+    <link rel="stylesheet" href="./blocks/questions.css">
+    <link rel="stylesheet" href="./blocks/contacts.css">
+    <link rel="stylesheet" href="./blocks/callback_form.css">
+    <link rel="stylesheet" href="./blocks/callback.css">
+    <link rel="stylesheet" href="./blocks/callback_form_popup.css">
+    <!-- END: общие блоки -->
+
+    <!-- START: секции -->
+    <link rel="stylesheet" href="./pages/about/about_page.css">
+    <!-- END: секции -->
+</head>
+
+<body>
+    <style>
+        /* FIXME: для разработаки, удалить, подключить appear.js */
+        [class*="js_appear"] {
+            opacity: 1;
+        }
+    </style>
+    <!-- global/header.css -->
+    <!-- global/header.js -->
+    <header class="header js_header container">
+        <div class="header__main">
+            <div class="header__main_container">
+                <a class="header__logo header__logo--desktop" href="/">
+                    <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
+                </a>
+
+                <div class="header__main_content">
+                    <div class="header__main_top">
+                        <div class="header__contacts">
+                            <a class="header__logo header__logo--mob" href="/">
+                                <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--metro"
+                                href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
+                                м. Славянский бульвар
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--address"
+                                href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg"
+                                    alt="" />
+                                <span class="header__contact_text--mob">
+                                    м. Славянский бульвар
+                                </span>
+                                г. Москва, ул. Нежинская, 8, корп.4
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
+                                8 (495) 132-31-02
+                            </a>
+
+                            <!-- TODO: заменить блок -->
+                            <div class="header__mob_nav_btns">
+                                <label for="qwerty" class="header__search_btn_mob js_header_search_btn_mob"></label>
+
+                                <div class="header__mob_nav_btn js_header_nav_btn">
+                                    <img loading="lazy"
+                                        class="header__mob_nav_btn_icon header__mob_nav_btn_icon--burger"
+                                        src="./assets/img/icons/burger.svg" alt="">
+
+                                    <img loading="lazy" class="header__mob_nav_btn_icon header__mob_nav_btn_icon--close"
+                                        src="./assets/img/icons/cross.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__main_bottom">
+                        <div class="header__search js_header_search">
+                            <form class="header__search_input_wrapper" action="/">
+                                <input placeholder="Поиск..." class="header__search_input js_search_input" type="text"
+                                    id="qwerty">
+
+                                <button type="button" class="header__search_reset js_search_reset_btn"></button>
+                            </form>
+
+                            <!-- XXX: Блок .header__search_suggestions должен быть всегда -->
+                            <!-- XXX: внутренние ссылки могут генериться -->
+                            <div class="header__search_suggestions">
+                                <a class="header__search_suggestion" href="/qweqwe">
+                                    dasdasd Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ullam
+                                    veniam cupiditate quo laboriosam voluptatibus mollitia dicta ad soluta. Ad est animi
+                                    optio iusto obcaecati ratione deserunt quam officia magnam commodi! Vitae
+                                    repudiandae eaque fugit, beatae incidunt nam ea accusamus dolores tempore impedit
+                                    ipsum doloremque quis. Tempore dolorum velit libero.
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="header__social">
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--wa" href=""></a>
+                            </li>
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--tg" href=""></a>
+                            </li>
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--vk" href=""></a>
+                            </li>
+                        </ul>
+
+                        <button class="header__appointment_btn btn">
+                            Записаться
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__nav_list">
+                <li class="header__nav_item">
+                    <a class="header__nav_link header__nav_link--active" href="/">
+                        О&nbsp;клинике
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Услуги
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="/doctors.html">
+                        Врачи
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Портфолио
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Акции
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Прайс
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Блог
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__mob">
+            <div class="header__mob_contacts">
+                <a class="icon_link header__contact header__contact--metro" href="https://yandex.ru/maps/-/CHEnVVPm"
+                    target="_blank">
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
+                    м. Славянский бульвар
+                </a>
+
+                <a class="icon_link header__contact header__contact--address" href="https://yandex.ru/maps/-/CHEnVVPm"
+                    target="_blank">
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" />
+                    г. Москва, ул. Нежинская, 8, корп.4
+                </a>
+
+                <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
+                    <b>8 (495) 132-31-02</b>
+                </a>
+            </div>
+
+            <ul class="header__social">
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--wa" href=""></a>
+                </li>
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--tg" href=""></a>
+                </li>
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--vk" href=""></a>
+                </li>
+            </ul>
+
+            <button class="header__appointment_btn btn">
+                Записаться
+            </button>
+        </div>
+    </header>
+    <script src="./global/header.js"></script>
+
+    <main class="about_page">
+        <div class="breadcrumbs container">
+            <a href="./index.html" class="breadcrumbs__link">Главная</a>
+            <span class="breadcrumbs__divider">/</span>
+            <span class="breadcrumbs__link breadcrumbs__link--active">О клинике</span>
+        </div>
+
+        <!-- common/swiper.min.js -->
+        <!-- blocks/hero.css -->
+        <!-- blocks/cards.css -->
+        <!-- blocks/cards.js -->
+        <!-- blocks/callback_form.css -->
+        <!-- blocks/callback_form_popup.css -->
+        <!-- /common/popup.css -->
+        <!-- /common/popup.js -->
+        <!--
+            popup id="callback_popup" в конце страницы, один на все блоки с попапом с формой
+            если нужен в каждом блоке свой, скопировать в каждый блок и поменять id
+            на кнопках для открытия поменять data-popup-id
+        -->
+        <section class="container hero about_page__section--hero">
+            <div class="hero__inner">
+                <div class="hero__col hero__col--content">
+                    <h1 class="h1 hero__title">
+                        Tandem&nbsp;— вместе к&nbsp;здоровым улыбкам
+                    </h1>
+
+                    <div class="hero__content">
+                        <p>
+                            Стоматологии Tandem в&nbsp;Москве&nbsp;— это&nbsp;место,
+                            где&nbsp;профессионализм встречается с&nbsp;человечностью,
+                            а&nbsp;забота и&nbsp;комфорт становятся основой лечения.
+                            Мы&nbsp;рады каждый день делать всё&nbsp;возможное,
+                            чтобы&nbsp;ваша улыбка сияла здоровьем и&nbsp;красотой.
+                        </p>
+                    </div>
+
+                    <button class="btn hero__btn" data-popup-id="callback_popup">
+                        Записаться на прием
+                    </button>
+                </div>
+
+                <div class="hero__col hero__col--img">
+                    <img src="./assets/img/hero.jpeg" alt="Тандем" loading="lazy">
+                </div>
+
+                <button class="btn hero__btn hero__btn--mob" data-popup-id="callback_popup">
+                    Записаться на прием
+                </button>
+            </div>
+
+            <div class="hero__cards cards" id="js_cards">
+                <div class="cards__inner swiper-wrapper">
+                    <div class="cards__card card card--accent swiper-slide">
+                        <div class="card__inner">
+                            <strong class="card__tag">
+                                Профилактика
+                            </strong>
+
+                            <div class="card__content">
+                                <h4 class="card__title">
+                                    Профессиональная чистка зубов
+                                </h4>
+        
+                                <p class="card__text">
+                                    и профессиональная гигиена полости рта
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards__card card swiper-slide">
+                        <div class="card__inner">
+                            <strong class="card__tag">
+                                Эстетическая стоматология
+                            </strong>
+
+                            <div class="card__content">
+                                <h4 class="card__title">
+                                    Ортодонтия
+                                </h4>
+        
+                                <p class="card__text">
+                                    Выравнивание прикуса
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards__card card card--gradient swiper-slide">
+                        <div class="card__inner">
+                            <strong class="card__tag">
+                                Диагностика
+                            </strong>
+
+                            <div class="card__content">
+                                <h4 class="card__title">
+                                    Рентген диагностика 
+                                </h4>
+        
+                                <p class="card__text">
+                                    радиовизиография
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards__card card card--decor swiper-slide">
+                        <div class="card__inner">
+                            <strong class="card__tag">
+                                Лечение
+                            </strong>
+
+                            <div class="card__content">
+                                <h4 class="card__title">
+                                    Лечение кариеса, пульпита, периодонтита
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__slider_dots slider_dots swiper-pagination">
+                    <!--  -->
+                </div>
+            </div>
+        </section>
+
+        <script src="./blocks/cards.js"></script>
+
+        <!-- blocks/profile.css -->
+        <!-- blocks/callback_form.css -->
+        <!-- blocks/callback_form_popup.css -->
+        <!-- /common/popup.css -->
+        <!-- /common/popup.js -->
+        <!--
+            popup id="callback_popup" в конце страницы, один на все блоки с попапом с формой
+            если нужен в каждом блоке свой, скопировать в каждый блок и поменять id
+            на кнопках для открытия поменять data-popup-id
+        -->
+        <section class="container profile profile--variant_1 about_page__section--profile">
+            <div class="profile__col profile__col--left js_appear_bottom">
+                <img loading="lazy" class="profile__img" src="./assets/img/about_profile.jpeg" alt="Тандем">
+            </div>
+            <div class="profile__col profile__col--right js_appear_top">
+                <h3 class="profile__title">
+                    Приветственное слово от дружной команды Tandem
+                </h3>
+
+                <blockquote class="profile__blockquote">
+                    <p>
+                        Наша команда – это высококвалифицированные специалисты, которые работают с одной целью: сделать
+                        ваше посещение стоматолога максимально приятным и безболезненным.
+                    </p>
+
+                    <p>
+                        Мы понимаем, что визит к стоматологу - ответственное решение, поэтому каждый наш сотрудник
+                        стремится создать теплую и доброжелательную атмосферу, чтобы вы чувствовали себя как дома.
+                    </p>
+                </blockquote>
+
+                <div class="profile__footer">
+                    <button class="btn" data-popup-id="callback_popup">
+                        Записаться на прием
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- blocks/promo.css -->
+        <section class="container promo promo--variant_1 about_page__section--promo">
+            <div class="promo__block promo__img_wrapper js_appear_bottom">
+                <img loading="lazy" src="./assets/img/team.jpeg" alt="">
+            </div>
+
+            <div class="promo__block promo__content_wrapper js_appear_top">
+                <div class="promo__content_col">
+                    <h2 class="promo__title">
+                        Приходите в Tandem – вместе мы создаем здоровые улыбки, радующие глаза и сердца!
+                    </h2>
+
+                    <div class="promo__description">
+                        <p>
+                            Мы используем только новейшие технологии и методы лечения, чтобы обеспечить наивысший
+                            уровень медицинской помощи. Врачи из нашей команды имеют огромный опыт работы, многие из
+                            специалистов работали и учились за рубежом. Наша клиника оснащена современным оборудованием,
+                            а материалы, которые мы используем, проходят строгий контроль качества. Это позволяет нам
+                            быть уверенными в качестве своей работы.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="promo__content_img_col">
+                    <img loading="lazy" src="./assets/img/blobs/2_teeth_purple.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- common/swiper.min.js -->
+        <!-- blocks/content_slider.css -->
+        <!-- blocks/content_slider.js -->
+        <!-- blocks/callback_form.css -->
+        <!-- blocks/callback_form_popup.css -->
+        <!-- /common/popup.css -->
+        <!-- /common/popup.js -->
+        <!--
+            popup id="callback_popup" в конце страницы, один на все блоки с попапом с формой
+            если нужен в каждом блоке свой, скопировать в каждый блок и поменять id
+            на кнопках для открытия поменять data-popup-id
+        -->
+        <!-- TODO: декор, размеры фоток в слайдере (може и не надо) -->
+        <section class="container content_slider about_page__section--content_slider" id="js_content_slider">
+            <h2 class="content_slider__title">
+                Создаём комфорт для вас в каждой детали
+            </h2>
+
+            <div class="content_slider__cols">
+                <div class="content_slider__content content_slider__col">
+                    <div class="content_slider__content_inner">
+                        <h3 class="content_slider__content_title">
+                            Клиника там то там то
+                        </h3>
+
+                        <div class="content_slider__content_text">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur.
+                                Adipiscing in tristique platea lacinia tincidunt eu.
+                                Molestie pretium ullamcorper praesent donec amet
+                                pellentesque mauris. Bibendum a tristique elementum
+                                senectus. Egestas consequat feugiat curabitur
+                                egestas ipsum consequat. Posuere integer massa
+                                purus maecenas gravida dictumst adipiscing sodales
+                                est. In volutpat id nunc enim risus sed amet nunc.
+                            </p>
+                        </div>
+
+                        <button class="content_slider__content_btn btn" data-popup-id="callback_popup">
+                            Записаться на прием
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content_slider__slider_wrapper content_slider__col" id="js_content_slider_slider">
+                    <div class="content_slider__slider swiper-wrapper">
+                        <div class="content_slider__slide swiper-slide">
+                            <img src="./assets/img/content_slider/slide_1.jpeg" alt="Тандем">
+                        </div>
+                        <div class="content_slider__slide swiper-slide">
+                            <img src="./assets/img/content_slider/slide_1.jpeg" alt="Тандем">
+                        </div>
+                        <div class="content_slider__slide swiper-slide">
+                            <img src="./assets/img/content_slider/slide_1.jpeg" alt="Тандем">
+                        </div>
+                    </div>
+
+                    <div class="content_slider__slider_dots slider_dots swiper-pagination">
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="./blocks/content_slider.js"></script>
+
+        <!-- blocks/ratings.css -->
+        <section class="container ratings">
+            <h2 class="ratings__title">
+                Качество лечения подтверждают независимые порталы
+            </h2>
+
+            <div class="ratings__list">
+                <div class="rating js_appear_top">
+                    <div class="rating__header">
+                        <img loading="lazy" class="rating__logo" src="./assets/img/icons/yandex_logo.png" alt="">
+
+                        <p class="rating__title">Яндекс</p>
+                    </div>
+
+                    <div class="rating__description">
+                        <span class="rating__rate">
+                            4,8<small>/5</small>
+                        </span>
+
+                        по мнению пациентов
+                    </div>
+                </div>
+
+                <div class="rating js_appear_bottom">
+                    <div class="rating__header">
+                        <img loading="lazy" class="rating__logo" src="./assets/img/icons/yandex_logo.png" alt="">
+
+                        <p class="rating__title">Яндекс</p>
+                    </div>
+
+                    <div class="rating__description">
+                        <span class="rating__rate">
+                            4,8<small>/5</small>
+                        </span>
+
+                        по мнению пациентов
+                    </div>
+                </div>
+
+                <div class="rating js_appear_top">
+                    <div class="rating__header">
+                        <img loading="lazy" class="rating__logo" src="./assets/img/icons/yandex_logo.png" alt="">
+
+                        <p class="rating__title">Яндекс</p>
+                    </div>
+
+                    <div class="rating__description">
+                        <span class="rating__rate">
+                            4,8<small>/5</small>
+                        </span>
+
+                        по мнению пациентов
+                    </div>
+                </div>
+
+                <div class="rating js_appear_bottom">
+                    <div class="rating__header">
+                        <img loading="lazy" class="rating__logo" src="./assets/img/icons/yandex_logo.png" alt="">
+
+                        <p class="rating__title">Яндекс</p>
+                    </div>
+
+                    <div class="rating__description">
+                        <span class="rating__rate">
+                            4,8<small>/5</small>
+                        </span>
+
+                        по мнению пациентов
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- blocks/callback_form.css -->
+        <!-- blocks/callback.css -->
+        <section class="container about_page__section--callback js_appear_top">
+            <article class="callback">
+                <div class="callback__inner">
+                    <div class="callback__text">
+                        <h2 class="callback__title">
+                            Мне только спросить!
+                        </h2>
+
+                        <p class="callback__description">
+                            Оставьте заявку и мы ответим на все вопросы. Например, мы можем рассказать как получить
+                            налоговый вычет за лечение зубов.
+                        </p>
+                    </div>
+
+                    <form class="callback__form callback_form" action="/">
+                        <input class="input callback_form__input" placeholder="Имя Фамилия" type="text" required>
+                        <input class="input callback_form__input" placeholder="Телефон" type="text" required>
+
+                        <button class="callback_form__submit_btn btn" type="submit">
+                            Заказать обратный звонок
+                        </button>
+
+                        <label class="checkbox callback_form__checkbox">
+                            <input class="checkbox__native" type="checkbox" checked required>
+                            <div class="checkbox__marker"></div>
+
+                            <p class="checkbox__text">
+                                Даю согласие на <a href="/" class="link" target="_blank">обработку своих персональных
+                                    данных</a>
+                            </p>
+                        </label>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+        <!-- common/swiper.min.js -->
+        <!-- common/slider_dots.css -->
+        <!-- blocks/questions.css -->
+        <!-- blocks/questions.js -->
+        <section class="container questions about_page__section--questions" id="js_questions">
+            <h2 class="questions__title js_appear_bottom">
+                Важные вопросы стоматологу
+            </h2>
+
+            <p class="questions__slider_description questions__slider_description--mob js_appear_bottom">
+                Мы знаем какой ответственный и важный шаг для вас - поход к стоматологу. Поэтому отвечаем на самые
+                популярные вопросы.
+            </p>
+
+            <div class="questions__slider">
+                <div class="questions__slider_controls js_appear_left">
+                    <p class="questions__slider_description questions__slider_description--desc">
+                        Мы знаем какой ответственный и важный шаг для вас - поход к стоматологу. Поэтому отвечаем на
+                        самые популярные вопросы.
+                    </p>
+
+                    <div class="questions__slider_buttons" id="js_questions_slider_mob">
+                        <div class="questions__slider_buttons_inner swiper-wrapper">
+                            <div role="button" class="questions__slider_button js_slider_button swiper-slide">
+                                <div class="questions__slider_button_img_wrapper">
+                                    <img loading="lazy" class="questions__slider_button_img"
+                                        src="./assets/img/questions/slider_btn_1.jpeg"
+                                        alt="Почему важно идти в клинику, а не к врачу">
+                                </div>
+
+                                <div class="questions__slider_button_text">
+                                    <p class="questions__slider_button_title">
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                    </p>
+                                    <span class="questions__slider_button_date">
+                                        06.09.2024
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div role="button" class="questions__slider_button js_slider_button swiper-slide">
+                                <div class="questions__slider_button_img_wrapper">
+                                    <img loading="lazy" class="questions__slider_button_img"
+                                        src="./assets/img/questions/slider_btn_1.jpeg"
+                                        alt="Почему важно идти в клинику, а не к врачу">
+                                </div>
+
+                                <div class="questions__slider_button_text">
+                                    <p class="questions__slider_button_title">
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                    </p>
+                                    <span class="questions__slider_button_date">
+                                        06.09.2024
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div role="button" class="questions__slider_button js_slider_button swiper-slide">
+                                <div class="questions__slider_button_img_wrapper">
+                                    <img loading="lazy" class="questions__slider_button_img"
+                                        src="./assets/img/questions/slider_btn_1.jpeg"
+                                        alt="Почему важно идти в клинику, а не к врачу">
+                                </div>
+
+                                <div class="questions__slider_button_text">
+                                    <p class="questions__slider_button_title">
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                    </p>
+                                    <span class="questions__slider_button_date">
+                                        06.09.2024
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div role="button" class="questions__slider_button js_slider_button swiper-slide">
+                                <div class="questions__slider_button_img_wrapper">
+                                    <img loading="lazy" class="questions__slider_button_img"
+                                        src="./assets/img/questions/slider_btn_1.jpeg"
+                                        alt="Почему важно идти в клинику, а не к врачу">
+                                </div>
+
+                                <div class="questions__slider_button_text">
+                                    <p class="questions__slider_button_title">
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                        Почему важно идти в&nbsp;клинику, а&nbsp;не&nbsp;к&nbsp;врачу
+                                    </p>
+                                    <span class="questions__slider_button_date">
+                                        06.09.2024
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="questions__slider_dots slider_dots slider_dots--gray swiper-pagination">
+                    <!--  -->
+                </div>
+
+                <div class="questions__slides_wrapper js_appear_right" id="js_questions_slider">
+                    <div class="questions__slides swiper-wrapper">
+                        <div class="questions__slide swiper-slide js_slider_slide">
+                            <div class="qustions__video_wrapper js_video_wrapper">
+                                <video class="questions__slide_video js_video" controls
+                                    src="https://storage.yandexcloud.net/media.samolet.ru/video/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%202024.mp4">
+                                </video>
+                                <button class="questions__slide_video_button js_video_control"></button>
+                            </div>
+                            <p class="questions__slide_title">
+                                Почему важно идти в клинику, а не к врачу
+                            </p>
+
+                            <span class="questions__slide_date">
+                                06.09.2024
+                            </span>
+                        </div>
+
+                        <div class="questions__slide swiper-slide js_slider_slide">
+                            <div class="qustions__video_wrapper js_video_wrapper">
+                                <video class="questions__slide_video js_video" controls
+                                    src="https://storage.yandexcloud.net/media.samolet.ru/video/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%202024.mp4">
+                                </video>
+                                <button class="questions__slide_video_button js_video_control"></button>
+                            </div>
+                            <p class="questions__slide_title">
+                                Почему важно идти в клинику, а не к врачу
+                            </p>
+
+                            <span class="questions__slide_date">
+                                06.09.2024
+                            </span>
+                        </div>
+
+                        <div class="questions__slide swiper-slide js_slider_slide">
+                            <div class="qustions__video_wrapper js_video_wrapper">
+                                <video class="questions__slide_video js_video" controls
+                                    src="https://storage.yandexcloud.net/media.samolet.ru/video/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%202024.mp4">
+                                </video>
+                                <button class="questions__slide_video_button js_video_control"></button>
+                            </div>
+                            <p class="questions__slide_title">
+                                Почему важно идти в клинику, а не к врачу
+                            </p>
+
+                            <span class="questions__slide_date">
+                                06.09.2024
+                            </span>
+                        </div>
+
+                        <div class="questions__slide swiper-slide js_slider_slide">
+                            <div class="qustions__video_wrapper js_video_wrapper">
+                                <video class="questions__slide_video js_video" controls
+                                    src="https://storage.yandexcloud.net/media.samolet.ru/video/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%202024.mp4">
+                                </video>
+                                <button class="questions__slide_video_button js_video_control"></button>
+                            </div>
+                            <p class="questions__slide_title">
+                                Почему важно идти в клинику, а не к врачу Почему важно идти в клинику, а не к врачу
+                                Почему важно идти в клинику, а не к врачу
+                            </p>
+
+                            <span class="questions__slide_date">
+                                06.09.2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="./blocks/questions.js"></script>
+
+        <!-- blocks/contacts.css -->
+        <section class="container contacts about_page__section--contacts">
+            <div class="contacts__col contacts__col--left js_appear_left">
+                <img loading="lazy" class="contacts__img" src="./assets/img/contacts.png" alt="стоматология тандем">
+            </div>
+
+            <div class="contacts__col contacts__col--right js_appear_right">
+                <h2 class="contacts__title">
+                    Всегда рады видеть вас в&nbsp;нашей клинике
+                </h2>
+
+                <div class="contacts__cards">
+                    <div class="contacts__card contacts__card--address js_appear_top">
+                        <a class="icon_link contacts__card_link" href="https://yandex.ru/maps/-/CHEnVVPm"
+                            target="_blank">
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
+                            м. Славянский бульвар
+                        </a>
+                        <a class="icon_link contacts__card_link" href="https://yandex.ru/maps/-/CHEnVVPm"
+                            target="_blank">
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" />
+                            Москва, ул. Нежинская, 8, корп.4
+                        </a>
+
+                        <a class="contacts__card_btn btn">
+                            Построить маршрут к&nbsp;клинике
+                            <img loading="lazy" class="contacts__card_btn_icon"
+                                src="./assets/img/icons/btn_link_arrow.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="contacts__card contacts__card--contacts js_appear_right">
+                        <a class="icon_link contacts__card_link" href="mailto:tandem-clinic1@yandex.ru">
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/email.svg" alt="" />
+                            tandem-clinic1@yandex.ru
+                        </a>
+
+                        <a class="icon_link contacts__card_link contacts__card_link--phone" href="tel:+74951323102">
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
+                            Единый телефон: <br>
+                            <span><b>8 (495) 132-31-02</b></span>
+                            </ф>
+                            <a class="icon_link contacts__card_link" href="https://wa.me/79250549900" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/wa.svg" alt="" />
+                                <b>+7 (925) 054-99-00</b>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="popup js_popup" id="callback_popup">
+            <div class="popup__inner">
+                <div class="callback_form_popup">
+                    <div class="callback_form_popup__inner">
+                        <h3 class="h2 callback_form_popup__title">
+                            Записаться на&nbsp;приём
+                        </h3>
+
+
+                        <p class="callback_form_popup__description">
+                            Заполните форму,
+                            мы&nbsp;свяжемся с&nbsp;вами
+                            и&nbsp;запишем на&nbsp;удобное время
+                        </p>
+
+                        <form action="/" class="callback_form callback_form_popup__form">
+                            <input class="input callback_form__input" name="name" placeholder="Имя Фамилия"
+                                type="text" required>
+                            <input class="input callback_form__input" name="phone" placeholder="Телефон" type="text"
+                                required>
+
+
+                            <button class="callback_form__submit_btn btn" type="submit">
+                                Записаться
+                            </button>
+
+                            <label class="checkbox callback_form__checkbox">
+                                <input class="checkbox__native" name="agreement" type="checkbox" checked required>
+                                <div class="checkbox__marker"></div>
+
+                                <p class="checkbox__text">
+                                    Даю согласие на <a href="/" class="link" target="_blank">обработку своих
+                                        персональных
+                                        данных</a>
+                                </p>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <img loading="lazy" class="footer__logo_img" src="./assets/img/logo.svg" alt="">
+                </div>
+
+                <p class="footer__ur_info">
+                    OOO Tandem Dental Clinic
+                </p>
+                <p class="footer__ur_info footer__ur_info--license">
+                    Номер лицензии: <span>ЛО-77-01-002858</span>
+                </p>
+
+                <a class="footer__policy--big-tab" href="/">
+                    Политика защиты данных
+                </a>
+            </div>
+
+            <div class="footer__cols">
+                <ul class="footer__links">
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            О&nbsp;клинике
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Прайс
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Наши&nbsp;врачи
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--law_info_big_tab">
+                        <a class="footer__link" href="#">
+                            Правовая информация
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--policy">
+                        <a class="footer__link" href="#">
+                            Политика защиты данных
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="footer__links">
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Блог
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--law_info">
+                        <a class="footer__link" href="#">
+                            Правовая информация
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__right">
+                <p class="footer__right_text">
+                    Для получения подробной и актуальной стоимости услуг, обращайтесь к администратору.
+                </p>
+
+                <a class="footer__policy--mob" href="#" target="_blank">
+                    Политика защиты данных
+                </a>
+                <a class="footer__law_info--mob" href="#" target="_blank">
+                    Правовая информация
+                </a>
+
+                <a class="footer__version footer__link" href="#">
+                    Версия для слабовидящих
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. <br>
+            НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+        </div>
+    </footer>
+
+
+    <script src="./common/popup.js"></script>
+</body>
+
+</html>
