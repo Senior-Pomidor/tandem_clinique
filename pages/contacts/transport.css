@@ -1,0 +1,104 @@
+.transport__title {
+    margin-bottom: 40px;
+}
+
+.transport__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(1px, 1fr));
+    gap: 40px;
+}
+
+.transport__col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.transport__card {
+    flex-grow: 1;
+    padding: 30px 40px;
+    border-radius: 30px;
+    background-color: var(--bg-gray);
+}
+
+/* .transport__card + .transport__card {
+    margin-top: 20px;
+} */
+.transport__card_title {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.transport__card_title::before,
+.transport__card_title::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    color: rgba(227, 74, 74, 1);
+    background-color: currentColor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.transport__card_title::before {
+    margin-right: 6px;
+    order: -1;
+    mask-image: url(../../assets/img/icons/metro_contact.svg);
+    /* mask-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M6.23385%205L1.92199%2016.8359L1.01356%2016.8233L1%2018.9913H14.4372L14.4101%2016.8485L13.4881%2016.8359L13.583%2016.5586L9.40673%205H6.23385ZM7.83387%209.20998L10.5593%2016.8359H5.04064L7.83387%209.20998Z%22%20fill%3D%22%23E34A4A%22%2F%3E%3Cpath%20d%3D%22M13.583%2016.5586L12.0363%2012.2574L14.6474%205L17.8203%205.01261L22.1179%2016.8342H23L22.9904%2019H18.1102L18.1084%2016.8296L18.9796%2016.8359L16.2372%209.2478L13.583%2016.5586Z%22%20fill%3D%22%23E34A4A%22%2F%3E%3C%2Fsvg%3E"); */
+}
+
+.transport__card_title::after {
+    margin-right: 10px;
+    order: -1;
+    mask-image: url(../../assets/img/icons/circle.svg);
+    /* mask-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%2216%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%23E34A4A%22%2F%3E%3C%2Fsvg%3E"); */
+}
+
+@media screen and (max-width: 1200px) {
+    .transport__title {
+        margin-bottom: 30px;
+    }
+
+    .transport__card {
+        padding: 20px 30px;
+        border-radius: 20px;
+    }
+
+    .transport__card_title::before,
+    .transport__card_title::after {
+        width: 16px;
+        height: 16px;
+    }
+
+    .transport__card_title::before {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .transport__grid {
+        grid-template-columns: repeat(2, minmax(0px, 1fr));
+        row-gap: 20px;
+    }
+
+    .transport__col:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .transport__title {
+        margin-bottom: 20px;
+    }
+
+    .transport__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transport__col:last-child {
+        grid-column: span 1;
+    }
+}

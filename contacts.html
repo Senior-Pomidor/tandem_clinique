@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Стоматология в москве">
+
+    <title>Tandem</title>
+
+    <!-- START: обязательно на каждую страницу -->
+    <link rel="stylesheet" href="./global/normalize.css">
+    <link rel="stylesheet" href="./global/main.css">
+    <link rel="stylesheet" href="./global/header.css">
+    <link rel="stylesheet" href="./global/footer.css">
+    <!-- END: обязательно на каждую страницу -->
+
+    <!-- START: вспомогательные стили -->
+    <!-- <link rel="stylesheet" href="./common/popup.css">
+    <link rel="stylesheet" href="./common/slider_dots.css">
+    <link rel="stylesheet" href="./common/list_icon.css"> -->
+    <!-- END: вспомогательные стили -->
+
+    <!-- START: общие блоки -->
+    <link rel="stylesheet" href="./blocks/callback_form.css">
+    <link rel="stylesheet" href="./blocks/callback.css">
+    <link rel="stylesheet" href="./blocks/banner.css">
+    <link rel="stylesheet" href="./blocks/social.css">
+    <!-- END: общие блоки -->
+
+    <!-- START: секции -->
+    <link rel="stylesheet" href="./pages/contacts/contacts_page.css">
+    <link rel="stylesheet" href="./pages/contacts/map.css">
+    <link rel="stylesheet" href="./pages/contacts/auto.css">
+    <link rel="stylesheet" href="./pages/contacts/transport.css">
+    <!-- END: секции -->
+
+    <body>
+        <style>
+            /* FIXME: для разработаки, удалить, подключить appear.js */
+            [class*="js_appear"] {
+                opacity: 1;
+            }
+        </style>
+
+        <!-- global/header.css -->
+        <!-- global/header.js -->
+        <header class="header js_header container">
+            <div class="header__main">
+                <div class="header__main_container">
+                    <a class="header__logo header__logo--desktop" href="/">
+                        <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
+                    </a>
+
+                    <div class="header__main_content">
+                        <div class="header__main_top">
+                            <div class="header__contacts">
+                                <a class="header__logo header__logo--mob" href="/">
+                                    <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
+                                </a>
+
+                                <a class="icon_link header__contact header__contact--metro"
+                                    href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
+                                    м. Славянский бульвар
+                                </a>
+
+                                <a class="icon_link header__contact header__contact--address"
+                                    href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg"
+                                        alt="" />
+                                    <span class="header__contact_text--mob">
+                                        м. Славянский бульвар
+                                    </span>
+                                    г. Москва, ул. Нежинская, 8, корп.4
+                                </a>
+
+                                <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
+                                    8 (495) 132-31-02
+                                </a>
+
+                                <!-- TODO: заменить блок -->
+                                <div class="header__mob_nav_btns">
+                                    <label for="qwerty" class="header__search_btn_mob js_header_search_btn_mob"></label>
+
+                                    <div class="header__mob_nav_btn js_header_nav_btn">
+                                        <img loading="lazy"
+                                            class="header__mob_nav_btn_icon header__mob_nav_btn_icon--burger"
+                                            src="./assets/img/icons/burger.svg" alt="">
+
+                                        <img loading="lazy" class="header__mob_nav_btn_icon header__mob_nav_btn_icon--close"
+                                            src="./assets/img/icons/cross.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__main_bottom">
+                            <div class="header__search js_header_search">
+                                <form class="header__search_input_wrapper" action="/">
+                                    <input placeholder="Поиск..." class="header__search_input js_search_input" type="text"
+                                        id="qwerty">
+
+                                    <button type="button" class="header__search_reset js_search_reset_btn"></button>
+                                </form>
+
+                                <!-- XXX: Блок .header__search_suggestions должен быть всегда -->
+                                <!-- XXX: внутренние ссылки могут генериться -->
+                                <div class="header__search_suggestions">
+                                    <a class="header__search_suggestion" href="/qweqwe">
+                                        dasdasd Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ullam
+                                        veniam cupiditate quo laboriosam voluptatibus mollitia dicta ad soluta. Ad est animi
+                                        optio iusto obcaecati ratione deserunt quam officia magnam commodi! Vitae
+                                        repudiandae eaque fugit, beatae incidunt nam ea accusamus dolores tempore impedit
+                                        ipsum doloremque quis. Tempore dolorum velit libero.
+                                    </a>
+                                    <a class="header__search_suggestion" href="/">
+                                        dasdasd
+                                    </a>
+                                    <a class="header__search_suggestion" href="/">
+                                        dasdasd
+                                    </a>
+                                    <a class="header__search_suggestion" href="/">
+                                        dasdasd
+                                    </a>
+                                    <a class="header__search_suggestion" href="/">
+                                        dasdasd
+                                    </a>
+                                </div>
+                            </div>
+
+                            <ul class="header__social">
+                                <li class="header__social_item">
+                                    <a class="header__social_link header__social_link--wa" href=""></a>
+                                </li>
+                                <li class="header__social_item">
+                                    <a class="header__social_link header__social_link--tg" href=""></a>
+                                </li>
+                                <li class="header__social_item">
+                                    <a class="header__social_link header__social_link--vk" href=""></a>
+                                </li>
+                            </ul>
+
+                            <button class="header__appointment_btn btn">
+                                Записаться
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="header__nav">
+                <ul class="header__nav_list">
+                    <li class="header__nav_item">
+                        <a class="header__nav_link header__nav_link--active" href="/">
+                            О&nbsp;клинике
+                        </a>
+                    </li>
+                    <li class="header__nav_item">
+                        <a class="header__nav_link" href="#">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="header__nav_item">
+                        <a class="header__nav_link" href="/doctors.html">
+                            Врачи
+                        </a>
+                    </li>
+                    <li class="header__nav_item">
+                        <a class="header__nav_link" href="#">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="header__nav_item">
+                        <a class="header__nav_link" href="#">
+                            Акции
+                        </a>
+                    </li>
+                    <li class="header__nav_item">
+                        <a class="header__nav_link" href="#">
+                            Прайс
+                        </a>
+                    </li>
+                    <li class="header__nav_item">
+                        <a class="header__nav_link" href="#">
+                            Блог
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__mob">
+                <div class="header__mob_contacts">
+                    <a class="icon_link header__contact header__contact--metro" href="https://yandex.ru/maps/-/CHEnVVPm"
+                        target="_blank">
+                        <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
+                        м. Славянский бульвар
+                    </a>
+
+                    <a class="icon_link header__contact header__contact--address" href="https://yandex.ru/maps/-/CHEnVVPm"
+                        target="_blank">
+                        <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" />
+                        г. Москва, ул. Нежинская, 8, корп.4
+                    </a>
+
+                    <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                        <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
+                        <b>8 (495) 132-31-02</b>
+                    </a>
+                </div>
+
+                <ul class="header__social">
+                    <li class="header__social_item">
+                        <a class="header__social_link header__social_link--wa" href=""></a>
+                    </li>
+                    <li class="header__social_item">
+                        <a class="header__social_link header__social_link--tg" href=""></a>
+                    </li>
+                    <li class="header__social_item">
+                        <a class="header__social_link header__social_link--vk" href=""></a>
+                    </li>
+                </ul>
+
+                <button class="header__appointment_btn btn">
+                    Записаться
+                </button>
+            </div>
+        </header>
+        <script src="./global/header.js"></script>
+
+        <main class="contacts_page">
+            <div class="breadcrumbs container">
+                <a href="./index.html" class="breadcrumbs__link">Главная</a>
+                <span class="breadcrumbs__divider">/</span>
+                <a href="./about.html" class="breadcrumbs__link">О клинике</a>
+                <span class="breadcrumbs__divider">/</span>
+                <span class="breadcrumbs__link breadcrumbs__link--active">Контакты</span>
+            </div>
+
+            <!-- blocks/banner.css -->
+            <section class="container contacts_page__section--banner">
+                <article class="banner">
+                    <div class="banner__inner">
+                        <div class="banner__text">
+                            <h3 class="banner__title">
+                                Баннер
+                            </h3>
+    
+                            <p class="banner__description">
+                                Текст текст текст текст текст текст текст Текст текст текст текст текст текст текст
+                            </p>
+                        </div>
+    
+                        <div class="banner__btn_wrapper">
+                            <button class="btn banner__btn">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+                    <img src="./assets/img/banner.png" alt="баннер" loading="lazy" class="banner__img">
+                </article>
+            </section>
+
+            <!-- pages/contacts/map.css -->
+            <section class="container map contacts_page__section--map">
+                <h1 class="h1 map__title">
+                    Как добраться в&nbsp;стоматологию Tandem?
+                </h1>
+                <div class="map__grid">
+                    <div class="map__contacts">
+                        <div class="map__contacts_card">
+                            <a class="icon_link" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" aria-hidden="true" />
+                                м. Славянский бульвар
+                            </a>
+
+                            <a class="icon_link" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" aria-hidden="true" />
+                                Москва, ул.&nbsp;Нежинская, 8, корп.4
+                            </a>
+            
+                            <a class="icon_link" href="mailto:tandem-clinic1@yandex.ru">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/email.svg" alt="" aria-hidden="true" />
+                                tandem-clinic1@yandex.ru
+                            </a>
+                        </div>
+
+                        <div class="map__contacts_card map__contacts_card--accent">
+                            <a class="icon_link map__contact--phone" href="tel:+74951323102">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone_white.svg" alt="" aria-hidden="true" />
+                                8 (495) 132-31-02
+                            </a>
+
+                            <a class="icon_link map__contact--wa" href="https://wa.me/79250549900" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/wa.svg" alt="" aria-hidden="true" />
+                                +7 (925) 054-99-00
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="map__map_wrapper">
+                        <iframe
+                            class="map__map"
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa526c2da6164d8c94e878192bbe3b0600027bcccbb1ac04448caa8adfc7acd39&amp;source=constructor"
+                            width="100%"
+                            height="100%"
+                            frameborder="0"
+                        ></iframe>
+
+                        <iframe
+                            class="map__map map__map--mob"
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa526c2da6164d8c94e878192bbe3b0600027bcccbb1ac04448caa8adfc7acd39&amp;source=constructor"
+                            width="100%"
+                            height="100%"
+                            frameborder="0"
+                        ></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- pages/contacts/auto.css -->
+            <section class="container auto contacts_page__section--auto">
+                <h2 class="h2 auto__title">
+                    на автомобиле
+                </h2>
+
+                <div class="auto__content">
+                    <p>
+                        Если вы&nbsp;планируете приехать
+                        на&nbsp;автомобиле, у&nbsp;нас есть
+                        для вас приятный бонус&nbsp;&ndash;
+                        бесплатная парковка рядом с&nbsp;клиникой!
+                        Чтобы воспользоваться парковкой,
+                        позвоните администратору клиники 
+                        <nobr>за&nbsp;5-10 минут</nobr> до&nbsp;вашего приезда.
+                    </p>
+
+                    <button class="btn auto__btn btn--border">
+                        Построить маршрут
+                    </button>
+                </div>
+            </section>
+
+            <!-- pages/contacts/transport.css -->
+            <section class="container transport contacts_page__section--transport">
+                <h2 class="h2 transport__title">
+                    На общественном транспорте
+                </h2>
+
+                <div class="transport__grid">
+                    <div class="transport__col">
+                        <div class="transport__card">
+                            <p class="transport__card_title">
+                                От м. Минская
+                            </p>
+
+                            <p>
+                                Выйдите на&nbsp;выход No&nbsp;1&nbsp;к Мемориальной мечети. Пройдите 400 метров до&nbsp;остановки &laquo;Каменная плотина&raquo; и&nbsp;сядьте на&nbsp;автобус No&nbsp;187. Выйдите на&nbsp;остановке &laquo;ул. Веерная&raquo;, пройдите 200 метров до&nbsp;светофора и&nbsp;перейдите дорогу на&nbsp;ул. Нежинская. <br>
+                                Мы&nbsp;находимся по&nbsp;адресу: ул. Нежинская, д.&nbsp;8, корп.&nbsp;4.   
+                            </p>
+                        </div>
+
+                        <div class="transport__card">
+                            <p class="transport__card_title">
+                                От м. Юго-Западная
+                            </p>
+
+                            <p>
+                                Садитесь на&nbsp;маршрутное такси No329M и&nbsp;выйдите на&nbsp;остановке &laquo;ул. Нежинская, д.&nbsp;8, корп.4&raquo;.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="transport__col">
+                        <div class="transport__card">
+                            <p class="transport__card_title">
+                                От м. Пр-т Вернадского 
+                            </p>
+
+                            <p>
+                                Остановитесь на&nbsp;ул. Удальцова и&nbsp;сядьте на&nbsp;автобус No42 или маршрутное такси No&nbsp;432M. Выйдите на&nbsp;остановке &laquo;ул. Веерная&raquo; или &laquo;ул. Нежинская, д.&nbsp;8, корп.&nbsp;4&raquo;.
+                            </p>
+                        </div>
+
+                        <div class="transport__card">
+                            <p class="transport__card_title">
+                                От м. Аминьевская
+                            </p>
+
+                            <p>
+                                Выйдите на&nbsp;остановку &laquo;метро Аминьевская&raquo;, сядьте на&nbsp;автобус &#8470;&nbsp;329, 325 или 641. Выйдите на&nbsp;остановке &laquo;Нежинская улица&raquo;. Или сядьте на&nbsp;автобус &#8470;&nbsp;274 и&nbsp;выйдите на&nbsp;остановке &laquo;Веерная улица&raquo;. Чтобы дойти до&nbsp;адреса&nbsp;ул. Нежинская, д.&nbsp;8, корп.&nbsp;4, понадобиться 3-4&nbsp;минуты.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="transport__col">
+                        <div class="transport__card">
+                            <p class="transport__card_title">
+                                От м. Славянский бульвар
+                            </p>
+
+                            <p>
+                                Выйдите в&nbsp;сторону Славянского бульвара и&nbsp;пройдите через подземный переход до&nbsp;конца. После выхода на&nbsp;улицу Славянский бульвар, сядьте на&nbsp;автобус No&nbsp;329, который довезет вас до&nbsp;остановки &laquo;ул. Веерная&raquo;. Выйдите на&nbsp;этой остановке и&nbsp;пройдите 200 метров назад до&nbsp;перекрестка. На&nbsp;светофоре перейдите дорогу на&nbsp;ул. Нежинская. Либо сядьте на&nbsp;автобус No&nbsp;641, который довезет вас до&nbsp;остановки &laquo;ул. Нежинская, д.&nbsp;8&raquo;. Мы&nbsp;находимся по&nbsp;адресу: ул. Нежинская, д.&nbsp;8, корп.&nbsp;4&nbsp;(время в&nbsp;пути 4-5&nbsp;минут).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- blocks/callback_form.css -->
+            <!-- blocks/callback.css -->
+            <section class="container contacts_page__section--callback">
+                <article class="callback callback--green">
+                    <div class="callback__inner">
+                        <div class="callback__text">
+                            <h2 class="callback__title">
+                                Мне только спросить!
+                            </h2>
+    
+                            <p class="callback__description">
+                                Например, мы&nbsp;можем рассказать,
+                                как оставить автомобиль на&nbsp;бесплатной парковке.
+                            </p>
+                        </div>
+    
+                        <form class="callback__form callback_form" action="/">
+                            <input class="input callback_form__input" placeholder="Имя Фамилия" type="text" required>
+                            <input class="input callback_form__input" placeholder="Телефон" type="text" required>
+    
+                            <button class="callback_form__submit_btn btn" type="submit">
+                                Заказать обратный звонок
+                            </button>
+    
+                            <label class="checkbox callback_form__checkbox">
+                                <input class="checkbox__native" type="checkbox" checked required>
+                                <div class="checkbox__marker"></div>
+    
+                                <p class="checkbox__text">
+                                    Даю согласие на <a href="/" class="link" target="_blank">обработку своих персональных
+                                        данных</a>
+                                </p>
+                            </label>
+                        </form>
+                    </div>
+                </article>
+            </section>
+
+            <!-- blocks/social.css -->
+            <section class="container contacts_page__section--social">
+                <div class="social">
+                    <h2 class="social__title">
+                        <!-- <span> для переноса на мобилке -->
+                        <span>Давайте</span> дружить в&nbsp;социальных сетях
+                    </h2>
+
+                    <div class="social__links">
+                        <a class="social__link social__link--tg" href="/"></a>
+                        <a class="social__link social__link--vk" href="/"></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer container">
+            <div class="footer__inner">
+                <div class="footer__left">
+                    <div class="footer__logo">
+                        <img loading="lazy" class="footer__logo_img" src="./assets/img/logo.svg" alt="">
+                    </div>
+    
+                    <p class="footer__ur_info">
+                        OOO Tandem Dental Clinic
+                    </p>
+                    <p class="footer__ur_info footer__ur_info--license">
+                        Номер лицензии: <span>ЛО-77-01-002858</span>
+                    </p>
+    
+                    <a class="footer__policy--big-tab" href="/">
+                        Политика защиты данных
+                    </a>
+                </div>
+    
+                <div class="footer__cols">
+                    <ul class="footer__links">
+                        <li class="footer__links_item">
+                            <a class="footer__link" href="#">
+                                О&nbsp;клинике
+                            </a>
+                        </li>
+                        <li class="footer__links_item">
+                            <a class="footer__link" href="#">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="footer__links_item">
+                            <a class="footer__link" href="#">
+                                Прайс
+                            </a>
+                        </li>
+                        <li class="footer__links_item">
+                            <a class="footer__link" href="#">
+                                Наши&nbsp;врачи
+                            </a>
+                        </li>
+                        <li class="footer__links_item footer__links_item--law_info_big_tab">
+                            <a class="footer__link" href="#">
+                                Правовая информация
+                            </a>
+                        </li>
+                        <li class="footer__links_item footer__links_item--policy">
+                            <a class="footer__link" href="#">
+                                Политика защиты данных
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="footer__links">
+                        <li class="footer__links_item">
+                            <a class="footer__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="footer__links_item">
+                            <a class="footer__link" href="#">
+                                Блог
+                            </a>
+                        </li>
+                        <li class="footer__links_item">
+                            <a class="footer__link" href="#">
+                                Портфолио
+                            </a>
+                        </li>
+                        <li class="footer__links_item footer__links_item--law_info">
+                            <a class="footer__link" href="#">
+                                Правовая информация
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="footer__right">
+                    <p class="footer__right_text">
+                        Для получения подробной и актуальной стоимости услуг, обращайтесь к администратору.
+                    </p>
+    
+                    <a class="footer__policy--mob" href="#" target="_blank">
+                        Политика защиты данных
+                    </a>
+                    <a class="footer__law_info--mob" href="#" target="_blank">
+                        Правовая информация
+                    </a>
+    
+                    <a class="footer__version footer__link" href="#">
+                        Версия для слабовидящих
+                    </a>
+                </div>
+            </div>
+    
+            <div class="footer__bottom">
+                ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. <br>
+                НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+            </div>
+        </footer>
+    </body>
+</html>

@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const popupId = btn.dataset.popupId;
             const $popup = document.getElementById(popupId);
             $popup.classList.add('popup--open');
+
+            $popup.dispatchEvent(new Event('open'));
         })
     })
 })
@@ -13,5 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('click', (event) => {
     if (event.target.classList.contains('js_popup')) {
         event.target.classList.remove('popup--open');
+        event.target.dispatchEvent(new Event('close'));
     }
 })

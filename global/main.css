@@ -109,6 +109,7 @@ h3,
     font-weight: 400;
 }
 
+
 h5,
 .h5 {
     font-size: 20px;
@@ -119,9 +120,17 @@ h5,
 ul.list,
 ol.list {
     padding-left: 1.5em;
+}
 
+ul.list {
     li {
-        list-style-type: initial;
+        list-style-type: disc;
+    }
+}
+
+ol.list {
+    li {
+        list-style-type: decimal;
     }
 }
 

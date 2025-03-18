@@ -1,0 +1,162 @@
+.map {
+    /*  */
+}
+
+.map__title {
+    margin-bottom: 60px;
+}
+
+.map__grid {
+    display: flex;
+    gap: 40px;
+}
+
+.map__contacts {
+    width: 452px;
+    min-width: 452px;
+}
+
+.map__contacts_card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 30px 40px;
+    border-radius: 30px;
+    background-color: var(--bg-gray);
+
+    .icon_link {
+        --icon-size: 28px;
+    }
+}
+
+.map__contacts_card + .map__contacts_card {
+    margin-top: 24px;
+}
+
+.map__contacts_card--accent {
+    gap: 10px;
+    background-color: var(--purple);
+    color: #fff;
+    padding: 18px 40px;
+
+    a {
+        color: #fff;
+    }
+}
+
+@media (hover: hover),
+(-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .map__contacts_card--accent a:hover {
+        color: var(--font-color--primary);
+    }
+}
+
+.map__contact--phone {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.map__contact--wa {
+    font-weight: 700;
+}
+
+.map__map_wrapper {
+    width: 100%;
+    aspect-ratio: 947 / 550;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.map__map--mob {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .map__contacts {
+        width: 287px;
+        min-width: 287px;
+    }
+
+    .map__contacts_card {
+        border-radius: 20px;
+        padding: 20px 30px;
+    }
+
+    .map__contacts_card--accent {
+        padding: 22px;
+    }
+
+    .map__contacts_card + .map__contacts_card {
+        margin-top: 40px;
+    }
+    
+
+    .map__contact--phone {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    .map__contacts {
+        .icon_link {
+            padding-left: calc(var(--icon-size) + 16px);
+        }
+    }
+
+
+    .map__map_wrapper {
+        border-radius: 20px;
+        aspect-ratio: 616 / 311;
+    }
+
+    .map__map {
+        display: none;
+    }
+
+    .map__map--mob {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .map__title {
+        margin-bottom: 30px;
+    }
+
+    .map__contacts {
+        width: initial;
+        min-width: initial;
+    }
+
+    .map__contacts,
+    .map__map_wrapper {
+        flex: 1 1 0px;
+    }
+
+    .map__contacts_card + .map__contacts_card {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .map__grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .map__contacts,
+    .map__map_wrapper {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .map__map_wrapper {
+        aspect-ratio: 288 / 292;
+        max-height: 350px;
+    }
+}
+
+
+
+

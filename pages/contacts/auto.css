@@ -1,0 +1,61 @@
+.auto {
+    display: flex;
+    gap: 40px;
+}
+
+.auto__title {
+    width: 576px;
+}
+
+.auto__content {
+    width: 643px;
+}
+
+.auto__btn {
+    margin-top: 20px;
+}
+
+.auto__btn::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin-right: 16px;
+    color: var(--purple);
+    background-color: currentColor;
+    mask-image: url(../../assets/img/icons/map.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+@media (hover: hover),
+(-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .auto__btn:hover::before {
+        color: var(--font-color--primary);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .auto__title {
+        width: 287px;
+        min-width: 287px;
+    }
+
+    .auto__content {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .auto {
+        flex-direction: column;
+        gap: 27px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .auto {
+        gap: 20px;
+    }
+}

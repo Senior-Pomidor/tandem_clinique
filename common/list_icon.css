@@ -1,0 +1,42 @@
+.list_icon {
+    --icon-size: 44px;
+}
+
+.list_icon li {
+    position: relative;
+    min-height: var(--icon-size);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: calc(var(--icon-size) + 24px);
+}
+
+.list_icon__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+
+@media screen and (max-width: 1200px) {
+    .list_icon {
+        --icon-size: 36px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    
+}
+
+@media screen and (max-width: 720px) {
+    .list_icon__icon {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .list_icon li {
+        padding-left: initial;
+    }
+}
