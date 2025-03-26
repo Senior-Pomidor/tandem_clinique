@@ -35,6 +35,7 @@ body {
     --bg-gray: #f3f5f3;
     --bg-white: #fff;
     --green-gradient: linear-gradient(160.04deg, #B7FBBD 5.41%, #F5F6FA 51.07%, #E4DFF5 95.82%);
+
     --gray-gradient: linear-gradient(180deg, #F0F5F0 0%, #F7F7F7 100%);
     --purple-gradient: linear-gradient(62.74deg, #AE8EF8 4.35%, #CBB3EF 51.37%);
     --btn-bg--primary: var(--purple-gradient);
@@ -106,6 +107,13 @@ h3,
 .h3 {
     font-size: 40px;
     line-height: 48px;
+    font-weight: 400;
+}
+
+h4,
+.h4 {
+    font-size: 32px;
+    line-height: 40px;
     font-weight: 400;
 }
 
@@ -210,14 +218,6 @@ ol.list {
     position: relative;
 }
 
-@media (hover: hover),
-(-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-    .btn:hover {
-        color: #fff;
-    }
-}
-
 .btn--border {
     background: #fff;
     box-shadow: inset 0 0 0 2px var(--purple);
@@ -239,11 +239,33 @@ ol.list {
         box-shadow var(--link-transition);
 }
 
+.btn--white {
+    background: #fff;
+}
+
+.btn--link {
+    padding: 10px 24px;
+
+    .btn__link_icon {
+        width: 36px;
+        height: 36px;
+        margin-left: 10px;
+    }
+}
+
 
 
 @media (hover: hover),
 (-ms-high-contrast: none),
 (-ms-high-contrast: active) {
+    .btn:hover {
+        color: #fff;
+    }
+
+    .btn--white:hover {
+        color: var(--purple);
+    }
+
     .btn--border:hover {
         color: var(--font-color--primary);
         box-shadow: inset 0 0 0 2px transparent;
@@ -263,6 +285,22 @@ ol.list {
         border-radius: 30px;
     }
 }
+
+@media screen and (max-width: 920px) {
+    .btn--link {
+        padding: 4px 20px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .btn--link {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 2px 12px;
+    }
+}
+
+
 
 /* links */
 .icon_link {

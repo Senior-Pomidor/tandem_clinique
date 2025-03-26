@@ -1,0 +1,43 @@
+.title_text {
+    display: flex;
+    gap: 40px;
+}
+
+.title_text__title {
+    width: 576px;
+    min-width: 576px;
+}
+
+.title_text__text {
+    width: 740px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    .title_text__title {
+        width: 288px;
+        min-width: 288px;
+    }
+
+    .title_text__text {
+        width: auto;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .title_text {
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .title_text__title {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    
+}

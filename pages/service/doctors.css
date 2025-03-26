@@ -1,0 +1,25 @@
+.doctors__title {
+    margin-bottom: 60px;
+}
+
+.doctor_profile + .doctor_profile {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    .doctors__title {
+        margin-bottom: 30px;
+    }
+
+    .doctor_profile + .doctor_profile {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    
+}
+
+@media screen and (max-width: 720px) {
+    
+}

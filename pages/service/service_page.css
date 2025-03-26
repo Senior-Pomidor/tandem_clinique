@@ -1,0 +1,62 @@
+.service_page__section--title_text,
+.service_page__section--callback {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.service_page__section--indicators {
+    padding-top: 120px;
+    padding-bottom: 127px;
+}
+
+.service_page__section--advantages {
+    padding-top: 120px;
+    padding-bottom: 107px;
+}
+
+.service_page__section--contacts,
+.service_page__section--case,
+.service_page__section--doctors,
+.service_page__section--algo {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+@media screen and (max-width: 1200px) {
+    .service_page__section--contacts,
+    .service_page__section--advantages,
+    .service_page__section--case,
+    .service_page__section--doctors,
+    .service_page__section--algo,
+    .service_page__section--title_text,
+    .service_page__section--indicators {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .service_page__section--callback {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    section + footer {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    
+}
+
+@media screen and (max-width: 720px) {
+    .service_page__section--contacts,
+    .service_page__section--advantages,
+    .service_page__section--case,
+    .service_page__section--doctors,
+    .service_page__section--algo,
+    .service_page__section--title_text,
+    .service_page__section--indicators {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Стоматология в москве">
+
+    <title>Tandem</title>
+
+    <!-- START: обязательно на каждую страницу -->
+    <link rel="stylesheet" href="./global/normalize.css">
+    <link rel="stylesheet" href="./global/main.css">
+    <link rel="stylesheet" href="./global/header.css">
+    <link rel="stylesheet" href="./global/footer.css">
+    <!-- END: обязательно на каждую страницу -->
+
+    <!-- START: UI components -->
+    <link rel="stylesheet" href="./common/list_icon.css">
+    <!-- <link rel="stylesheet" href="./common/list_styled.css">
+    <link rel="stylesheet" href="./common/slider_dots.css">
+    <link rel="stylesheet" href="./common/popup.css"> -->
+    <!-- END: UI components -->
+
+    <!-- START: swiper обяателен для слайдеров -->
+    <!-- XXX: загружать до слайдеров -->
+    <!-- <script src="./common/swiper.min.js"></script> -->
+    
+    <!-- END: swiper обяателен для слайдеров-->
+
+    <!-- START: общие блоки -->
+    <!-- <link rel="stylesheet" href="./blocks/profile.css">
+    <link rel="stylesheet" href="./blocks/promo.css">
+    <link rel="stylesheet" href="./blocks/callback_form.css">
+    <link rel="stylesheet" href="./blocks/callback_form_popup.css">
+    <link rel="stylesheet" href="./blocks/callback.css">
+    <link rel="stylesheet" href="./blocks/reviews.css">
+    <link rel="stylesheet" href="./blocks/contacts.css">
+    <link rel="stylesheet" href="./blocks/questions.css">
+    <link rel="stylesheet" href="./blocks/ratings.css"> -->
+    <!-- END: общие блоки -->
+
+    <!-- START: секции -->
+    <link rel="stylesheet" href="./pages/tax/tax_page.css">
+    <link rel="stylesheet" href="./pages/tax/tax.css">
+    <!-- END: секции -->
+</head>
+
+<body>
+    <style>
+        /* FIXME: для разработаки, удалить, подключить appear.js */
+        [class*="js_appear"] {
+            opacity: 1;
+        }
+    </style>
+
+    <header class="header js_header container">
+        <div class="header__main">
+            <div class="header__main_container">
+                <a class="header__logo header__logo--desktop" href="/">
+                    <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
+                </a>
+
+                <div class="header__main_content">
+                    <div class="header__main_top">
+                        <div class="header__contacts">
+                            <a class="header__logo header__logo--mob" href="/">
+                                <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--metro"
+                                href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
+                                м. Славянский бульвар
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--address"
+                                href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg"
+                                    alt="" />
+                                <span class="header__contact_text--mob">
+                                    м. Славянский бульвар
+                                </span>
+                                г. Москва, ул. Нежинская, 8, корп.4
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
+                                8 (495) 132-31-02
+                            </a>
+
+                            <!-- TODO: заменить блок -->
+                            <div class="header__mob_nav_btns">
+                                <label for="qwerty" class="header__search_btn_mob js_header_search_btn_mob"></label>
+
+                                <div class="header__mob_nav_btn js_header_nav_btn">
+                                    <img loading="lazy"
+                                        class="header__mob_nav_btn_icon header__mob_nav_btn_icon--burger"
+                                        src="./assets/img/icons/burger.svg" alt="">
+
+                                    <img loading="lazy" class="header__mob_nav_btn_icon header__mob_nav_btn_icon--close"
+                                        src="./assets/img/icons/cross.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__main_bottom">
+                        <!-- TODO: заменить блок -->
+                        <div class="header__search js_header_search">
+                            <form class="header__search_input_wrapper" action="/">
+                                <input placeholder="Поиск..." class="header__search_input js_search_input" type="text"
+                                    id="qwerty">
+
+                                <button type="button" class="header__search_reset js_search_reset_btn"></button>
+                            </form>
+
+                            <!-- XXX: Блок .header__search_suggestions должен быть всегда -->
+                            <!-- XXX: внутренние ссылки могут генериться -->
+                            <div class="header__search_suggestions">
+                                <a class="header__search_suggestion" href="/qweqwe">
+                                    dasdasd Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ullam
+                                    veniam cupiditate quo laboriosam voluptatibus mollitia dicta ad soluta. Ad est animi
+                                    optio iusto obcaecati ratione deserunt quam officia magnam commodi! Vitae
+                                    repudiandae eaque fugit, beatae incidunt nam ea accusamus dolores tempore impedit
+                                    ipsum doloremque quis. Tempore dolorum velit libero.
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="header__social">
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--wa" href=""></a>
+                            </li>
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--tg" href=""></a>
+                            </li>
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--vk" href=""></a>
+                            </li>
+                        </ul>
+
+                        <button class="header__appointment_btn btn">
+                            Записаться
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__nav_list">
+                <li class="header__nav_item">
+                    <a class="header__nav_link header__nav_link--active" href="/">
+                        О&nbsp;клинике
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Услуги
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="/doctors.html">
+                        Врачи
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Портфолио
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Акции
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Прайс
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Блог
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__mob">
+            <div class="header__mob_contacts">
+                <a class="icon_link header__contact header__contact--metro" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
+                    м. Славянский бульвар
+                </a>
+
+                <a class="icon_link header__contact header__contact--address" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" />
+                    г. Москва, ул. Нежинская, 8, корп.4
+                </a>
+
+                <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
+                    <b>8 (495) 132-31-02</b>
+                </a>
+            </div>
+
+            <ul class="header__social">
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--wa" href=""></a>
+                </li>
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--tg" href=""></a>
+                </li>
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--vk" href=""></a>
+                </li>
+            </ul>
+
+            <button class="header__appointment_btn btn">
+                Записаться
+            </button>
+        </div>
+    </header>
+    <script src="./global/header.js"></script>
+
+    <main class="page_template">
+        <div class="breadcrumbs container">
+            <a href="/" class="breadcrumbs__link">Главная</a>
+            <span class="breadcrumbs__divider">/</span>
+            <a href="./doctors.html" class="breadcrumbs__link">Врачи</a>
+            <span class="breadcrumbs__divider">/</span>
+            <span class="breadcrumbs__link breadcrumbs__link--active">Asatryan</span>
+        </div>
+
+        <!-- pages/about/tax.css -->
+        <!-- common/list_icon.css -->
+        <section class="container tax tax_page__section--tax">
+            <h2 class="tax__title">
+                Налоговый вычет
+            </h2>
+
+            <div class="tax__description">
+                <p>
+                    Стоматология Tandem Dental Clinic помогает пациентам
+                    в&nbsp;получении социального налогового вычета за&nbsp;пройденное у&nbsp;нас лечение.
+                    Для получения документов вам нужно обратиться к&nbsp;любому администратору нашей клиники.
+                    Вас проконсультируют по&nbsp;всем вопросам и&nbsp;подготовят нужные бумаги для получения вычета.
+                    Вы&nbsp;можете сделать заявку на&nbsp;получение документов позвонив по&nbsp;телефонам заранее.
+                </p>
+            </div>
+
+            <div class="tax__grid">
+                <div class="tax__card">
+                    <h3 class="tax__card_title">
+                        Что такое социальный налоговый вычет по&nbsp;расходам на&nbsp;лечение?
+                    </h3>
+
+                    <div class="tax__card_text">
+                        <p>
+                            Любые стоматологические услуги, в&nbsp;том числе имплантация и&nbsp;протезирование зубов, подпадают под действие пункта 3&nbsp;статьи 219 &laquo;Социальные налоговые вычеты&raquo; Налогового кодекса РФ.
+                        </p>
+                            
+                        <p>
+                            Социальный налоговый вычет по&nbsp;расходам на&nbsp;лечение предоставляется налогоплательщику, оплатившему за&nbsp;счет собственных средств:
+                        </p>
+
+                        <ul class="list tax__card_ul">
+                            <li>
+                                услуги по&nbsp;своему лечению;
+                            </li>
+                            <li>
+                                услуги по&nbsp;лечению супруга (супруги);
+                            </li>
+                            <li>
+                                услуги по&nbsp;лечению своих родителей&nbsp;и (или) своих детей в&nbsp;возрасте до&nbsp;18&nbsp;лет. В&nbsp;случае оплаты лечения родственника, справка об&nbsp;оплате лечения должна быть оформлена на&nbsp;налогоплательщика, который хочет получить налоговый вычет.
+                            </li>
+                        </ul>
+
+                        <p>
+                            Заявление может быть подано налогоплательщиком в&nbsp;течении 3-х лет со&nbsp;дня оплаты медицинских услуг. <br>
+                            Заявление подается в&nbsp;Налоговый орган по&nbsp;месту жительства налогоплательщика. <br>
+                            Налоговый орган принимает решение о&nbsp;предоставлении налогового вычета или об&nbsp;отказе в&nbsp;предоставлении налогового вычета. <br>
+                            Перечни медицинских услуг, при оплате которых предоставляется вычет, утверждены Постановлением Правительства РФ&nbsp;от&nbsp;19.03.2001 &#8470;&nbsp;201.
+                        </p>
+                    </div>
+
+                    <p class="tax__card_section">
+                        Правительство РФ разделило все медицинские услуги на два списка. 
+                    </p>
+
+                    <div class="tax__card_columns">
+                        <div class="tax__card_col">
+                            <p class="tax__card_col_title">
+                                Список &#8470;&nbsp;1&nbsp;&ndash; код &laquo;1&raquo;&nbsp;&ndash; лечение не&nbsp;является дорогостоящим.
+                            </p>
+
+                            <p>
+                                В&nbsp;Список &#8470;&nbsp;1&nbsp;входят любые стоматологические услуги: пломбирование и&nbsp;удаление зубов, лечение каналов, лечение десен, исправление прикуса брекетами и&nbsp;капами и&nbsp;т.п. <br>
+                                По&nbsp;этому списку Правительство РФ&nbsp;ограничивает налоговый вычет суммой в&nbsp;120&nbsp;000&nbsp;рублей. Даже если вы&nbsp;потратили на&nbsp;лечение сумму, превышающую
+                                120&nbsp;тыс.&nbsp;руб., она не&nbsp;будет учтена при расчете налогового вычета.
+                            </p>
+                        </div>
+
+                        <div class="tax__card_col">
+                            <p class="tax__card_col_title">
+                                Список &#8470;&nbsp;2&nbsp;&ndash; код &laquo;2&raquo;&nbsp;&ndash; дорогостоящее лечение.
+                            </p>
+
+                            <p>
+                                В&nbsp;Список &#8470;&nbsp;2&nbsp;входят имплантация зубов, протезирование на&nbsp;зубных имплантах, костно-пластические и&nbsp;реконструктивные хирургические операции на&nbsp;челюстях. <br>
+                                По&nbsp;этому списку верхний потолок налогового вычета не&nbsp;ограничен. Если вы&nbsp;потратили на&nbsp;имплантацию 1&nbsp;миллион рублей, вы&nbsp;можете претендовать на&nbsp;возврат&nbsp;13% с&nbsp;этой суммы.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tax__card tax__card--img">
+                    <img src="./assets/img/tax.jpeg" alt="налоговый вычет">
+                </div>
+
+                <div class="tax__card tax__card--purple">
+                    <h3 class="tax__card_title">
+                        Документы, необходимые для получения налогового вычета:
+                    </h3>
+
+                    <ol class="list tax__card_ol">
+                        <li>
+                            Налоговая декларация&nbsp;&ndash; оригинал.
+                        </li>
+                        <li>
+                            Справка о&nbsp;доходах формы <nobr>2-НДФЛ.</nobr>
+                        </li>
+                        <li>
+                            Копии платежных документов, подтверждающих факт внесения денежных средств в&nbsp;кассу или на&nbsp;расчетный счет ООО&nbsp;&laquo;Тандем&raquo; (чек или выписка банка).
+                        </li>
+                        <li>
+                            Справка установленного образца об&nbsp;оплате медицинских услуг.
+                        </li>
+                        <li>
+                            Копия договора на&nbsp;оказание платных медицинских услуг, заключенного с&nbsp;ООО&nbsp;&laquo;Тандем&raquo;.
+                        </li>
+                        <li>
+                            Копия лицензии ООО&nbsp;&laquo;Тандем&raquo; на&nbsp;оказание стоматологических услуг.
+                        </li>
+                        <li>
+                            Копии документов, подтверждающих родство, при оплате медицинских услуг за&nbsp;своего ребенка, супруга, родителя и&nbsp;т.&nbsp;д.
+                        </li>
+                    </ol>
+
+                    <p class="tax__card_docs_desc">
+                        Администраторы нашей клиники подготовят для вас документы, указанные в&nbsp;пунктах 4&ndash;6.
+                    </p>
+                </div>
+
+                <div class="tax__card tax__card--green">
+                    <h3 class="tax__card_title">
+                        Пример расчета налогового вычета на&nbsp;лечение
+                    </h3>
+
+                    <ul class="tax__card_tax_list list_icon">
+                        <li>
+                            <img aria-hidden="true" class="list_icon__icon" src="./assets/img/icons/hand_ruble.svg" alt="" />
+
+                            Ваша ежемесячная заработная плата составляет 35&nbsp;000&nbsp;рублей. <br>
+                            За&nbsp;налоговый период (один календарный год) доход составит 420&nbsp;000&nbsp;рублей.
+                        </li>
+                        <li>
+                            <img aria-hidden="true" class="list_icon__icon" src="./assets/img/icons/calculator.svg" alt="" />
+
+                            С&nbsp;этого дохода вы&nbsp;платите подоходный налог (НДФЛ) в&nbsp;размере&nbsp;13%, который за&nbsp;год составит 54&nbsp;600&nbsp;рублей.
+                        </li>
+
+                        <li>
+                            <img aria-hidden="true" class="list_icon__icon" src="./assets/img/icons/calendar_tooth.svg" alt="" />
+
+                            <p>
+                                Вы&nbsp;подаете заявление о&nbsp;предоставлении Вам социального вычета на&nbsp;лечение, и&nbsp;налоговый орган будет вычитать средства, потраченные на&nbsp;лечение из&nbsp;вашего дохода, тем самым, уменьшая налоговую базу, подлежащую налогообложению. <br>
+                                Поскольку &laquo;имплантация зубных протезов&raquo; относится к&nbsp;дорогостоящим медицинским услугам, на&nbsp;которые не&nbsp;распространяется ограничение налогового вычета в&nbsp;120&nbsp;000&nbsp;рублей, размер вычета может составить 130&nbsp;000&nbsp;рублей. Сумма НДФЛ, подлежащая возврату из&nbsp;бюджета, может составить 16&nbsp;900&nbsp;рублей. <br>
+                                <strong>130&nbsp;000&nbsp;руб.&nbsp;х&nbsp;13%&nbsp;= 16&nbsp;900&nbsp;руб.</strong>
+                            </p>
+
+                            <p>
+                                В&nbsp;том числе было потрачено 130&nbsp;000&nbsp;рублей на&nbsp;прочие виды стоматологического лечения, которые ограничены налоговым вычетом в&nbsp;120&nbsp;000&nbsp;рублей.
+                                Сумма НДФЛ здесь составит 15&nbsp;600&nbsp;рублей. <br>
+                                <strong>120&nbsp;000&nbsp;руб.&nbsp;х&nbsp;13%&nbsp;= 15&nbsp;600&nbsp;руб.</strong>
+                            </p>
+
+                            <p>
+                                Итоговая сумма налога, подлежащая возврату составляет 32&nbsp;500&nbsp;рублей. <br>
+                                <strong>15&nbsp;600&nbsp;руб.&nbsp;+ 16&nbsp;900&nbsp;руб.&nbsp;= 32&nbsp;500&nbsp;руб.</strong>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <img loading="lazy" class="footer__logo_img" src="./assets/img/logo.svg" alt="">
+                </div>
+
+                <p class="footer__ur_info">
+                    OOO Tandem Dental Clinic
+                </p>
+                <p class="footer__ur_info footer__ur_info--license">
+                    Номер лицензии: <span>ЛО-77-01-002858</span>
+                </p>
+
+                <a class="footer__policy--big-tab" href="/">
+                    Политика защиты данных
+                </a>
+            </div>
+
+            <div class="footer__cols">
+                <ul class="footer__links">
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            О&nbsp;клинике
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Прайс
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Наши&nbsp;врачи
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--law_info_big_tab">
+                        <a class="footer__link" href="#">
+                            Правовая информация
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--policy">
+                        <a class="footer__link" href="#">
+                            Политика защиты данных
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="footer__links">
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Блог
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--law_info">
+                        <a class="footer__link" href="#">
+                            Правовая информация
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__right">
+                <p class="footer__right_text">
+                    Для получения подробной и актуальной стоимости услуг, обращайтесь к администратору.
+                </p>
+
+                <a class="footer__policy--mob" href="#" target="_blank">
+                    Политика защиты данных
+                </a>
+                <a class="footer__law_info--mob" href="#" target="_blank">
+                    Правовая информация
+                </a>
+
+                <a class="footer__version footer__link" href="#">
+                    Версия для слабовидящих
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. <br>
+            НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+        </div>
+    </footer>
+
+    <script src="./global/main.js"></script>
+    <!-- <script src="./common/popup.js"></script>
+    <script src="./common/dropdown.js"></script> -->
+
+    <!-- XXX: анимация появления блоков -->
+    <!-- <script src="./global/appear.js"></script> -->
+</body>
+
+</html>

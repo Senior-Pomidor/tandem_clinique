@@ -1,8 +1,7 @@
 .about_page__section--content_slider,
 .about_page__section--ratings,
 .about_page__section--questions,
-.about_page__section--contacts,
-.about_page__section--tax {
+.about_page__section--contacts {
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -31,8 +30,7 @@
     .about_page__section--content_slider,
     .about_page__section--ratings,
     .about_page__section--questions,
-    .about_page__section--contacts,
-    .about_page__section--tax {
+    .about_page__section--contacts {
         padding-top: 60px;
         padding-bottom: 60px;
     }
@@ -68,8 +66,7 @@
     .about_page__section--content_slider,
     .about_page__section--ratings,
     .about_page__section--questions,
-    .about_page__section--contacts,
-    .about_page__section--tax {
+    .about_page__section--contacts {
         padding-top: 40px;
         padding-bottom: 40px;
     }

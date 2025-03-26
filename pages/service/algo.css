@@ -1,0 +1,115 @@
+.algo {
+    display: flex;
+    gap: 60px;
+}
+
+.algo__col {
+    flex: 1 1 1px;
+}
+
+.algo__title {
+    margin-bottom: 30px;
+}
+
+.algo__list_wrapper {
+    border-radius: 30px;
+    padding: 40px 48px;
+    background-color: var(--bg-gray);
+}
+
+.algo__list {
+    --icon-size: 28px;
+
+    li {
+        display: flex;
+        min-height: var(--icon-size);
+        align-items: center;
+    }
+
+    li::before {
+        content: "";
+        display: block;
+        width: var(--icon-size);
+        min-width: var(--icon-size);
+        height: var(--icon-size);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: var(--purple);
+        margin-right: 24px;
+        align-self: flex-start;
+        mask-image: url(../../assets/img/icons/code_flex.svg);
+    }
+
+    li + li {
+        margin-top: 45px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .algo__col:first-child {
+        width: 288px;
+        flex-grow: 0;
+    }
+
+    .algo__list_wrapper {
+        padding: 31px 28px;
+        padding-right: 20px;
+    }
+
+    .algo__list {
+        --icon-size: 16px;
+
+        li::before {
+            margin-right: 19px;
+            mask-image: url(../../assets/img/icons/code_xs_flex.svg);
+        }
+
+        li + li {
+            margin-top: 20px;
+        }
+    }
+
+    .algo__title {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .algo {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .algo__col:first-child {
+        width: 100%;
+    }
+
+    .algo__list_wrapper {
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .algo__title {
+        margin-bottom: 30px;
+    }
+    
+    .algo__list {
+        li::before {
+            margin-top: 2px;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .algo__list_wrapper {
+        padding: 24px 10px;
+        padding-right: 17px;
+    }
+
+    .algo__list {
+        li::before {
+            margin-top: 3px;
+            margin-right: 15px;
+        }
+    }
+}

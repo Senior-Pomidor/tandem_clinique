@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Стоматология в москве">
+
+    <title>Tandem</title>
+
+    <!-- START: обязательно на каждую страницу -->
+    <link rel="stylesheet" href="./global/normalize.css">
+    <link rel="stylesheet" href="./global/main.css">
+    <link rel="stylesheet" href="./global/header.css">
+    <link rel="stylesheet" href="./global/footer.css">
+    <!-- END: обязательно на каждую страницу -->
+
+    <!-- START: UI components -->
+    <!-- <link rel="stylesheet" href="./common/list_styled.css">
+    <link rel="stylesheet" href="./common/slider_dots.css">
+    <link rel="stylesheet" href="./common/popup.css"> -->
+    <!-- END: UI components -->
+
+    <!-- START: swiper обяателен для слайдеров -->
+    <!-- XXX: загружать до слайдеров -->
+    <!-- <script src="./common/swiper.min.js"></script> -->
+    <!-- END: swiper обяателен для слайдеров-->
+
+    <!-- START: общие блоки -->
+    <!-- <link rel="stylesheet" href="./blocks/profile.css">
+    <link rel="stylesheet" href="./blocks/promo.css"> -->
+    <link rel="stylesheet" href="./blocks/callback_form.css">
+    <!-- <link rel="stylesheet" href="./blocks/callback_form_popup.css"> -->
+    <link rel="stylesheet" href="./blocks/callback.css">
+    <!-- <link rel="stylesheet" href="./blocks/reviews.css">
+    <link rel="stylesheet" href="./blocks/questions.css">
+    <link rel="stylesheet" href="./blocks/ratings.css"> -->
+    <link rel="stylesheet" href="./blocks/contacts.css">
+    <link rel="stylesheet" href="./blocks/doctor_profile.css">
+    <!-- END: общие блоки -->
+
+    <!-- START: секции -->
+    <link rel="stylesheet" href="./pages/service/service_page.css">
+    <link rel="stylesheet" href="./pages/service/title_text.css">
+    <link rel="stylesheet" href="./pages/service/indicators.css">
+    <link rel="stylesheet" href="./pages/service/algo.css">
+    <link rel="stylesheet" href="./pages/service/doctors.css">
+    <link rel="stylesheet" href="./pages/service/case.css">
+    <link rel="stylesheet" href="./pages/service/advantages.css">
+    <!-- END: секции -->
+</head>
+
+<body>
+    <style>
+        /* FIXME: для разработаки, удалить, подключить appear.js */
+        [class*="js_appear"] {
+            opacity: 1;
+        }
+    </style>
+
+    <header class="header js_header container">
+        <div class="header__main">
+            <div class="header__main_container">
+                <a class="header__logo header__logo--desktop" href="/">
+                    <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
+                </a>
+
+                <div class="header__main_content">
+                    <div class="header__main_top">
+                        <div class="header__contacts">
+                            <a class="header__logo header__logo--mob" href="/">
+                                <img loading="lazy" class="header__logo_img" src="./assets/img/logo.svg" alt="">
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--metro"
+                                href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
+                                м. Славянский бульвар
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--address"
+                                href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg"
+                                    alt="" />
+                                <span class="header__contact_text--mob">
+                                    м. Славянский бульвар
+                                </span>
+                                г. Москва, ул. Нежинская, 8, корп.4
+                            </a>
+
+                            <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
+                                8 (495) 132-31-02
+                            </a>
+
+                            <!-- TODO: заменить блок -->
+                            <div class="header__mob_nav_btns">
+                                <label for="qwerty" class="header__search_btn_mob js_header_search_btn_mob"></label>
+
+                                <div class="header__mob_nav_btn js_header_nav_btn">
+                                    <img loading="lazy"
+                                        class="header__mob_nav_btn_icon header__mob_nav_btn_icon--burger"
+                                        src="./assets/img/icons/burger.svg" alt="">
+
+                                    <img loading="lazy" class="header__mob_nav_btn_icon header__mob_nav_btn_icon--close"
+                                        src="./assets/img/icons/cross.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__main_bottom">
+                        <!-- TODO: заменить блок -->
+                        <div class="header__search js_header_search">
+                            <form class="header__search_input_wrapper" action="/">
+                                <input placeholder="Поиск..." class="header__search_input js_search_input" type="text"
+                                    id="qwerty">
+
+                                <button type="button" class="header__search_reset js_search_reset_btn"></button>
+                            </form>
+
+                            <!-- XXX: Блок .header__search_suggestions должен быть всегда -->
+                            <!-- XXX: внутренние ссылки могут генериться -->
+                            <div class="header__search_suggestions">
+                                <a class="header__search_suggestion" href="/qweqwe">
+                                    dasdasd Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ullam
+                                    veniam cupiditate quo laboriosam voluptatibus mollitia dicta ad soluta. Ad est animi
+                                    optio iusto obcaecati ratione deserunt quam officia magnam commodi! Vitae
+                                    repudiandae eaque fugit, beatae incidunt nam ea accusamus dolores tempore impedit
+                                    ipsum doloremque quis. Tempore dolorum velit libero.
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                                <a class="header__search_suggestion" href="/">
+                                    dasdasd
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="header__social">
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--wa" href=""></a>
+                            </li>
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--tg" href=""></a>
+                            </li>
+                            <li class="header__social_item">
+                                <a class="header__social_link header__social_link--vk" href=""></a>
+                            </li>
+                        </ul>
+
+                        <button class="header__appointment_btn btn">
+                            Записаться
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__nav_list">
+                <li class="header__nav_item">
+                    <a class="header__nav_link header__nav_link--active" href="/">
+                        О&nbsp;клинике
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Услуги
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="/doctors.html">
+                        Врачи
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Портфолио
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Акции
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Прайс
+                    </a>
+                </li>
+                <li class="header__nav_item">
+                    <a class="header__nav_link" href="#">
+                        Блог
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__mob">
+            <div class="header__mob_contacts">
+                <a class="icon_link header__contact header__contact--metro" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
+                    м. Славянский бульвар
+                </a>
+
+                <a class="icon_link header__contact header__contact--address" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" />
+                    г. Москва, ул. Нежинская, 8, корп.4
+                </a>
+
+                <a class="icon_link header__contact header__contact--phone" href="tel:+74951323102">
+                    <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
+                    <b>8 (495) 132-31-02</b>
+                </a>
+            </div>
+
+            <ul class="header__social">
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--wa" href=""></a>
+                </li>
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--tg" href=""></a>
+                </li>
+                <li class="header__social_item">
+                    <a class="header__social_link header__social_link--vk" href=""></a>
+                </li>
+            </ul>
+
+            <button class="header__appointment_btn btn">
+                Записаться
+            </button>
+        </div>
+    </header>
+    <script src="./global/header.js"></script>
+
+    <main class="service_page">
+        <div class="breadcrumbs container">
+            <a href="/" class="breadcrumbs__link">Главная</a>
+            <span class="breadcrumbs__divider">/</span>
+            <a href="./doctors.html" class="breadcrumbs__link">Врачи</a>
+            <span class="breadcrumbs__divider">/</span>
+            <span class="breadcrumbs__link breadcrumbs__link--active">Asatryan</span>
+        </div>
+
+        <section class="container advantages service_page__section--advantages">
+            <h2 class="advantages__title">
+                Преимущества процедуры
+            </h2>
+
+            <div class="advantages__inner">
+                <div class="advantage">
+                    <div class="advantage__icon_wrapper">
+                        <img src="./assets/img/icons/timer.svg" alt="иконка" aria-hidden="true">
+                    </div>
+                    <div class="advantage__content">
+                        <h4 class="advantage__title">
+                            Время проведения
+                        </h4>
+
+                        <p class="advantage__text">
+                            45 минут
+                        </p>
+                    </div>
+                </div>
+
+                <div class="advantage">
+                    <div class="advantage__icon_wrapper">
+                        <img src="./assets/img/icons/plast.svg" alt="иконка" aria-hidden="true">
+                    </div>
+                    <div class="advantage__content">
+                        <h4 class="advantage__title">
+                            Реабилитация
+                        </h4>
+
+                        <p class="advantage__text">
+                            может сохраняться гиперчувствительность зубов в течении 10-12 часов
+                        </p>
+                    </div>
+                </div>
+
+                <div class="advantage">
+                    <div class="advantage__icon_wrapper">
+                        <img src="./assets/img/icons/tooth_heart.svg" alt="иконка" aria-hidden="true">
+                    </div>
+                    <div class="advantage__content">
+                        <h4 class="advantage__title">
+                            Эффект
+                        </h4>
+
+                        <p class="advantage__text">
+                            осветление зубов до 8 тонов
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- blocks/doctors_profile.css -->
+        <section class="container doctors service_page__section--doctors">
+            <h2 class="doctors__title">
+                Врачи клиники, проводящие отбеливание зубов
+            </h2>
+
+            <div class="doctor_profile">
+                <div class="doctor_profile__col doctor_profile__col--img">
+                    <img src="./assets/img/doctor_profile/asatryan.jpeg" alt="">
+                </div>
+                <div class="doctor_profile__col doctor_profile__col--info">
+                    <h3 class="doctor_profile__name">
+                        Галстян Карен Эдуардович
+                    </h3>
+
+                    <p class="doctor_profile__position">
+                        Главный врач, руководитель клиники
+                    </p>
+
+                    <ul class="doctor_profile__tags">
+                        <li class="doctor_profile__tag doctor_profile__tag--accent">
+                            Стаж более 20 лет
+                        </li>
+                        <li class="doctor_profile__tag">
+                            Ортопедия
+                        </li>
+                        <li class="doctor_profile__tag">
+                            Имплантология
+                        </li>
+                        <li class="doctor_profile__tag">
+                            Терапия
+                        </li>
+                    </ul>
+
+                    <blockquote class="doctor_profile__quote">
+                        &laquo;Я&nbsp;уверен, что залог успешного
+                        и&nbsp;комфортного лечения&nbsp;&ndash;
+                        это тандем врача и&nbsp;пациента&raquo;
+                    </blockquote>
+
+                    <div class="doctor_profile__footer">
+                        <a class="btn btn--link btn--white" href="./doctor.html">
+                            Подробнее о специалисте
+
+                            <img
+                                loading="lazy"
+                                class="btn__link_icon"
+                                src="./assets/img/icons/btn_link_arrow.svg"
+                                alt=""
+                            >
+                        </a>
+
+                        <button class="btn">
+                            Записаться на приём
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="doctor_profile">
+                <div class="doctor_profile__col doctor_profile__col--img">
+                    <img src="./assets/img/doctor_profile/asatryan.jpeg" alt="">
+                </div>
+                <div class="doctor_profile__col doctor_profile__col--info">
+                    <h3 class="doctor_profile__name">
+                        Галстян Карен Эдуардович
+                    </h3>
+
+                    <p class="doctor_profile__position">
+                        Главный врач, руководитель клиники
+                    </p>
+
+                    <ul class="doctor_profile__tags">
+                        <li class="doctor_profile__tag doctor_profile__tag--accent">
+                            Стаж более 20 лет
+                        </li>
+                        <li class="doctor_profile__tag">
+                            Ортопедия
+                        </li>
+                        <li class="doctor_profile__tag">
+                            Имплантология
+                        </li>
+                        <li class="doctor_profile__tag">
+                            Терапия
+                        </li>
+                    </ul>
+
+                    <blockquote class="doctor_profile__quote">
+                        &laquo;Я&nbsp;уверен, что залог успешного
+                        и&nbsp;комфортного лечения&nbsp;&ndash;
+                        это тандем врача и&nbsp;пациента&raquo;
+                    </blockquote>
+
+                    <div class="doctor_profile__footer">
+                        <a class="btn btn--link btn--white" href="./doctor.html">
+                            Подробнее о специалисте
+
+                            <img
+                                loading="lazy"
+                                class="btn__link_icon"
+                                src="./assets/img/icons/btn_link_arrow.svg"
+                                alt=""
+                            >
+                        </a>
+
+                        <button class="btn">
+                            Записаться на приём
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="container title_text service_page__section--title_text">
+            <h2 class="title_text__title">
+                О технологии
+            </h2>
+
+            <div class="title_text__text">
+                <p>
+                    Zoom 4&nbsp;&mdash; это система профессионального
+                    отбеливания от&nbsp;компании Philips.
+                    Главным отличием от&nbsp;предыдущих версий
+                    является более бережное воздействие на&nbsp;зубную
+                    эмаль&nbsp;и, как следствие, большая безопасность.
+                    Позволяет осветлить зубы до&nbsp;8&nbsp;тонов,
+                    при этом сократив период гиперчувствительности
+                    после процедуры до&nbsp;10-12&nbsp;часов.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="container indicators service_page__section--indicators">
+            <h2 class="indicators__title">
+                Показания и противопоказания
+            </h2>
+
+            <div class="indicators__inner">
+                <div class="indicators__img_wrapper indicators__col">
+                    <img src="./assets/img/indicators.png" alt="">
+                </div>
+    
+                <div class="indicators__col indicators__ind">
+                    <h3 class="indicators__col_title">
+                        Показания
+                    </h3>
+    
+                    <ul class="indicators__list indicators__list--check">
+                        <li>
+                            Желание пациента придать белизну зубным рядам
+                        </li>
+                        <li>
+                            Клиновидные дефекты с обнажением дентина
+                        </li>
+                        <li>
+                            Восстановление первоначального цвета после корректирующей терапии на брекетах
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="indicators__col indicators__contrind">
+                    <h3 class="indicators__col_title">
+                        Противопоказания
+                    </h3>
+    
+                    <div class="indicators__contrind_cols">
+                        <ul class="indicators__contrind_col indicators__list indicators__list--cross">
+                            <li>
+                                Онкология
+                            </li>
+                            <li>
+                                Сахарный диабет
+                            </li>
+                            <li>
+                                Чрезмерная чувствительность к&nbsp;ультрафиолетовому излучению
+                            </li>
+                            <li>
+                                Аллергия на компоненты отбеливающего геля
+                            </li>
+                            <li>
+                                Наличие большого количества пломб и коронок (цвет природных зубов после отбеливания будет отличаться от оттенка протезов)
+                            </li>
+                            <li>
+                                Психические патологии
+                            </li>
+                        </ul>
+    
+                        <div class="indicators__contrind_col">
+                            <p class="indicators__list_title">
+                                Относительные
+                            </p>
+    
+                            <ul class="indicators__list indicators__list--cross">
+                                <li>
+                                    Возраст до 18 лет
+                                </li>
+                                <li>
+                                    Беременность и грудное вскармливание
+                                </li>
+                                <li>
+                                    Прием фармацевтических препаратов, увеличивающих чувствительность к ультрафиолету
+                                </li>
+                                <li>
+                                    Воспаление десен, болезни зубов
+                                </li>
+                                <li>
+                                    Клиновидные дефекты с обнажением дентина
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="container algo service_page__section--algo">
+            <div class="algo__col">
+                <h2 class="algo__title">
+                    Как подготовиться к&nbsp;отбеливанию зубов Zoom4?
+                </h2>
+
+                <p>
+                    Для достижения наилучшего результата рекомендуется:
+                </p>
+            </div>
+
+            <div class="algo__col algo__list_wrapper">
+                <ul class="algo__list">
+                    <li>
+                        Пройти профессиональную гигиену полости рта
+                        за&nbsp;1-2 недели до&nbsp;процедуры
+                    </li>
+                    <li>
+                        Исключить употребление красящих продуктов
+                        и&nbsp;напитков за&nbsp;2-3 дня до&nbsp;отбеливания
+                    </li>
+                    <li>
+                        Отказаться от&nbsp;курения минимум за&nbsp;сутки
+                        до&nbsp;процедуры
+                    </li>
+                    <li>
+                        Проконсультироваться со&nbsp;стоматологом
+                        для исключения противопоказаний
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container js_appear_top service_page__section--callback">
+            <article class="callback">
+                <div class="callback__inner">
+                    <div class="callback__text">
+                        <h2 class="callback__title">
+                            Появились вопросы?
+                        </h2>
+
+                        <p class="callback__description">
+                            Оставьте заявку и мы ответим на все вопросы. Например, мы можем рассказать как получить налоговый вычет за лечение зубов.
+                        </p>
+                    </div>
+
+                    <form class="callback__form callback_form" action="/">
+                        <input class="input callback_form__input" placeholder="Имя Фамилия" type="text" required>
+                        <input class="input callback_form__input" placeholder="Телефон" type="text" required>
+
+                        <button class="callback_form__submit_btn btn" type="submit">
+                            Заказать обратный звонок
+                        </button>
+
+                        <label class="checkbox callback_form__checkbox">
+                            <input class="checkbox__native" type="checkbox" checked required>
+                            <div class="checkbox__marker"></div>
+
+                            <p class="checkbox__text">
+                                Даю согласие на <a href="/" class="link" target="_blank">обработку своих персональных
+                                    данных</a>
+                            </p>
+                        </label>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+        <section class="container case service_page__section--case">
+            <h2 class="case__title">
+                Кейс
+            </h2>
+
+            <div class="case__cols">
+                <div class="case__col case__col--left">
+                    <div class="case__img_wrapper">
+                        <span class="case__tag">
+                            После
+                        </span>
+
+                        <img src="./assets/img/case.jpeg" alt="отбеливание зубов">
+                    </div>
+                    
+                    <button class="btn case__btn">
+                        Посмотреть портфолио
+                    </button>
+                </div>
+
+                <div class="case__col case__col--right">
+                    <div class="case__info_inner">
+                        <h3 class="h5 case__info_title">
+                            Доктор Галстян Карен Эдуардович
+                        </h3>
+    
+                        <h4 class="h5 case__info_subtitle">
+                            Пациент Алексей, 32 года
+                        </h4>
+                        <p>
+                            Алексей обратился в&nbsp;стоматологию Tandem
+                            с&nbsp;желанием улучшить цвет своих зубов.
+                            После консультации с&nbsp;ведущим специалистом
+                            клиники, доктором Кареном Эдуардовичем Галстяном,
+                            было принято решение провести процедуру
+                            отбеливания Zoom4.
+                        </p>
+
+                        <h4 class="h5 case__info_subtitle">
+                            Исходная ситуация
+                        </h4>
+
+                        <ul class="case__info_list">
+                            <li>
+                                Цвет зубов: А3 по шкале Vita
+                                (желтоватый оттенок)
+                            </li>
+                            <li>
+                                Отсутствие противопоказаний к отбеливанию
+                            </li>
+                            <li>
+                                Здоровые зубы и десны
+                            </li>
+                        </ul>
+
+                        <h4 class="h5 case__info_subtitle">
+                            Результат процедуры
+                        </h4>
+
+                        <ul class="case__info_list">
+                            <li>
+                                Достигнут цвет A1 по шкале Vita (белоснежный оттенок)
+                            </li>
+                            <li>
+                                Улучшение на 8-10 тонов
+                            </li>
+                            <li>
+                                Равномерное отбеливание всех зубов
+                            </li>
+                            <li>
+                                Отсутствие дискомфорта и повышенной чувствительности
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- blocks/callback_form.css -->
+        <!-- blocks/callback.css -->
+        <section class="container js_appear_top service_page__section--callback">
+            <article class="callback callback--green">
+                <div class="callback__inner">
+                    <div class="callback__text">
+                        <h2 class="callback__title">
+                            Записаться на отбеливание
+                        </h2>
+
+                        <p class="callback__description">
+                            Чистка вестибулярной поверхности зубов и&nbsp;отбеливание
+                            аппаратом Philips ZOOM&nbsp;4&nbsp;LED за&nbsp;одну процедуру
+                        </p>
+                    </div>
+
+                    <form class="callback__form callback_form" action="/">
+                        <input class="input callback_form__input" placeholder="Имя Фамилия" type="text" required>
+                        <input class="input callback_form__input" placeholder="Телефон" type="text" required>
+
+                        <button class="callback_form__submit_btn btn" type="submit">
+                            Заказать обратный звонок
+                        </button>
+
+                        <label class="checkbox callback_form__checkbox">
+                            <input class="checkbox__native" type="checkbox" checked required>
+                            <div class="checkbox__marker"></div>
+
+                            <p class="checkbox__text">
+                                Даю согласие на <a href="/" class="link" target="_blank">обработку своих персональных
+                                    данных</a>
+                            </p>
+                        </label>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+
+        <section class="container contacts service_page__section--contacts">
+            <div class="contacts__col contacts__col--left js_appear_left">
+                <img loading="lazy" class="contacts__img" src="./assets/img/contacts.png" alt="стоматология тандем">
+            </div>
+
+            <div class="contacts__col contacts__col--right js_appear_right">
+                <h2 class="contacts__title">
+                    Всегда рады видеть вас в&nbsp;нашей клинике
+                </h2>
+
+                <div class="contacts__cards">
+                    <div class="contacts__card contacts__card--address js_appear_top">
+                        <a class="icon_link contacts__card_link" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/metro.svg" alt="" />
+                            м. Славянский бульвар
+                        </a>
+                        <a class="icon_link contacts__card_link" href="https://yandex.ru/maps/-/CHEnVVPm" target="_blank">
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/map_point.svg" alt="" />
+                            Москва, ул. Нежинская, 8, корп.4
+                        </a>
+
+                        <a class="contacts__card_btn btn" href="https://yandex.ru/maps/213/moscow/?indoorLevel=1&ll=37.471407%2C55.710053&mode=routes&rtext=~55.710053%2C37.471407" target="_blank">
+                            Построить маршрут к&nbsp;клинике
+                            <img loading="lazy" class="contacts__card_btn_icon"
+                                src="./assets/img/icons/btn_link_arrow.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="contacts__card contacts__card--contacts js_appear_right">
+                        <a class="icon_link contacts__card_link" href="mailto:tandem-clinic1@yandex.ru">
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/email.svg" alt="" />
+                            tandem-clinic1@yandex.ru
+                        </a>
+
+                        <a class="icon_link contacts__card_link contacts__card_link--phone" href="tel:+74951323102">
+                            <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/phone.svg" alt="" />
+                            Единый телефон: <br>
+                            <span><b>8 (495) 132-31-02</b></span>
+                            </ф>
+                            <a class="icon_link contacts__card_link" href="https://wa.me/79250549900" target="_blank">
+                                <img loading="lazy" class="icon_link__icon" src="./assets/img/icons/wa.svg" alt="" />
+                                <b>+7 (925) 054-99-00</b>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <img loading="lazy" class="footer__logo_img" src="./assets/img/logo.svg" alt="">
+                </div>
+
+                <p class="footer__ur_info">
+                    OOO Tandem Dental Clinic
+                </p>
+                <p class="footer__ur_info footer__ur_info--license">
+                    Номер лицензии: <span>ЛО-77-01-002858</span>
+                </p>
+
+                <a class="footer__policy--big-tab" href="/">
+                    Политика защиты данных
+                </a>
+            </div>
+
+            <div class="footer__cols">
+                <ul class="footer__links">
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            О&nbsp;клинике
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Прайс
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Наши&nbsp;врачи
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--law_info_big_tab">
+                        <a class="footer__link" href="#">
+                            Правовая информация
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--policy">
+                        <a class="footer__link" href="#">
+                            Политика защиты данных
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="footer__links">
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Блог
+                        </a>
+                    </li>
+                    <li class="footer__links_item">
+                        <a class="footer__link" href="#">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="footer__links_item footer__links_item--law_info">
+                        <a class="footer__link" href="#">
+                            Правовая информация
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__right">
+                <p class="footer__right_text">
+                    Для получения подробной и актуальной стоимости услуг, обращайтесь к администратору.
+                </p>
+
+                <a class="footer__policy--mob" href="#" target="_blank">
+                    Политика защиты данных
+                </a>
+                <a class="footer__law_info--mob" href="#" target="_blank">
+                    Правовая информация
+                </a>
+
+                <a class="footer__version footer__link" href="#">
+                    Версия для слабовидящих
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. <br>
+            НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+        </div>
+    </footer>
+
+    <script src="./global/main.js"></script>
+    <!-- <script src="./common/popup.js"></script>
+    <script src="./common/dropdown.js"></script> -->
+
+    <!-- XXX: анимация появления блоков -->
+    <!-- <script src="./global/appear.js"></script> -->
+</body>
+
+</html>
