@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="./blocks/ratings.css"> -->
     <link rel="stylesheet" href="./blocks/contacts.css">
     <link rel="stylesheet" href="./blocks/doctor_profile.css">
+    <link rel="stylesheet" href="./blocks/callback_hero.css">
     <!-- END: общие блоки -->
 
     <!-- START: секции -->
@@ -48,6 +49,8 @@
     <link rel="stylesheet" href="./pages/service/doctors.css">
     <link rel="stylesheet" href="./pages/service/case.css">
     <link rel="stylesheet" href="./pages/service/advantages.css">
+    <link rel="stylesheet" href="./pages/service/prices.css">
+    <link rel="stylesheet" href="./pages/service/blog.css">
     <!-- END: секции -->
 </head>
 
@@ -251,6 +254,50 @@
             <span class="breadcrumbs__link breadcrumbs__link--active">Asatryan</span>
         </div>
 
+        <!-- blocks/callback_form.css -->
+        <!-- blocks/callback_hero.css -->
+        <section class="container js_appear_top service_page__section--callback_hero">
+            <article class="callback_hero">
+                <div class="callback_hero__inner">
+                    <div class="callback_hero__text">
+                        <p class="callback_hero__tag">
+                            Онлайн-запись
+                        </p>
+
+                        <h1 class="callback_hero__title">
+                            Отбелива<span>ние</span> зубов ZOOM4
+                        </h1>
+
+                        <p class="callback_hero__description">
+                            Современная технология по&nbsp;осветлению эмали
+                            сочетающая максимальный
+                            отбеливающий эффект и&nbsp;щадящее воздействие на&nbsp;зубы.
+                        </p>
+                    </div>
+
+                    <form class="callback_hero__form callback_form" action="/">
+                        <input class="input callback_form__input" placeholder="Имя Фамилия" type="text" required>
+                        <input class="input callback_form__input" placeholder="Телефон" type="text" required>
+                        <input class="input callback_form__input" placeholder="Дата и время" type="text" onfocus="this.type='datetime-local'" required>
+
+                        <button class="callback_form__submit_btn btn" type="submit">
+                            Записаться&nbsp;со&nbsp;скидкой
+                        </button>
+
+                        <label class="checkbox callback_form__checkbox">
+                            <input class="checkbox__native" type="checkbox" checked required>
+                            <div class="checkbox__marker"></div>
+
+                            <p class="checkbox__text">
+                                Даю согласие на <a href="/" class="link" target="_blank">обработку своих персональных
+                                    данных</a>
+                            </p>
+                        </label>
+                    </form>
+                </div>
+            </article>
+        </section>
+
         <section class="container advantages service_page__section--advantages">
             <h2 class="advantages__title">
                 Преимущества процедуры
@@ -304,6 +351,44 @@
             </div>
         </section>
 
+        <!-- pages/service/prices.css -->
+        <section class="container prices service_page__section--prices">
+            <h2 class="prices__title">
+                Стоимость отбеливания Zoom4
+            </h2>
+
+            <ul class="prices__list">
+                <li class="prices__item">
+                    <p>
+                        Офисное отбеливание
+                    </p>
+
+                    <span class="prices__price">
+                        3 000 ₽
+                    </span>
+                </li>
+
+                <li class="prices__item">
+                    <p>
+                        Офисное отбеливание
+                    </p>
+
+                    <span class="prices__price">
+                        3 000 ₽
+                    </span>
+                </li>
+
+                <li class="prices__item">
+                    <p>
+                        lorem ipsum dolor sit amet consectetur adipiscing elit
+                    </p>
+
+                    <span class="prices__price">
+                        3 000 ₽
+                    </span>
+                </li>
+            </ul>
+        </section>
 
         <!-- blocks/doctors_profile.css -->
         <section class="container doctors service_page__section--doctors">
@@ -591,6 +676,7 @@
             </article>
         </section>
 
+        <!-- pages/service/case.css -->
         <section class="container case service_page__section--case">
             <h2 class="case__title">
                 Кейс
@@ -669,7 +755,67 @@
             </div>
         </section>
 
+        <!-- pages/service/blog.css -->
+        <section class="container blog service_page__section--blog">
+            <div class="blog__cols">
+                <div class="blog__col blog__col--left">
+                    <h2 class="blog__title">
+                        Блог Полезные статьи
+                    </h2>
 
+                    <div class="blog__description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                            Aenean commodo ligula eget dolor. Aenean massa.
+                            Cum sociis natoque penatibus et magnis
+                            dis parturient montes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="blog__col blog__col--right">
+                    <a href="" class="blog__card">
+                        <div class="blog__card_img_wrapper">
+                            <img src="./assets/img/case.jpeg" alt="Как правильно чистить зубы?">
+                        </div>
+
+                        <h4 class="blog__card_title">
+                            Как правильно чистить зубы?
+                        </h4>
+
+                        <div class="blog__card_text">
+                            <p>
+                                Lorem ipsum dolor sit amet,
+                                consectetuer adipiscing elit.
+                                Aenean commodo ligula eget dolor.
+                                Aenean massa. Cum sociis natoque
+                                penatibus et magnis dis parturient montes.
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="" class="blog__card">
+                        <div class="blog__card_img_wrapper">
+                            <img src="./assets/img/case.jpeg" alt="Белая диета – нужна или нет?">
+                        </div>
+
+                        <h4 class="blog__card_title">
+                            Белая диета&nbsp;&ndash; нужна или&nbsp;нет?
+                        </h4>
+
+                        <div class="blog__card_text">
+                            <p>
+                                Lorem ipsum dolor sit amet,
+                                consectetuer adipiscing elit.
+                                Aenean commodo ligula eget dolor.
+                                Aenean massa. Cum sociis natoque
+                                penatibus et magnis dis parturient montes.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <!-- blocks/callback_form.css -->
         <!-- blocks/callback.css -->
@@ -708,7 +854,6 @@
                 </div>
             </article>
         </section>
-
 
         <section class="container contacts service_page__section--contacts">
             <div class="contacts__col contacts__col--left js_appear_left">

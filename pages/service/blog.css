@@ -1,0 +1,151 @@
+.blog {
+
+}
+
+.blog__cols {
+    display: flex;
+    gap: 85px;
+}
+
+.blog__col--left {
+    width: 408px;
+    flex-shrink: 0;
+}
+
+.blog__col--right {
+    display: flex;
+    gap: 40px;
+    flex-grow: 1;
+}
+
+.blog__description {
+    margin-top: 27px;
+}
+
+.blog__card {
+    flex: 1 1 1px;
+    cursor: pointer;
+}
+
+@media (hover: hover),
+(-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .blog__card:hover {
+        color: var(--font-color--primary);
+    }
+}
+
+.blog__card_img_wrapper {
+    position: relative;
+    display: flex;
+    aspect-ratio: 453 / 351;
+
+    img {
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        border-radius: 30px;
+    }
+}
+
+.blog__card_img_wrapper::before,
+.blog__card_img_wrapper::after {
+    display: flex;
+    content: "";
+    position: absolute;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.blog__card_img_wrapper::before {
+    right: -1px;
+    bottom: -1px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    mask-image: url(../../assets/img/icons/corner.svg);
+}
+
+.blog__card_img_wrapper::after {
+    width: 28px;
+    height: 28px;
+    right: 0px;
+    bottom: 0px;
+    background: var(--purple-gradient);
+    mask-image: url(../../assets/img/icons/arrow_circle.svg);
+}
+
+.blog__card_title {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.blog__card_text {
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .blog__cols {
+        gap: 42px;
+    }
+
+    .blog__col--left {
+        width: 288px;
+    }
+
+    .blog__description {
+        margin-top: 30px;
+    }
+
+    .blog__card_img_wrapper {
+        aspect-ratio: 286 / 251;
+    }
+
+    .blog__card_title {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .blog__card_text {
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .blog__cols {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .blog__col {
+        width: 100%;
+    }
+
+    .blog__card_img_wrapper {
+        aspect-ratio: 324 / 251;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .blog__cols {
+        gap: 30px;
+    }
+
+    .blog__col--right {
+        flex-wrap: wrap;
+    }
+
+    .blog__card {
+        min-width: 100%;
+    }
+
+    .blog__card_img_wrapper {
+        aspect-ratio: 286 / 251;
+        max-height: 324px;
+        width: 100%;
+    }
+}

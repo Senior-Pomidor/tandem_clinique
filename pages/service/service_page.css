@@ -14,6 +14,8 @@
     padding-bottom: 107px;
 }
 
+.service_page__section--blog,
+.service_page__section--prices,
 .service_page__section--contacts,
 .service_page__section--case,
 .service_page__section--doctors,
@@ -22,7 +24,17 @@
     padding-bottom: 120px;
 }
 
+.service_page__section--callback_hero {
+    padding-bottom: 70px;
+}
+
 @media screen and (max-width: 1200px) {
+    .service_page__section--callback_hero {
+        padding-bottom: 60px;
+    }
+
+    .service_page__section--blog,
+    .service_page__section--prices,
     .service_page__section--contacts,
     .service_page__section--advantages,
     .service_page__section--case,
@@ -49,6 +61,12 @@
 }
 
 @media screen and (max-width: 720px) {
+    .service_page__section--callback_hero {
+        padding-bottom: 20px;
+    }
+
+    .service_page__section--blog,
+    .service_page__section--prices,
     .service_page__section--contacts,
     .service_page__section--advantages,
     .service_page__section--case,
