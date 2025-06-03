@@ -15,6 +15,10 @@
 }
 /* END: Шрифты */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding-top: calc(var(--header-main-height) + var(--header-nav-height) + var(--header-blocks-gap) * 2);
     font-family: sans-serif;
@@ -30,7 +34,10 @@ body {
 :root {
     --green: rgba(183, 251, 189, 1);
     --purple: rgba(174, 142, 248, 1);
+    --purple-dark: rgba(41, 7, 121, 1);
+    --purple-light: rgba(165, 126, 255, 1);
     --gray: rgba(112, 112, 112, 1);
+    --beige: rgba(249, 252, 249, 1);
     --bg-purple: var(--purple);
     --bg-gray: #f3f5f3;
     --bg-white: #fff;

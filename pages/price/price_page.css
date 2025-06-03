@@ -1,0 +1,95 @@
+.price_page__section--banner {
+    padding-bottom: 80px;
+}
+
+.price_page__section--advantages,
+.price_page__section--prices {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.price_page__section--contacts,
+.price_page__section--ratings {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.price_page__section--reviews {
+    padding-top: 90px;
+    padding-bottom: 80px;
+
+    .reviews__slider_controls {
+        padding-bottom: 60px;
+    }
+}
+
+.price_page__section--callback {
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
+
+@media screen and (max-width: 1200px) {
+    .price_page__section--banner {
+        padding-bottom: 16px;
+    }
+
+    .price_page__section--contacts,
+    .price_page__section--reviews,
+    .price_page__section--ratings,
+    .price_page__section--figure,
+    .price_page__section--advantages,
+    .price_page__section--prices {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .price_page__section--reviews {
+        .reviews__slider_controls {
+            padding-bottom: 40px;
+        }
+    }
+
+    .price_page__section--callback {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .price_page__section--reviews {
+        .reviews__slider_controls {
+            padding-bottom: 50px;
+        }
+    }
+
+    .price_page__section--callback {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .price_page__section--banner {
+        padding-bottom: 40px;
+    }
+
+    .price_page__section--contacts,
+    .price_page__section--reviews,
+    .price_page__section--ratings,
+    .price_page__section--figure,
+    .price_page__section--advantages,
+    .price_page__section--prices {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .price_page__section--reviews {
+        .reviews__slider_controls {
+            padding-bottom: 40px;
+        }
+
+        .review__show_more {
+            margin-top: 10px;
+        }
+    }
+}
