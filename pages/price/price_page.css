@@ -30,7 +30,7 @@
 
 @media screen and (max-width: 1200px) {
     .price_page__section--banner {
-        padding-bottom: 16px;
+        padding-bottom: 40px;
     }
 
     .price_page__section--contacts,
@@ -77,10 +77,14 @@
     .price_page__section--reviews,
     .price_page__section--ratings,
     .price_page__section--figure,
-    .price_page__section--advantages,
-    .price_page__section--prices {
+    .price_page__section--advantages {
         padding-top: 40px;
         padding-bottom: 40px;
+    }
+
+    .price_page__section--prices,
+    .price_page__section--banner {
+        padding-bottom: 20px;
     }
 
     .price_page__section--reviews {

@@ -1,0 +1,35 @@
+.tiles__tile {
+    padding: 74px 89px 67px 65px;
+    background-color: var(--bg-gray);
+    border-radius: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.tiles__tile_title {
+    margin-bottom: 36px;
+}
+
+@media screen and (max-width: 1200px) {
+    .tiles__tile {
+        padding: 30px;
+        border-radius: 20px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .tiles__tile_title {
+        margin-bottom: 16px;
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .tiles__tile {
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+     /* */
+}

@@ -47,6 +47,7 @@
     <!-- START: секции -->
     <link rel="stylesheet" href="./pages/price/price_page.css">
     <link rel="stylesheet" href="./pages/price/services.css">
+    <link rel="stylesheet" href="./pages/price/tiles.css">
     <link rel="stylesheet" href="./pages/price/advantages.css">
     <link rel="stylesheet" href="./pages/price/figure.css">
     <!-- END: секции -->
@@ -250,6 +251,513 @@
             <span class="breadcrumbs__link breadcrumbs__link--active">Прайс</span>
         </div>
 
+        <!-- pages/price/services.css -->
+        <!-- pages/price/services.js -->
+        <!-- навигация на мобилке в дублирующем блоке .services__nav_mob -->
+        <section class="container services price_page__section--prices">
+            <h1 class="services__title">
+                Услуги в&nbsp;клинике Tandem в&nbsp;Москве
+            </h1>
+
+            <div class="services__inner">
+                <div class="services__nav_mob_wrapper">
+                    <!--
+                    XXX: активный пункт меню (текущая страница) -- просто строка
+                    Неактивные пункты меню (другие страницы) -- ссылка
+                    ниже подписал варианты
+                    -->
+                    <ul class="services__nav_mob">
+                        <!-- XXX: НЕ активный пункт (ссылка) -->
+                        <li>
+                            <a href="./price.html" class="services__nav_mob_link">
+                                Терапия
+                            </a>
+                        </li>
+
+                        <!-- XXX: активный пункт (span) -->
+                        <!-- js_nav_link_active для анимации -->
+                        <li>
+                            <span
+                                class="services__nav_mob_link services__nav_mob_link--active js_nav_link_active"
+                            >
+                                Парадонтология
+                            </span>
+                        </li>
+
+                        <li>
+                            <a href="./price.html" class="services__nav_mob_link">
+                                Парадонтология
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./price.html" class="services__nav_mob_link">
+                                Парадонтология
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!--
+                    XXX: список якорей для текущей страницы
+                    js_nav_mob_list для анимации
+                    -->
+                    <ul class="services__nav_mob_list js_nav_mob_list">
+                        <li class="services__nav_mob_list_item">
+                            <a href="#brackets" class="services__nav_mob_list_link">Брекеты</a>
+                        </li>
+                        <li class="services__nav_mob_list_item">
+                            <a href="#brackets" class="services__nav_mob_list_link">Брекеты</a>
+                        </li>
+                        <li class="services__nav_mob_list_item">
+                            <a href="#brackets" class="services__nav_mob_list_link">Брекеты</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="services__col services__col--left">
+                    <ul class="services__nav">
+                        <li class="services__nav_item">
+                            <a href="./price.html" class="services__nav_item_header">
+                                <div class="services__nav_item_header_icon">
+                                    <img loading="lazy" src="./assets/img/icons/icon_tooth.svg" alt="" />
+                                </div>
+
+                                <h4 class="services__nav_item_title">
+                                    Терапия
+                                </h4>
+                            </a>
+
+                            <ul class="services__nav_subcat">
+                                <li class="services__nav_subitem">
+                                    <a href="#brackets" class="services__nav_sublink">
+                                        Брекеты
+                                    </a>
+                                </li>
+
+                                <li class="services__nav_subitem">
+                                    <a href="#apparats" class="services__nav_sublink">
+                                        Аппараты ортодонтические
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="services__nav_item services__nav_item--active">
+                            <a href="./price.html" class="services__nav_item_header">
+                                <div class="services__nav_item_header_icon">
+                                    <img loading="lazy" src="./assets/img/icons/icon_tooth.svg" alt="" />
+                                </div>
+
+                                <h4 class="services__nav_item_title">
+                                    Ортодонтия
+                                </h4>
+                            </a>
+
+                            <ul class="services__nav_subcat">
+                                <li class="services__nav_subitem">
+                                    <a href="#brackets" class="services__nav_sublink">
+                                        Брекеты
+                                    </a>
+                                </li>
+
+                                <li class="services__nav_subitem">
+                                    <a href="#apparats" class="services__nav_sublink">
+                                        Аппараты ортодонтические
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="services__nav_item">
+                            <a href="./price.html" class="services__nav_item_header">
+                                <div class="services__nav_item_header_icon">
+                                    <img loading="lazy" src="./assets/img/icons/icon_tooth.svg" alt="" />
+                                </div>
+
+                                <h4 class="services__nav_item_title">
+                                    Пародонтология
+                                </h4>
+                            </a>
+
+                            <ul class="services__nav_subcat">
+                                <li class="services__nav_subitem">
+                                    <a href="#brackets" class="services__nav_sublink">
+                                        Брекеты
+                                    </a>
+                                </li>
+
+                                <li class="services__nav_subitem">
+                                    <a href="#apparats" class="services__nav_sublink">
+                                        Аппараты ортодонтические
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="services__col services__col--right">
+                    <!-- XXX: дублируется в блоке services__prices_header_mob -->
+                    <div class="services__prices_header">
+                        <div class="services__prices_header_content">
+                            <div class="services__prices_title_wrapper">
+                                <div class="services__prices_title_icon">
+                                    <img src="./assets/img/icons/icon_tooth.svg" alt="Ортодонтия">
+                                </div>
+
+                                <h3 class="services__prices_title">
+                                    Ортодонтия
+                                </h3>
+                            </div>
+
+                            <div class="services__prices_header_description">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services__prices_header_img">
+                            <img src="./assets/img/price_header.png" alt="Ортодонтия">
+                        </div>
+                    </div>
+
+                    <div class="services__prices">
+                        <div class="services__prices_header_mob">
+                            <div class="services__prices_img">
+                                <img src="./assets/img/price_header.png" alt="Ортодонтия">
+                            </div>
+
+                            <div class="services__prices_title_wrapper">
+                                <div class="services__prices_title_icon">
+                                    <img src="./assets/img/icons/icon_tooth.svg" alt="Ортодонтия">
+                                </div>
+
+                                <h3 class="services__prices_title">
+                                    Ортодонтия
+                                </h3>
+                            </div>
+
+                            <div class="services__prices_header_description">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <!--
+                        XXX: для аккордеонов атрибут data-acc-target у заголовка
+                        и data-acc-id у блока с контентом
+                        -->
+                        <div class="services__prices_category">
+                            <h4 id="brackets" class="services__prices_category_title" data-acc-target="brackets">
+                                Брекеты
+                            </h4>
+
+                            <div class="services__prices_subcategory" data-acc-id="brackets">
+                                <h5 class="services__prices_subcategory_title">
+                                    1 категория сложности (1 зубной ряд)
+                                </h5>
+
+                                <ul class="services__prices_list">
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <h5 class="services__prices_subcategory_title">
+                                    2 категория сложности (1 зубной ряд)
+                                </h5>
+
+                                <ul class="services__prices_list">
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <h4 id="brackets" class="services__prices_category_title" data-acc-target="apparats">
+                                Аппараты ортодонтические
+                            </h4>
+
+                            <div class="services__prices_subcategory" data-acc-id="apparats">
+                                <h5 class="services__prices_subcategory_title">
+                                    1 категория сложности (1 зубной ряд)
+                                </h5>
+
+                                <ul class="services__prices_list">
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <h5 class="services__prices_subcategory_title">
+                                    2 категория сложности (1 зубной ряд)
+                                </h5>
+
+                                <ul class="services__prices_list">
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="svc">
+                                        <a class="svc__link" href="./price.html">
+                                            <span class="svc__link_inner">
+                                                <span class="svc__code">
+                                                    А16.07.003.100
+                                                </span>
+
+                                                <span class="svc__add">
+                                                    допуслуга
+                                                </span>
+
+                                                <span class="svc__name">
+                                                    Металлические брекеты, система 2х4
+                                                </span>
+
+                                                <span class="svc__price">
+                                                    0 000 ₽
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="./pages/price/services.js"></script>
+
+
         <!-- blocks/banner.css -->
         <section class="container price_page__section--banner">
             <article class="banner">
@@ -274,433 +782,22 @@
             </article>
         </section>
 
-        <!-- pages/price/services.css -->
-        <!-- навигация на мобилке в дублирующем блоке .services__nav_mob -->
-        <section class="container services price_page__section--prices">
-            <h1 class="services__title">
-                Услуги в&nbsp;клинике Tandem в&nbsp;Москве
-            </h1>
-
-            <div class="services__inner">
-                <ul class="services__nav_mob">
-                    <li class="services__nav_mob_item">
-                        <a href="./price.html" class="services__nav_mob_link services__nav_mob_link--active">
-                            <span class="services__nav_mob_link_icon">
-                                <img src="./assets/img/icons/icon_tooth.svg" alt="Терапия">
-                            </span>
-
-                            Терапия
-                        </a>
-                    </li>
-
-                    <li class="services__nav_mob_item">
-                        <a href="./price.html" class="services__nav_mob_link">
-                            <span class="services__nav_mob_link_icon">
-                                <img src="./assets/img/icons/icon_tooth.svg" alt="Терапия">
-                            </span>
-
-                            Парадонтология
-                        </a>
-                    </li>
-
-                    <li class="services__nav_mob_item">
-                        <a href="./price.html" class="services__nav_mob_link">
-                            <span class="services__nav_mob_link_icon">
-                                <img src="./assets/img/icons/icon_tooth.svg" alt="Терапия">
-                            </span>
-
-                            Парадонтология
-                        </a>
-                    </li>
-
-                    <li class="services__nav_mob_item">
-                        <a href="./price.html" class="services__nav_mob_link">
-                            <span class="services__nav_mob_link_icon">
-                                <img src="./assets/img/icons/icon_tooth.svg" alt="Терапия">
-                            </span>
-
-                            Парадонтология
-                        </a>
-                    </li>
-
-                    <li class="services__nav_mob_item">
-                        <a href="./price.html" class="services__nav_mob_link">
-                            <span class="services__nav_mob_link_icon">
-                                <img src="./assets/img/icons/icon_tooth.svg" alt="Терапия">
-                            </span>
-
-                            Парадонтология
-                        </a>
-                    </li>
-
-                    <li class="services__nav_mob_item">
-                        <a href="./price.html" class="services__nav_mob_link">
-                            <span class="services__nav_mob_link_icon">
-                                <img src="./assets/img/icons/icon_tooth.svg" alt="Терапия">
-                            </span>
-
-                            Парадонтология
-                        </a>
-                    </li>
-
-                    <li class="services__nav_mob_item">
-                        <a href="./price.html" class="services__nav_mob_link">
-                            <span class="services__nav_mob_link_icon">
-                                <img src="./assets/img/icons/icon_tooth.svg" alt="Терапия">
-                            </span>
-
-                            Парадонтология
-                        </a>
-                    </li>
-
-                    <li class="services__nav_mob_item">
-                        <a href="./price.html" class="services__nav_mob_link">
-                            <span class="services__nav_mob_link_icon">
-                                <img src="./assets/img/icons/icon_tooth.svg" alt="Терапия">
-                            </span>
-
-                            Парадонтология
-                        </a>
-                    </li>
-
-                    <li class="services__nav_mob_item">
-                        <a href="./price.html" class="services__nav_mob_link">
-                            <span class="services__nav_mob_link_icon">
-                                <img src="./assets/img/icons/icon_tooth.svg" alt="Терапия">
-                            </span>
-
-                            Парадонтология
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="services__col services__col--left">
-                    <ul class="services__nav">
-                        <li class="services__nav_item">
-                            <a href="./price.html" class="services__nav_item_header">
-                                <div class="services__nav_item_header_icon">
-                                    <img loading="lazy" src="./assets/img/icons/icon_tooth.svg" alt="" />
-                                </div>
-
-                                <h3 class="services__nav_item_title">
-                                    Терапия
-                                </h3>
-                            </a>
-
-                            <ul class="services__nav_subcat">
-                                <li class="services__nav_subitem">
-                                    <a href="#brackets" class="services__nav_sublink">
-                                        Брекеты
-                                    </a>
-                                </li>
-
-                                <li class="services__nav_subitem">
-                                    <a href="#apparats" class="services__nav_sublink">
-                                        Аппараты ортодонтические
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="services__nav_item services__nav_item--active">
-                            <a href="./price.html" class="services__nav_item_header">
-                                <div class="services__nav_item_header_icon">
-                                    <img loading="lazy" src="./assets/img/icons/icon_tooth.svg" alt="" />
-                                </div>
-
-                                <h3 class="services__nav_item_title">
-                                    Ортодонтия
-                                </h3>
-
-                                <div class="services__nav_item_arrow"></div>
-                            </a>
-
-                            <ul class="services__nav_subcat">
-                                <li class="services__nav_subitem">
-                                    <a href="#brackets" class="services__nav_sublink">
-                                        Брекеты
-                                    </a>
-                                </li>
-
-                                <li class="services__nav_subitem">
-                                    <a href="#apparats" class="services__nav_sublink">
-                                        Аппараты ортодонтические
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="services__nav_item">
-                            <a href="./price.html" class="services__nav_item_header">
-                                <div class="services__nav_item_header_icon">
-                                    <img loading="lazy" src="./assets/img/icons/icon_tooth.svg" alt="" />
-                                </div>
-
-                                <h3 class="services__nav_item_title">
-                                    Пародонтология
-                                </h3>
-
-                                <div class="services__nav_item_arrow"></div>
-                            </a>
-
-                            <ul class="services__nav_subcat">
-                                <li class="services__nav_subitem">
-                                    <a href="#brackets" class="services__nav_sublink">
-                                        Брекеты
-                                    </a>
-                                </li>
-
-                                <li class="services__nav_subitem">
-                                    <a href="#apparats" class="services__nav_sublink">
-                                        Аппараты ортодонтические
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="services__col services__col--right">
-                    <div class="services__prices">
-                        <div class="services__prices_img">
-                            <img src="./assets/img/banner.png" alt="Ортодонтия">
-                        </div>
-
-                        <div class="services__prices_title_wrapper">
-                            <div class="services__prices_title_icon">
-                                <img src="./assets/img/icons/icon_tooth.svg" alt="Ортодонтия">
-                            </div>
-
-                            <h3 class="services__prices_title">
-                                Ортодонтия
-                            </h3>
-                        </div>
-
-                        <div class="services__prices_category">
-                            <h4 id="brackets" class="services__prices_category_title">
-                                Брекеты
-                            </h4>
-
-                            <h5 class="services__prices_subcategory_title">
-                                1 категория сложности (1 зубной ряд)
-                            </h5>
-
-                            <ul class="services__prices_list">
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        А16.07.003.100
-                                    </span>
-
-                                    <span class="svc__add">
-                                        допуслуга
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        Металлические брекеты, система 2х4
-                                    </a>
-
-                                    <span class="svc__price">
-                                        0 000 ₽
-                                    </span>
-                                </li>
-
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        А16.07.003.100
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        Лечение на комбинированной брекет-системе Experience керамика+Experience металл
-                                    </a>
-
-                                    <span class="svc__price">
-                                        100 000 ₽
-                                    </span>
-                                </li>
-
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        -
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        -
-                                    </a>
-
-                                    <span class="svc__price">
-                                        -
-                                    </span>
-                                </li>
-                            </ul>
-
-                            <h5 class="services__prices_subcategory_title">
-                                2 категория сложности (1 зубной ряд)
-                            </h5>
-
-                            <ul class="services__prices_list">
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        А16.07.003.100
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        Металлические брекеты, система 2х4
-                                    </a>
-
-                                    <span class="svc__price">
-                                        0 000 ₽
-                                    </span>
-                                </li>
-
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        А16.07.003.100
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        Лечение на комбинированной брекет-системе Experience керамика+Experience металл
-                                    </a>
-
-                                    <span class="svc__price">
-                                        100 000 ₽
-                                    </span>
-                                </li>
-
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        А16.07.003.100
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        Металлические брекеты, система 2х4
-                                    </a>
-
-                                    <span class="svc__price">
-                                        0 000 ₽
-                                    </span>
-                                </li>
-                            </ul>
-
-                            <h4 id="apparats" class="services__prices_category_title">
-                                Аппараты ортодонтические
-                            </h4>
-
-                            <h5 class="services__prices_subcategory_title">
-                                1 категория сложности (1 зубной ряд)
-                            </h5>
-
-                            <ul class="services__prices_list">
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        А16.07.003.100
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        Металлические брекеты, система 2х4
-                                    </a>
-
-                                    <span class="svc__price">
-                                        0 000 ₽
-                                    </span>
-                                </li>
-
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        А16.07.003.100
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        Лечение на комбинированной брекет-системе Experience керамика+Experience металл
-                                    </a>
-
-                                    <span class="svc__price">
-                                        100 000 ₽
-                                    </span>
-                                </li>
-
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        -
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        -
-                                    </a>
-
-                                    <span class="svc__price">
-                                        -
-                                    </span>
-                                </li>
-                            </ul>
-
-                            <h5 class="services__prices_subcategory_title">
-                                2 категория сложности (1 зубной ряд)
-                            </h5>
-
-                            <ul class="services__prices_list">
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        А16.07.003.100
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        Металлические брекеты, система 2х4
-                                    </a>
-
-                                    <span class="svc__price">
-                                        0 000 ₽
-                                    </span>
-                                </li>
-
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        А16.07.003.100
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        Лечение на комбинированной брекет-системе Experience керамика+Experience металл
-                                    </a>
-
-                                    <span class="svc__price">
-                                        100 000 ₽
-                                    </span>
-                                </li>
-
-                                <li class="svc">
-                                    <span class="svc__code">
-                                        А16.07.003.100
-                                    </span>
-
-                                    <a href="./" class="svc__name">
-                                        Металлические брекеты, система 2х4
-                                    </a>
-
-                                    <span class="svc__price">
-                                        0 000 ₽
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="services__tile">
-                        <h2 class="services__tile_title">
-                            Заголовок
-                        </h2>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam nonumy eirmod tempor invidunt
-                            ut labore et dolore magna aliquyam erat, sed
-                            diam voluptua. At vero eos et accusam et justo
-                            duo dolores et ea rebum. Stet clita kasd gubergren,
-                            no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                            Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam nonumy eirmod tempor invidunt ut
-                            labore et
-                        </p>
-                    </div>
-                </div>
+        <section class="tiles container">
+            <div class="tiles__tile">
+                <h2 class="tiles__tile_title">
+                    Заголовок
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing
+                    elitr, sed diam nonumy eirmod tempor invidunt
+                    ut labore et dolore magna aliquyam erat, sed
+                    diam voluptua. At vero eos et accusam et justo
+                    duo dolores et ea rebum. Stet clita kasd gubergren,
+                    no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing
+                    elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et
+                </p>
             </div>
         </section>
 

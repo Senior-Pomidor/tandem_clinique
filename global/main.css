@@ -700,8 +700,8 @@ a {
 }
 
 body, html {
-    overflow-x: hidden;
-    /* overflow: hidden; */
+    overflow-x: clip;
+    /* overflow: clip; */
 }
 
 
