@@ -14,6 +14,7 @@
     padding-bottom: 107px;
 }
 
+.service_page__section--how,
 .service_page__section--blog,
 .service_page__section--prices,
 .service_page__section--contacts,
@@ -33,6 +34,7 @@
         padding-bottom: 60px;
     }
 
+    .service_page__section--how,
     .service_page__section--blog,
     .service_page__section--prices,
     .service_page__section--contacts,
@@ -65,6 +67,7 @@
         padding-bottom: 20px;
     }
 
+    .service_page__section--how,
     .service_page__section--blog,
     .service_page__section--prices,
     .service_page__section--contacts,
